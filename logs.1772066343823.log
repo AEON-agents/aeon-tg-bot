@@ -1,0 +1,1001 @@
+2026-02-25T22:12:15.670851686Z [err]  2026-02-25 22:12:11,964 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:15.670858325Z [err]  2026-02-25 22:12:11,966 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:15.670865541Z [err]  2026-02-25 22:12:11,967 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:15.670920348Z [err]  2026-02-25 22:12:11,956 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:15.670925139Z [err]  2026-02-25 22:12:11,959 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:15.670929606Z [err]  2026-02-25 22:12:11,960 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:15.670939342Z [err]  2026-02-25 22:12:11,961 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:15.670974651Z [err]  2026-02-25 22:12:11,969 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:15.670983169Z [err]  2026-02-25 22:12:11,971 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:15.670989757Z [err]  2026-02-25 22:12:11,973 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.629731644Z [err]  2026-02-25 22:12:11,987 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.629743088Z [err]  2026-02-25 22:12:11,990 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.629970328Z [err]  2026-02-25 22:12:11,973 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:16.629977854Z [err]  2026-02-25 22:12:11,974 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.629984034Z [err]  2026-02-25 22:12:11,976 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.629995902Z [err]  2026-02-25 22:12:11,977 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.630002709Z [err]  2026-02-25 22:12:11,979 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.630008745Z [err]  2026-02-25 22:12:11,980 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.630016294Z [err]  2026-02-25 22:12:11,981 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.630023114Z [err]  2026-02-25 22:12:11,981 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:16.630029186Z [err]  2026-02-25 22:12:11,983 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.630034977Z [err]  2026-02-25 22:12:11,984 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.630040909Z [err]  2026-02-25 22:12:11,985 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.634822738Z [err]  2026-02-25 22:12:12,000 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.634840871Z [err]  2026-02-25 22:12:11,992 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.634845887Z [err]  2026-02-25 22:12:12,001 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.634851863Z [err]  2026-02-25 22:12:11,993 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:16.634858187Z [err]  2026-02-25 22:12:11,994 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.634865987Z [err]  2026-02-25 22:12:11,996 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.634870966Z [err]  2026-02-25 22:12:11,998 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.634941977Z [err]  2026-02-25 22:12:12,007 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.634952072Z [err]  2026-02-25 22:12:12,008 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.634953479Z [err]  2026-02-25 22:12:12,004 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.634961186Z [err]  2026-02-25 22:12:12,016 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.634973997Z [err]  2026-02-25 22:12:12,005 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:16.634978408Z [err]  2026-02-25 22:12:12,018 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.639575734Z [err]  2026-02-25 22:12:12,020 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.639602836Z [err]  2026-02-25 22:12:12,037 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.639625610Z [err]  2026-02-25 22:12:12,039 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.639639072Z [err]  2026-02-25 22:12:12,041 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.639645691Z [err]  2026-02-25 22:12:12,022 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.639652870Z [err]  2026-02-25 22:12:12,022 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:16.639659331Z [err]  2026-02-25 22:12:12,024 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.639666791Z [err]  2026-02-25 22:12:12,026 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.639669756Z [err]  2026-02-25 22:12:12,030 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.639680686Z [err]  2026-02-25 22:12:12,028 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.639684755Z [err]  2026-02-25 22:12:12,031 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.639692671Z [err]  2026-02-25 22:12:12,034 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.639700038Z [err]  2026-02-25 22:12:12,034 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:16.644884158Z [err]  2026-02-25 22:12:12,043 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.644889938Z [err]  2026-02-25 22:12:12,044 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.644895608Z [err]  2026-02-25 22:12:12,047 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.644917031Z [err]  2026-02-25 22:12:12,063 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.644931874Z [err]  2026-02-25 22:12:12,047 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:16.644932814Z [err]  2026-02-25 22:12:12,065 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.644940337Z [err]  2026-02-25 22:12:12,049 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.644947340Z [err]  2026-02-25 22:12:12,054 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.644953452Z [err]  2026-02-25 22:12:12,056 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.644979774Z [err]  2026-02-25 22:12:12,058 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.644989122Z [err]  2026-02-25 22:12:12,059 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.644997025Z [err]  2026-02-25 22:12:12,062 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.645005002Z [err]  2026-02-25 22:12:12,062 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:16.653386797Z [err]  2026-02-25 22:12:12,066 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.653392932Z [err]  2026-02-25 22:12:12,068 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.653399130Z [err]  2026-02-25 22:12:12,070 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.653405990Z [err]  2026-02-25 22:12:12,072 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.653412014Z [err]  2026-02-25 22:12:12,072 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:16.653424525Z [err]  2026-02-25 22:12:12,074 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.653430323Z [err]  2026-02-25 22:12:12,076 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.653436916Z [err]  2026-02-25 22:12:12,077 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.653443192Z [err]  2026-02-25 22:12:12,083 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.653458827Z [err]  2026-02-25 22:12:12,085 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.653465850Z [err]  2026-02-25 22:12:12,087 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.653471630Z [err]  2026-02-25 22:12:12,087 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:16.653477393Z [err]  2026-02-25 22:12:12,088 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.653956465Z [err]  2026-02-25 22:12:12,090 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.653962754Z [err]  2026-02-25 22:12:12,093 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.653968897Z [err]  2026-02-25 22:12:12,098 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.653982480Z [err]  2026-02-25 22:12:12,101 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.653988518Z [err]  2026-02-25 22:12:12,102 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.653994728Z [err]  2026-02-25 22:12:12,102 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:16.654000390Z [err]  2026-02-25 22:12:12,103 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.654006615Z [err]  2026-02-25 22:12:12,104 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.654012820Z [err]  2026-02-25 22:12:12,106 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.654018334Z [err]  2026-02-25 22:12:12,107 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.654029845Z [err]  2026-02-25 22:12:12,108 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.654035753Z [err]  2026-02-25 22:12:12,110 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.658056165Z [err]  2026-02-25 22:12:12,110 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:16.658065641Z [err]  2026-02-25 22:12:12,111 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.658072034Z [err]  2026-02-25 22:12:12,112 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.658078311Z [err]  2026-02-25 22:12:12,113 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.658084377Z [err]  2026-02-25 22:12:12,115 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.658090045Z [err]  2026-02-25 22:12:12,116 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.658096262Z [err]  2026-02-25 22:12:12,117 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.658101465Z [err]  2026-02-25 22:12:12,117 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:16.658106405Z [err]  2026-02-25 22:12:12,118 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.658114060Z [err]  2026-02-25 22:12:12,120 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.658118959Z [err]  2026-02-25 22:12:12,121 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.658123874Z [err]  2026-02-25 22:12:12,122 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.658130150Z [err]  2026-02-25 22:12:12,125 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.663551584Z [err]  2026-02-25 22:12:12,126 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.663558240Z [err]  2026-02-25 22:12:12,126 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:16.663564464Z [err]  2026-02-25 22:12:12,128 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.663565477Z [err]  2026-02-25 22:12:12,145 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.663572922Z [err]  2026-02-25 22:12:12,130 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.663579310Z [err]  2026-02-25 22:12:12,131 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.663587023Z [err]  2026-02-25 22:12:12,133 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.663594692Z [err]  2026-02-25 22:12:12,135 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.663601473Z [err]  2026-02-25 22:12:12,136 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.663608844Z [err]  2026-02-25 22:12:12,137 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:16.663615347Z [err]  2026-02-25 22:12:12,139 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.663622038Z [err]  2026-02-25 22:12:12,141 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.663628588Z [err]  2026-02-25 22:12:12,143 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.670343925Z [err]  2026-02-25 22:12:12,158 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.670356493Z [err]  2026-02-25 22:12:12,159 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.670360036Z [err]  2026-02-25 22:12:12,146 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.670366620Z [err]  2026-02-25 22:12:12,147 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.670372975Z [err]  2026-02-25 22:12:12,147 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:16.670378922Z [err]  2026-02-25 22:12:12,149 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.670384612Z [err]  2026-02-25 22:12:12,150 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.670390719Z [err]  2026-02-25 22:12:12,151 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.670397810Z [err]  2026-02-25 22:12:12,153 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.670405360Z [err]  2026-02-25 22:12:12,154 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.670411688Z [err]  2026-02-25 22:12:12,154 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:16.670417376Z [err]  2026-02-25 22:12:12,155 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:16.670423498Z [err]  2026-02-25 22:12:12,157 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.573339450Z [err]  2026-02-25 22:12:12,163 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.573353629Z [err]  2026-02-25 22:12:12,164 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.573366915Z [err]  2026-02-25 22:12:12,164 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:17.573375366Z [err]  2026-02-25 22:12:12,166 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.573378633Z [err]  2026-02-25 22:12:12,175 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.573385413Z [err]  2026-02-25 22:12:12,167 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.573394367Z [err]  2026-02-25 22:12:12,176 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.573396712Z [err]  2026-02-25 22:12:12,169 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.573396937Z [err]  2026-02-25 22:12:12,161 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.573405246Z [err]  2026-02-25 22:12:12,170 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.573412421Z [err]  2026-02-25 22:12:12,172 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.573419860Z [err]  2026-02-25 22:12:12,173 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.573427709Z [err]  2026-02-25 22:12:12,174 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:17.575292048Z [err]  2026-02-25 22:12:12,177 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.575297915Z [err]  2026-02-25 22:12:12,178 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.575304141Z [err]  2026-02-25 22:12:12,180 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.575310416Z [err]  2026-02-25 22:12:12,181 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.575316596Z [err]  2026-02-25 22:12:12,181 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:17.575323154Z [err]  2026-02-25 22:12:12,182 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.575329242Z [err]  2026-02-25 22:12:12,183 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.575335225Z [err]  2026-02-25 22:12:12,184 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.575341991Z [err]  2026-02-25 22:12:12,186 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.575348317Z [err]  2026-02-25 22:12:12,187 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.575354468Z [err]  2026-02-25 22:12:12,188 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.575359597Z [err]  2026-02-25 22:12:12,188 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:17.575365065Z [err]  2026-02-25 22:12:12,190 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.579561043Z [err]  2026-02-25 22:12:12,191 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.579569721Z [err]  2026-02-25 22:12:12,193 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.579576612Z [err]  2026-02-25 22:12:12,195 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.579582810Z [err]  2026-02-25 22:12:12,197 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.579588713Z [err]  2026-02-25 22:12:12,199 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.579594920Z [err]  2026-02-25 22:12:12,199 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:17.579600853Z [err]  2026-02-25 22:12:12,201 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.579608799Z [err]  2026-02-25 22:12:12,203 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.579615510Z [err]  2026-02-25 22:12:12,204 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.579621396Z [err]  2026-02-25 22:12:12,205 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.579627055Z [err]  2026-02-25 22:12:12,207 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.579632911Z [err]  2026-02-25 22:12:12,208 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.583182830Z [err]  2026-02-25 22:12:12,208 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:17.583223668Z [err]  2026-02-25 22:12:12,209 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.583250353Z [err]  2026-02-25 22:12:12,210 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.583269332Z [err]  2026-02-25 22:12:12,211 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.583281851Z [err]  2026-02-25 22:12:12,213 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.583296145Z [err]  2026-02-25 22:12:12,214 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.583307264Z [err]  2026-02-25 22:12:12,217 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.583317017Z [err]  2026-02-25 22:12:12,217 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:17.583325109Z [err]  2026-02-25 22:12:12,218 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.583334334Z [err]  2026-02-25 22:12:12,219 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.583341745Z [err]  2026-02-25 22:12:12,222 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.583611512Z [err]  2026-02-25 22:12:12,223 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.583620560Z [err]  2026-02-25 22:12:12,226 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.586599993Z [err]  2026-02-25 22:12:12,227 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.586617548Z [err]  2026-02-25 22:12:12,228 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:17.586627743Z [err]  2026-02-25 22:12:12,229 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.586636542Z [err]  2026-02-25 22:12:12,230 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.586646147Z [err]  2026-02-25 22:12:12,231 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.586656320Z [err]  2026-02-25 22:12:12,233 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.586664596Z [err]  2026-02-25 22:12:12,234 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.586676194Z [err]  2026-02-25 22:12:12,236 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.586683752Z [err]  2026-02-25 22:12:12,236 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:17.586691393Z [err]  2026-02-25 22:12:12,237 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.586699076Z [err]  2026-02-25 22:12:12,238 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.586706258Z [err]  2026-02-25 22:12:12,239 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.586713679Z [err]  2026-02-25 22:12:12,240 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.590192204Z [err]  2026-02-25 22:12:12,242 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.590198222Z [err]  2026-02-25 22:12:12,244 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.590203690Z [err]  2026-02-25 22:12:12,245 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:17.590209810Z [err]  2026-02-25 22:12:12,247 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.590215930Z [err]  2026-02-25 22:12:12,249 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.590224075Z [err]  2026-02-25 22:12:12,253 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.590229853Z [err]  2026-02-25 22:12:12,254 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.590236336Z [err]  2026-02-25 22:12:12,255 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.590242190Z [err]  2026-02-25 22:12:12,257 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.590250167Z [err]  2026-02-25 22:12:12,257 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:17.590257737Z [err]  2026-02-25 22:12:12,258 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.590263667Z [err]  2026-02-25 22:12:12,259 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.590270965Z [err]  2026-02-25 22:12:12,260 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.597650448Z [err]  2026-02-25 22:12:12,261 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.597654430Z [err]  2026-02-25 22:12:12,275 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.597658730Z [err]  2026-02-25 22:12:12,262 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.597663512Z [err]  2026-02-25 22:12:12,264 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.597668629Z [err]  2026-02-25 22:12:12,264 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:17.597673320Z [err]  2026-02-25 22:12:12,266 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.597679406Z [err]  2026-02-25 22:12:12,267 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.597683854Z [err]  2026-02-25 22:12:12,268 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.597688392Z [err]  2026-02-25 22:12:12,269 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.597693105Z [err]  2026-02-25 22:12:12,270 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.597698575Z [err]  2026-02-25 22:12:12,271 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.597702525Z [err]  2026-02-25 22:12:12,271 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:17.597745004Z [err]  2026-02-25 22:12:12,272 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.601002352Z [err]  2026-02-25 22:12:12,276 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.601012720Z [err]  2026-02-25 22:12:12,279 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.601016435Z [err]  2026-02-25 22:12:12,329 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.601022273Z [err]  2026-02-25 22:12:12,282 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.601028458Z [err]  2026-02-25 22:12:12,284 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.601033177Z [err]  2026-02-25 22:12:12,284 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:17.601037359Z [err]  2026-02-25 22:12:12,286 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.601041531Z [err]  2026-02-25 22:12:12,308 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.601047347Z [err]  2026-02-25 22:12:12,311 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.601052644Z [err]  2026-02-25 22:12:12,314 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.601060466Z [err]  2026-02-25 22:12:12,318 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.601064535Z [err]  2026-02-25 22:12:12,324 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.601068589Z [err]  2026-02-25 22:12:12,324 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:17.603754382Z [err]  2026-02-25 22:12:12,332 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.603762769Z [err]  2026-02-25 22:12:12,333 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.603768288Z [err]  2026-02-25 22:12:12,334 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.603774267Z [err]  2026-02-25 22:12:12,336 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.603780285Z [err]  2026-02-25 22:12:12,337 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.603785735Z [err]  2026-02-25 22:12:12,338 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:17.603790750Z [err]  2026-02-25 22:12:12,340 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.603796236Z [err]  2026-02-25 22:12:12,342 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.603801043Z [err]  2026-02-25 22:12:12,343 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.603807606Z [err]  2026-02-25 22:12:12,344 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.603813411Z [err]  2026-02-25 22:12:12,345 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.603818840Z [err]  2026-02-25 22:12:12,347 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.607313984Z [err]  2026-02-25 22:12:12,347 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:17.607324320Z [err]  2026-02-25 22:12:12,349 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.607330664Z [err]  2026-02-25 22:12:12,350 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.607337144Z [err]  2026-02-25 22:12:12,351 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.607343251Z [err]  2026-02-25 22:12:12,356 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.607349158Z [err]  2026-02-25 22:12:12,358 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.607354947Z [err]  2026-02-25 22:12:12,363 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.607361603Z [err]  2026-02-25 22:12:12,363 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:17.607369813Z [err]  2026-02-25 22:12:12,366 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.607374972Z [err]  2026-02-25 22:12:12,368 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.607380238Z [err]  2026-02-25 22:12:12,371 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.607385566Z [err]  2026-02-25 22:12:12,373 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.607390683Z [err]  2026-02-25 22:12:12,374 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.610644891Z [err]  2026-02-25 22:12:12,376 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:17.610653300Z [err]  2026-02-25 22:12:12,377 - sender_bot - INFO - Redis reconnected
+2026-02-25T22:12:17.610659299Z [err]  2026-02-25 22:12:12,379 - sender_bot - ERROR - Redis error: Error 111 connecting to redis-ut9z.railway.internal:6379. Connection refused.
+2026-02-25T22:12:19.745992233Z [err]  [2026-02-25 22:12:19 +0000] [1] [INFO] Handling signal: term
+2026-02-25T22:12:21.323237980Z [err]  [2026-02-25 22:12:19 +0000] [2] [INFO] Worker exiting (pid: 2)
+2026-02-25T22:12:21.323243937Z [err]  [2026-02-25 22:12:20 +0000] [1] [INFO] Shutting down: Master
+2026-02-25T22:12:22.545379987Z [inf]  Mounting volume on: /var/lib/containers/railwayapp/bind-mounts/ee76416f-45b4-49c4-971a-bcbf3ab7ceb8/vol_r78gq2hpno1an7m2
+2026-02-25T22:12:23.295727676Z [err]  [2026-02-25 22:12:22 +0000] [2] [INFO] Booting worker with pid: 2
+2026-02-25T22:12:23.295807825Z [err]  [2026-02-25 22:12:22 +0000] [1] [INFO] Starting gunicorn 23.0.0
+2026-02-25T22:12:23.295814934Z [err]  [2026-02-25 22:12:22 +0000] [1] [INFO] Listening at: http://0.0.0.0:8080 (1)
+2026-02-25T22:12:23.295822284Z [err]  [2026-02-25 22:12:22 +0000] [1] [INFO] Using worker: gthread
+2026-02-25T22:12:27.407184239Z [err]  2026-02-25 22:12:26,825 - bot - INFO - 🔧 Initializing AEON Telegram Bot...
+2026-02-25T22:12:27.407193375Z [err]  2026-02-25 22:12:26,828 - bot - INFO - ✅ Main event loop started in dedicated thread
+2026-02-25T22:12:27.407202054Z [err]  2026-02-25 22:12:26,828 - bot - INFO - 🚀 Starting AEON Telegram Bot...
+2026-02-25T22:12:28.582071905Z [err]  2026-02-25 22:12:28,031 - db - INFO - Database pool created
+2026-02-25T22:12:28.582078267Z [err]  2026-02-25 22:12:28,031 - redis_client - INFO - Redis connection pool created
+2026-02-25T22:12:28.582084904Z [err]  2026-02-25 22:12:28,032 - redis_client - INFO - Redis client created
+2026-02-25T22:12:28.582138518Z [err]  2026-02-25 22:12:28,032 - bot - INFO - Redis client created
+2026-02-25T22:12:28.582149468Z [err]  2026-02-25 22:12:28,032 - bot - INFO - 🔄 Starting pg_notify listener worker...
+2026-02-25T22:12:28.582863477Z [err]  2026-02-25 22:12:28,032 - bot - INFO - 📌 Connecting to Postgres...
+2026-02-25T22:12:28.582876399Z [err]  2026-02-25 22:12:28,032 - bot - INFO - ✅ pg_notify listener thread started
+2026-02-25T22:12:28.582883908Z [err]  2026-02-25 22:12:28,033 - bot - INFO - 🔄 Starting stuck messages retry worker (interval: 180s)
+2026-02-25T22:12:28.582893348Z [err]  2026-02-25 22:12:28,033 - bot - INFO - ✅ Stuck messages retry worker started
+2026-02-25T22:12:28.582900477Z [err]  2026-02-25 22:12:28,033 - sender_bot - INFO - ✅ RateLimiter initialized: RateLimitConfig(chat_messages_per_second=1.0, group_messages_per_minute=20, global_messages_per_second=25, global_api_requests_per_second=25, safety_factor=0.85)
+2026-02-25T22:12:28.582907087Z [err]  2026-02-25 22:12:28,033 - sender_bot - INFO - Sender using shared DB pool
+2026-02-25T22:12:28.582914787Z [err]  2026-02-25 22:12:28,033 - sender_bot - INFO - ✅ SenderBot initialized with rate limiting, chat actions, and reactions support
+2026-02-25T22:12:28.582921175Z [err]  2026-02-25 22:12:28,033 - sender_bot - INFO - 🔄 SenderBot worker loop started
+2026-02-25T22:12:28.582927902Z [err]  2026-02-25 22:12:28,034 - sender_bot - INFO - ✅ SenderBot worker started
+2026-02-25T22:12:28.582936225Z [err]  2026-02-25 22:12:28,034 - bot - INFO - ✅ Sender started
+2026-02-25T22:12:28.582942992Z [err]  2026-02-25 22:12:28,034 - bot - INFO - Starting incoming message consumer...
+2026-02-25T22:12:29.988816180Z [err]  2026-02-25 22:12:28,035 - bot - INFO - ✅ Incoming message consumer started
+2026-02-25T22:12:29.988821943Z [err]  2026-02-25 22:12:28,059 - sender_bot - INFO - ✅ Worker Bot instance created
+2026-02-25T22:12:29.988827837Z [err]  2026-02-25 22:12:28,103 - bot - INFO - ✅ Webhook set: https://believable-art-telegram-test.up.railway.app/webhook/telegram
+2026-02-25T22:12:29.988833529Z [err]  2026-02-25 22:12:28,620 - bot - INFO - No stuck messages found
+2026-02-25T22:12:29.988838971Z [err]  2026-02-25 22:12:28,791 - bot - INFO - ✅ Application initialized
+2026-02-25T22:12:29.988844785Z [err]  2026-02-25 22:12:29,246 - bot - INFO - ✅ Listening on 'telegram_send'
+2026-02-25T22:12:29.988850575Z [err]  2026-02-25 22:12:29,464 - bot - INFO - ✅ Redis connected
+2026-02-25T22:13:31.286914266Z [err]  2026-02-25 22:13:28,544 - bot - INFO - No stuck messages found
+2026-02-25T22:16:38.025768073Z [err]  2026-02-25 22:16:29,220 - bot - INFO - No stuck messages found
+2026-02-25T22:19:40.260021741Z [err]  2026-02-25 22:19:29,899 - bot - INFO - No stuck messages found
+2026-02-25T22:22:33.813204268Z [err]  2026-02-25 22:22:30,586 - bot - INFO - No stuck messages found
+2026-02-25T22:25:35.640936963Z [err]  2026-02-25 22:25:31,291 - bot - INFO - No stuck messages found
+2026-02-25T22:26:56.918053794Z [err]  2026-02-25 22:26:49,404 - bot - INFO - 📬 Received 1 notifications
+2026-02-25T22:26:56.918059171Z [err]  2026-02-25 22:26:49,406 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772058409.293060, "chat_ident": "-4829992928", "request_body": {"chat_id": "-48299929...
+2026-02-25T22:26:56.918064375Z [err]  2026-02-25 22:26:49,406 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-25T22:26:56.918070005Z [err]  2026-02-25 22:26:49,498 - sender_bot - INFO - Sent text: tg_id=10951
+2026-02-25T22:27:16.467410825Z [err]  2026-02-25 22:27:08,286 - bot - INFO - 📬 Received 1 notifications
+2026-02-25T22:27:16.467418312Z [err]  2026-02-25 22:27:08,288 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772058428.192138, "chat_ident": "-4829992928", "request_body": {"chat_id": "-48299929...
+2026-02-25T22:27:16.467424724Z [err]  2026-02-25 22:27:08,288 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-25T22:27:16.467430657Z [err]  2026-02-25 22:27:08,351 - sender_bot - INFO - Sent text: tg_id=10952
+2026-02-25T22:28:17.293808359Z [err]  2026-02-25 22:28:10,412 - bot - INFO - 📬 Received 2 notifications
+2026-02-25T22:28:17.293817693Z [err]  2026-02-25 22:28:10,413 - handlers - INFO - Processing delete: chat=4829992928, msg_id=10951
+2026-02-25T22:28:17.293823129Z [err]  2026-02-25 22:28:10,414 - bot - INFO - 📥 Pushed to Redis [1/2]: {"queued_at": 1772058490.301805, "chat_ident": "4829992928", "request_body": {"chat_id": "4829992928...
+2026-02-25T22:28:17.293828172Z [err]  2026-02-25 22:28:10,414 - bot - INFO - 📥 Pushed to Redis [2/2]: {"queued_at": 1772058490.301805, "chat_ident": "-4829992928", "request_body": {"chat_id": "-48299929...
+2026-02-25T22:28:17.293839532Z [err]  2026-02-25 22:28:10,414 - bot - INFO - ✅ Total pushed: 2/2
+2026-02-25T22:28:17.293843957Z [err]  2026-02-25 22:28:10,414 - bot - INFO - 📬 Received 2 notifications
+2026-02-25T22:28:17.293848418Z [err]  2026-02-25 22:28:10,415 - bot - INFO - 📥 Pushed to Redis [1/2]: {"queued_at": 1772058490.301805, "chat_ident": "-4829992928", "request_body": {"chat_id": "-48299929...
+2026-02-25T22:28:17.293853389Z [err]  2026-02-25 22:28:10,416 - bot - INFO - 📥 Pushed to Redis [2/2]: {"queued_at": 1772058490.301805, "chat_ident": "-4829992928", "request_body": {"chat_id": "-48299929...
+2026-02-25T22:28:17.293858485Z [err]  2026-02-25 22:28:10,416 - bot - INFO - ✅ Total pushed: 2/2
+2026-02-25T22:28:17.293863835Z [err]  2026-02-25 22:28:10,505 - sender_bot - ERROR - ❌ Bad request: Telegram server says - Bad Request: chat not found
+2026-02-25T22:28:17.293870243Z [err]  2026-02-25 22:28:11,269 - sender_bot - INFO - Sent text: tg_id=10953
+2026-02-25T22:28:17.293876724Z [err]  2026-02-25 22:28:12,265 - sender_bot - INFO - Sent text: tg_id=10954
+2026-02-25T22:28:17.293881764Z [err]  2026-02-25 22:28:13,267 - sender_bot - INFO - Sent text: tg_id=10955
+2026-02-25T22:28:36.450226257Z [err]  2026-02-25 22:28:32,000 - bot - INFO - No stuck messages found
+2026-02-25T22:31:40.567195460Z [err]  2026-02-25 22:31:32,725 - bot - INFO - No stuck messages found
+2026-02-25T22:34:35.222985215Z [err]  2026-02-25 22:34:33,441 - bot - INFO - No stuck messages found
+2026-02-25T22:36:27.727231167Z [err]  2026-02-25 22:36:26,364 - bot - INFO - Added user 142 to group 5273094456
+2026-02-25T22:36:27.727236050Z [err]  2026-02-25 22:36:27,054 - bot - INFO - Saved message: chat=173, tg_id=10956, type=text, files=0
+2026-02-25T22:36:27.727240528Z [err]  /usr/local/lib/python3.11/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (6.0.0.post1)/charset_normalizer (3.4.4) doesn't match a supported version!
+2026-02-25T22:36:27.727645353Z [err]    warnings.warn(
+2026-02-25T22:36:28.743276801Z [err]  2026-02-25 22:36:27,952 - aiogram.event - INFO - Update id=681946692 is handled. Duration 6309 ms by bot id=8319533037
+2026-02-25T22:36:28.743284232Z [err]  2026-02-25 22:36:27,952 - bot - INFO - Processed incoming update: 681946692
+2026-02-25T22:36:36.886451065Z [err]  2026-02-25 22:36:36,480 - bot - INFO - Added user 142 to group 5273094456
+2026-02-25T22:36:37.913211365Z [err]  2026-02-25 22:36:37,149 - bot - INFO - Saved message: chat=173, tg_id=10957, type=text, files=0
+2026-02-25T22:36:37.913216526Z [err]  2026-02-25 22:36:37,796 - aiogram.event - INFO - Update id=681946693 is handled. Duration 6189 ms by bot id=8319533037
+2026-02-25T22:36:37.913220832Z [err]  2026-02-25 22:36:37,798 - bot - INFO - Processed incoming update: 681946693
+2026-02-25T22:36:45.200870068Z [err]  2026-02-25 22:36:44,477 - bot - INFO - Added user 142 to group 5273094456
+2026-02-25T22:36:45.200877795Z [err]  2026-02-25 22:36:45,156 - bot - INFO - Saved message: chat=173, tg_id=10958, type=text, files=0
+2026-02-25T22:36:46.318651864Z [err]  2026-02-25 22:36:45,805 - aiogram.event - INFO - Update id=681946694 is handled. Duration 5726 ms by bot id=8319533037
+2026-02-25T22:36:46.318658875Z [err]  2026-02-25 22:36:45,806 - bot - INFO - Processed incoming update: 681946694
+2026-02-25T22:36:51.211889137Z [err]  2026-02-25 22:36:50,627 - bot - INFO - Added user 142 to group 5273094456
+2026-02-25T22:36:51.304584773Z [err]  2026-02-25 22:36:51,297 - bot - INFO - Saved message: chat=173, tg_id=10959, type=text, files=0
+2026-02-25T22:36:52.428278858Z [err]  2026-02-25 22:36:51,794 - aiogram.event - INFO - Update id=681946695 is handled. Duration 5559 ms by bot id=8319533037
+2026-02-25T22:36:52.428285017Z [err]  2026-02-25 22:36:51,794 - bot - INFO - Processed incoming update: 681946695
+2026-02-25T22:37:12.331838321Z [err]  2026-02-25 22:37:02,716 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T22:37:12.331846048Z [err]  2026-02-25 22:37:03,385 - bot - INFO - Saved message: chat=173, tg_id=10960, type=text, files=0
+2026-02-25T22:37:12.331857718Z [err]  2026-02-25 22:37:04,041 - aiogram.event - INFO - Update id=681946696 is handled. Duration 6038 ms by bot id=8319533037
+2026-02-25T22:37:12.331873368Z [err]  2026-02-25 22:37:04,041 - bot - INFO - Processed incoming update: 681946696
+2026-02-25T22:37:41.905709136Z [err]  2026-02-25 22:37:34,120 - bot - INFO - No stuck messages found
+2026-02-25T22:38:51.651123805Z [err]  2026-02-25 22:38:45,354 - bot - INFO - Added user 142 to group 5273094456
+2026-02-25T22:38:51.651129061Z [err]  2026-02-25 22:38:46,059 - bot - INFO - Saved message: chat=173, tg_id=10961, type=text, files=0
+2026-02-25T22:38:51.651135111Z [err]  2026-02-25 22:38:46,586 - aiogram.event - INFO - Update id=681946697 is handled. Duration 5807 ms by bot id=8319533037
+2026-02-25T22:38:51.651140476Z [err]  2026-02-25 22:38:46,586 - bot - INFO - Processed incoming update: 681946697
+2026-02-25T22:39:32.217503031Z [err]  2026-02-25 22:39:24,814 - bot - INFO - Added user 142 to group 5273094456
+2026-02-25T22:39:32.217511832Z [err]  2026-02-25 22:39:25,517 - bot - INFO - Saved message: chat=173, tg_id=10962, type=document, files=1
+2026-02-25T22:39:32.217521244Z [err]  2026-02-25 22:39:26,170 - aiogram.event - INFO - Update id=681946698 is handled. Duration 6248 ms by bot id=8319533037
+2026-02-25T22:39:32.217528857Z [err]  2026-02-25 22:39:26,170 - bot - INFO - Processed incoming update: 681946698
+2026-02-25T22:39:51.385155115Z [err]  2026-02-25 22:39:44,623 - bot - INFO - Processed incoming update: 681946699
+2026-02-25T22:39:51.385321308Z [err]  2026-02-25 22:39:43,255 - bot - INFO - Added user 142 to group 5273094456
+2026-02-25T22:39:51.385327796Z [err]  2026-02-25 22:39:43,958 - bot - INFO - Saved message: chat=173, tg_id=10963, type=document, files=1
+2026-02-25T22:39:51.385334481Z [err]  2026-02-25 22:39:44,623 - aiogram.event - INFO - Update id=681946699 is handled. Duration 5948 ms by bot id=8319533037
+2026-02-25T22:40:31.755277916Z [err]  2026-02-25 22:40:29,920 - bot - INFO - Added user 142 to group 5273094456
+2026-02-25T22:40:31.755283422Z [err]  2026-02-25 22:40:30,650 - bot - INFO - Saved message: chat=173, tg_id=10964, type=text, files=0
+2026-02-25T22:40:31.755288035Z [err]  2026-02-25 22:40:31,169 - aiogram.event - INFO - Update id=681946700 is handled. Duration 5821 ms by bot id=8319533037
+2026-02-25T22:40:31.755297159Z [err]  2026-02-25 22:40:31,169 - bot - INFO - Processed incoming update: 681946700
+2026-02-25T22:40:36.589091072Z [err]  2026-02-25 22:40:35,816 - bot - INFO - No stuck messages found
+2026-02-25T22:40:36.759594761Z [err]  2026-02-25 22:40:36,751 - bot - INFO - Added user 142 to group 5273094456
+2026-02-25T22:40:37.686502666Z [err]  2026-02-25 22:40:37,450 - bot - INFO - Saved message: chat=173, tg_id=10965, type=document, files=1
+2026-02-25T22:40:38.551516224Z [err]  2026-02-25 22:40:38,091 - aiogram.event - INFO - Update id=681946701 is handled. Duration 6920 ms by bot id=8319533037
+2026-02-25T22:40:38.551529423Z [err]  2026-02-25 22:40:38,094 - bot - INFO - Processed incoming update: 681946701
+2026-02-25T22:41:07.961229763Z [err]  2026-02-25 22:41:00,932 - bot - INFO - Added user 142 to group 5273094456
+2026-02-25T22:41:07.961236613Z [err]  2026-02-25 22:41:01,602 - bot - INFO - Saved message: chat=173, tg_id=10966, type=text, files=0
+2026-02-25T22:41:07.961243158Z [err]  2026-02-25 22:41:02,252 - aiogram.event - INFO - Update id=681946702 is handled. Duration 5762 ms by bot id=8319533037
+2026-02-25T22:41:07.961249012Z [err]  2026-02-25 22:41:02,252 - bot - INFO - Processed incoming update: 681946702
+2026-02-25T22:41:37.271621864Z [err]  2026-02-25 22:41:27,686 - bot - INFO - Added user 142 to group 5273094456
+2026-02-25T22:41:37.271635350Z [err]  2026-02-25 22:41:28,354 - bot - INFO - Saved message: chat=173, tg_id=10967, type=document, files=1
+2026-02-25T22:41:37.271641963Z [err]  2026-02-25 22:41:28,997 - aiogram.event - INFO - Update id=681946703 is handled. Duration 5695 ms by bot id=8319533037
+2026-02-25T22:41:37.271647888Z [err]  2026-02-25 22:41:28,998 - bot - INFO - Processed incoming update: 681946703
+2026-02-25T22:43:07.404215222Z [err]  2026-02-25 22:43:07,133 - bot - INFO - Added user 142 to group 5273094456
+2026-02-25T22:43:08.357843645Z [err]  2026-02-25 22:43:07,802 - bot - INFO - Saved message: chat=173, tg_id=10968, type=document, files=1
+2026-02-25T22:43:08.357856064Z [err]  2026-02-25 22:43:08,314 - aiogram.event - INFO - Update id=681946704 is handled. Duration 5431 ms by bot id=8319533037
+2026-02-25T22:43:08.357862087Z [err]  2026-02-25 22:43:08,315 - bot - INFO - Processed incoming update: 681946704
+2026-02-25T22:43:37.931637109Z [err]  2026-02-25 22:43:36,484 - bot - INFO - No stuck messages found
+2026-02-25T22:44:39.124699817Z [err]  2026-02-25 22:44:29,634 - sender_bot - INFO - Sent text: tg_id=10969
+2026-02-25T22:44:39.124812688Z [err]  2026-02-25 22:44:29,573 - bot - INFO - 📬 Received 1 notifications
+2026-02-25T22:44:39.124822070Z [err]  2026-02-25 22:44:29,574 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772059469.481940, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-25T22:44:39.124831663Z [err]  2026-02-25 22:44:29,574 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-25T22:44:58.854755822Z [err]  2026-02-25 22:44:54,167 - bot - INFO - Added user 142 to group 5273094456
+2026-02-25T22:44:58.854762107Z [err]  2026-02-25 22:44:54,850 - bot - INFO - Saved message: chat=173, tg_id=10970, type=document, files=1
+2026-02-25T22:44:58.854768174Z [err]  2026-02-25 22:44:55,361 - aiogram.event - INFO - Update id=681946705 is handled. Duration 5461 ms by bot id=8319533037
+2026-02-25T22:44:58.854774892Z [err]  2026-02-25 22:44:55,361 - bot - INFO - Processed incoming update: 681946705
+2026-02-25T22:45:38.653779854Z [err]  2026-02-25 22:45:28,763 - bot - INFO - 📬 Received 1 notifications
+2026-02-25T22:45:38.653787898Z [err]  2026-02-25 22:45:28,768 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772059528.673994, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-25T22:45:38.653792639Z [err]  2026-02-25 22:45:28,768 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-25T22:45:38.653797644Z [err]  2026-02-25 22:45:28,877 - sender_bot - INFO - Sent text: tg_id=10971
+2026-02-25T22:45:57.933557300Z [err]  2026-02-25 22:45:53,098 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T22:45:57.933563443Z [err]  2026-02-25 22:45:53,776 - bot - INFO - Saved message: chat=173, tg_id=10972, type=text, files=0
+2026-02-25T22:45:57.933569534Z [err]  2026-02-25 22:45:54,265 - aiogram.event - INFO - Update id=681946706 is handled. Duration 5824 ms by bot id=8319533037
+2026-02-25T22:45:57.933575233Z [err]  2026-02-25 22:45:54,266 - bot - INFO - Processed incoming update: 681946706
+2026-02-25T22:46:38.103093679Z [err]  2026-02-25 22:46:29,442 - bot - INFO - 📬 Received 1 notifications
+2026-02-25T22:46:38.103145175Z [err]  2026-02-25 22:46:29,445 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772059589.353694, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-25T22:46:38.103154274Z [err]  2026-02-25 22:46:29,445 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-25T22:46:38.103159729Z [err]  2026-02-25 22:46:29,504 - sender_bot - INFO - Sent text: tg_id=10973
+2026-02-25T22:46:38.103164588Z [err]  2026-02-25 22:46:37,157 - bot - INFO - No stuck messages found
+2026-02-25T22:46:48.042542219Z [err]  2026-02-25 22:46:47,967 - bot - INFO - Added user 142 to group 5273094456
+2026-02-25T22:46:49.159007876Z [err]  2026-02-25 22:46:48,642 - bot - INFO - Saved message: chat=173, tg_id=10974, type=document, files=1
+2026-02-25T22:46:49.308596477Z [err]  2026-02-25 22:46:49,303 - aiogram.event - INFO - Update id=681946707 is handled. Duration 5787 ms by bot id=8319533037
+2026-02-25T22:46:49.308605002Z [err]  2026-02-25 22:46:49,303 - bot - INFO - Processed incoming update: 681946707
+2026-02-25T22:47:08.592435870Z [err]  2026-02-25 22:47:03,893 - bot - INFO - Added user 142 to group 5273094456
+2026-02-25T22:47:08.592440416Z [err]  2026-02-25 22:47:04,569 - bot - INFO - Saved message: chat=173, tg_id=10975, type=text, files=0
+2026-02-25T22:47:08.592444074Z [err]  2026-02-25 22:47:05,068 - aiogram.event - INFO - Update id=681946708 is handled. Duration 5610 ms by bot id=8319533037
+2026-02-25T22:47:08.592449017Z [err]  2026-02-25 22:47:05,068 - bot - INFO - Processed incoming update: 681946708
+2026-02-25T22:48:09.732702594Z [err]  2026-02-25 22:48:01,648 - bot - INFO - 📬 Received 1 notifications
+2026-02-25T22:48:09.732709756Z [err]  2026-02-25 22:48:01,650 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772059681.559640, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-25T22:48:09.732715976Z [err]  2026-02-25 22:48:01,650 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-25T22:48:09.732723895Z [err]  2026-02-25 22:48:01,817 - sender_bot - INFO - Sent text: tg_id=10976
+2026-02-25T22:48:49.144906023Z [err]  2026-02-25 22:48:43,571 - bot - INFO - Added user 142 to group 5273094456
+2026-02-25T22:48:49.144911036Z [err]  2026-02-25 22:48:44,281 - bot - INFO - Saved message: chat=173, tg_id=10977, type=document, files=1
+2026-02-25T22:48:49.144915233Z [err]  2026-02-25 22:48:44,797 - aiogram.event - INFO - Update id=681946709 is handled. Duration 5839 ms by bot id=8319533037
+2026-02-25T22:48:49.144919503Z [err]  2026-02-25 22:48:44,797 - bot - INFO - Processed incoming update: 681946709
+2026-02-25T22:49:38.394805962Z [err]  2026-02-25 22:49:37,858 - bot - INFO - No stuck messages found
+2026-02-25T22:49:58.533924587Z [err]  2026-02-25 22:49:55,500 - bot - INFO - 📬 Received 1 notifications
+2026-02-25T22:49:58.533965287Z [err]  2026-02-25 22:49:55,501 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772059795.410543, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-25T22:49:58.533970314Z [err]  2026-02-25 22:49:55,501 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-25T22:49:58.533974728Z [err]  2026-02-25 22:49:55,570 - sender_bot - INFO - Sent text: tg_id=10978
+2026-02-25T22:50:28.314797581Z [err]  2026-02-25 22:50:24,038 - bot - INFO - Added user 142 to group 5273094456
+2026-02-25T22:50:28.314802004Z [err]  2026-02-25 22:50:24,747 - bot - INFO - Saved message: chat=173, tg_id=10979, type=document, files=1
+2026-02-25T22:50:28.314807044Z [err]  2026-02-25 22:50:25,257 - aiogram.event - INFO - Update id=681946710 is handled. Duration 5840 ms by bot id=8319533037
+2026-02-25T22:50:28.314812037Z [err]  2026-02-25 22:50:25,257 - bot - INFO - Processed incoming update: 681946710
+2026-02-25T22:51:38.462695151Z [err]  2026-02-25 22:51:32,039 - bot - INFO - 📬 Received 1 notifications
+2026-02-25T22:51:38.462702588Z [err]  2026-02-25 22:51:32,041 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772059891.950373, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-25T22:51:38.462710788Z [err]  2026-02-25 22:51:32,041 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-25T22:51:38.462718796Z [err]  2026-02-25 22:51:32,092 - sender_bot - INFO - Sent text: tg_id=10980
+2026-02-25T22:51:58.755385176Z [err]  2026-02-25 22:51:56,442 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T22:51:58.755394578Z [err]  2026-02-25 22:51:57,155 - bot - INFO - Saved message: chat=173, tg_id=10981, type=text, files=0
+2026-02-25T22:51:58.755401570Z [err]  2026-02-25 22:51:57,673 - aiogram.event - INFO - Update id=681946711 is handled. Duration 6020 ms by bot id=8319533037
+2026-02-25T22:51:58.755407126Z [err]  2026-02-25 22:51:57,674 - bot - INFO - Processed incoming update: 681946711
+2026-02-25T22:52:38.815709867Z [err]  2026-02-25 22:52:35,894 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772059955.802977, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-25T22:52:38.815725421Z [err]  2026-02-25 22:52:35,894 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-25T22:52:38.815734416Z [err]  2026-02-25 22:52:35,945 - sender_bot - INFO - Sent text: tg_id=10982
+2026-02-25T22:52:38.815741656Z [err]  2026-02-25 22:52:38,566 - bot - INFO - No stuck messages found
+2026-02-25T22:52:38.815824286Z [err]  2026-02-25 22:52:35,892 - bot - INFO - 📬 Received 1 notifications
+2026-02-25T22:55:42.298734986Z [err]  2026-02-25 22:55:39,251 - bot - INFO - No stuck messages found
+2026-02-25T22:55:50.432294528Z [err]  2026-02-25 22:55:49,797 - bot - INFO - Added user 142 to group 5273094456
+2026-02-25T22:55:50.478824927Z [err]  2026-02-25 22:55:50,473 - bot - INFO - Saved message: chat=173, tg_id=10983, type=text, files=0
+2026-02-25T22:55:51.364191426Z [err]  2026-02-25 22:55:50,977 - aiogram.event - INFO - Update id=681946712 is handled. Duration 5761 ms by bot id=8319533037
+2026-02-25T22:55:51.364198039Z [err]  2026-02-25 22:55:50,977 - bot - INFO - Processed incoming update: 681946712
+2026-02-25T22:58:03.813295452Z [err]  2026-02-25 22:57:53,528 - bot - INFO - 📬 Received 1 notifications
+2026-02-25T22:58:03.813300213Z [err]  2026-02-25 22:57:53,531 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772060273.439345, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-25T22:58:03.813304619Z [err]  2026-02-25 22:57:53,531 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-25T22:58:03.813308981Z [err]  2026-02-25 22:57:53,582 - sender_bot - INFO - Sent text: tg_id=10984
+2026-02-25T22:58:23.541687574Z [err]  2026-02-25 22:58:18,918 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T22:58:23.541693150Z [err]  2026-02-25 22:58:19,596 - bot - INFO - Saved message: chat=173, tg_id=10985, type=text, files=0
+2026-02-25T22:58:23.541699135Z [err]  2026-02-25 22:58:20,110 - aiogram.event - INFO - Update id=681946713 is handled. Duration 5636 ms by bot id=8319533037
+2026-02-25T22:58:23.541705002Z [err]  2026-02-25 22:58:20,110 - bot - INFO - Processed incoming update: 681946713
+2026-02-25T22:58:25.591793508Z [err]  2026-02-25 22:58:24,548 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T22:58:25.591799472Z [err]  2026-02-25 22:58:25,224 - bot - INFO - Saved message: chat=173, tg_id=10986, type=text, files=0
+2026-02-25T22:58:26.383730309Z [err]  2026-02-25 22:58:25,713 - aiogram.event - INFO - Update id=681946714 is handled. Duration 5601 ms by bot id=8319533037
+2026-02-25T22:58:26.383739686Z [err]  2026-02-25 22:58:25,714 - bot - INFO - Processed incoming update: 681946714
+2026-02-25T22:58:30.732343739Z [err]  2026-02-25 22:58:30,142 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T22:58:30.833237694Z [err]  2026-02-25 22:58:30,820 - bot - INFO - Saved message: chat=173, tg_id=10987, type=document, files=1
+2026-02-25T22:58:32.002866129Z [err]  2026-02-25 22:58:31,309 - aiogram.event - INFO - Update id=681946715 is handled. Duration 5593 ms by bot id=8319533037
+2026-02-25T22:58:32.002870692Z [err]  2026-02-25 22:58:31,310 - bot - INFO - Processed incoming update: 681946715
+2026-02-25T22:58:35.739192334Z [err]  2026-02-25 22:58:35,557 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T22:58:36.727347187Z [err]  2026-02-25 22:58:36,231 - bot - INFO - Saved message: chat=173, tg_id=10988, type=text, files=0
+2026-02-25T22:58:36.753648141Z [err]  2026-02-25 22:58:36,740 - aiogram.event - INFO - Update id=681946716 is handled. Duration 5428 ms by bot id=8319533037
+2026-02-25T22:58:36.753656370Z [err]  2026-02-25 22:58:36,741 - bot - INFO - Processed incoming update: 681946716
+2026-02-25T22:58:41.026720514Z [err]  2026-02-25 22:58:41,021 - bot - INFO - No stuck messages found
+2026-02-25T22:58:41.886208208Z [err]  2026-02-25 22:58:41,877 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T22:58:43.062511464Z [err]  2026-02-25 22:58:42,584 - bot - INFO - Saved message: chat=173, tg_id=10989, type=document, files=1
+2026-02-25T22:58:44.300130435Z [err]  2026-02-25 22:58:43,095 - aiogram.event - INFO - Update id=681946717 is handled. Duration 6351 ms by bot id=8319533037
+2026-02-25T22:58:44.300136133Z [err]  2026-02-25 22:58:43,095 - bot - INFO - Processed incoming update: 681946717
+2026-02-25T22:58:48.362006729Z [err]  2026-02-25 22:58:47,820 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T22:58:49.341345041Z [err]  2026-02-25 22:58:48,521 - bot - INFO - Saved message: chat=173, tg_id=10990, type=document, files=1
+2026-02-25T22:58:49.341350715Z [err]  2026-02-25 22:58:49,027 - aiogram.event - INFO - Update id=681946718 is handled. Duration 5929 ms by bot id=8319533037
+2026-02-25T22:58:49.341357009Z [err]  2026-02-25 22:58:49,027 - bot - INFO - Processed incoming update: 681946718
+2026-02-25T22:58:54.104225767Z [err]  2026-02-25 22:58:53,592 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T22:58:54.312049405Z [err]  2026-02-25 22:58:54,294 - bot - INFO - Saved message: chat=173, tg_id=10991, type=text, files=0
+2026-02-25T22:58:55.126903023Z [err]  2026-02-25 22:58:54,799 - aiogram.event - INFO - Update id=681946719 is handled. Duration 5768 ms by bot id=8319533037
+2026-02-25T22:58:55.126911123Z [err]  2026-02-25 22:58:54,799 - bot - INFO - Processed incoming update: 681946719
+2026-02-25T22:58:59.230444533Z [err]  2026-02-25 22:58:59,204 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T22:59:00.363933318Z [err]  2026-02-25 22:58:59,903 - bot - INFO - Saved message: chat=173, tg_id=10992, type=text, files=0
+2026-02-25T22:59:01.438794450Z [err]  2026-02-25 22:59:00,557 - aiogram.event - INFO - Update id=681946720 is handled. Duration 5755 ms by bot id=8319533037
+2026-02-25T22:59:01.438803343Z [err]  2026-02-25 22:59:00,557 - bot - INFO - Processed incoming update: 681946720
+2026-02-25T22:59:05.130244115Z [err]  2026-02-25 22:59:05,123 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T22:59:06.241789602Z [err]  2026-02-25 22:59:05,823 - bot - INFO - Saved message: chat=173, tg_id=10993, type=text, files=0
+2026-02-25T22:59:06.322337589Z [err]  2026-02-25 22:59:06,317 - aiogram.event - INFO - Update id=681946721 is handled. Duration 5755 ms by bot id=8319533037
+2026-02-25T22:59:06.322347564Z [err]  2026-02-25 22:59:06,318 - bot - INFO - Processed incoming update: 681946721
+2026-02-25T22:59:11.198685176Z [err]  2026-02-25 22:59:10,876 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T22:59:12.196715864Z [err]  2026-02-25 22:59:11,578 - bot - INFO - Saved message: chat=173, tg_id=10994, type=text, files=0
+2026-02-25T22:59:12.196722140Z [err]  2026-02-25 22:59:12,084 - aiogram.event - INFO - Update id=681946722 is handled. Duration 5763 ms by bot id=8319533037
+2026-02-25T22:59:12.196726955Z [err]  2026-02-25 22:59:12,085 - bot - INFO - Processed incoming update: 681946722
+2026-02-25T22:59:17.259940922Z [err]  2026-02-25 22:59:16,965 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T22:59:18.203707140Z [err]  2026-02-25 22:59:17,665 - bot - INFO - Saved message: chat=173, tg_id=10995, type=text, files=0
+2026-02-25T22:59:18.203711796Z [err]  2026-02-25 22:59:18,160 - aiogram.event - INFO - Update id=681946723 is handled. Duration 6073 ms by bot id=8319533037
+2026-02-25T22:59:18.203717129Z [err]  2026-02-25 22:59:18,161 - bot - INFO - Processed incoming update: 681946723
+2026-02-25T22:59:22.579931340Z [err]  2026-02-25 22:59:22,575 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T22:59:23.275332694Z [err]  2026-02-25 22:59:22,750 - bot - INFO - Buffered media group 14176482354404562: msg_id=10996, type=document
+2026-02-25T22:59:23.275339933Z [err]  2026-02-25 22:59:22,750 - aiogram.event - INFO - Update id=681946724 is handled. Duration 4587 ms by bot id=8319533037
+2026-02-25T22:59:23.275347141Z [err]  2026-02-25 22:59:22,751 - bot - INFO - Processed incoming update: 681946724
+2026-02-25T22:59:27.453261318Z [err]  2026-02-25 22:59:27,305 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T22:59:27.488259254Z [err]  2026-02-25 22:59:27,480 - bot - INFO - Buffered media group 14176482354404562: msg_id=10997, type=document
+2026-02-25T22:59:27.488270690Z [err]  2026-02-25 22:59:27,480 - aiogram.event - INFO - Update id=681946725 is handled. Duration 4727 ms by bot id=8319533037
+2026-02-25T22:59:27.488277098Z [err]  2026-02-25 22:59:27,480 - bot - INFO - Flushing media group 14176482354404562: 2 files, type=document
+2026-02-25T22:59:27.488287804Z [err]  2026-02-25 22:59:27,480 - bot - INFO - Processed incoming update: 681946725
+2026-02-25T22:59:28.614442069Z [err]  2026-02-25 22:59:28,006 - bot - INFO - Saved message: chat=173, tg_id=10996, type=document, files=2
+2026-02-25T22:59:32.750162299Z [err]  2026-02-25 22:59:32,745 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T22:59:33.621022101Z [err]  2026-02-25 22:59:33,618 - bot - INFO - Late arrival for media group 14176482354404562: added file, total=3
+2026-02-25T22:59:33.621034042Z [err]  2026-02-25 22:59:33,619 - aiogram.event - INFO - Update id=681946726 is handled. Duration 5436 ms by bot id=8319533037
+2026-02-25T22:59:33.621039223Z [err]  2026-02-25 22:59:33,619 - bot - INFO - Processed incoming update: 681946726
+2026-02-25T22:59:38.667482879Z [err]  2026-02-25 22:59:38,180 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T22:59:39.622835970Z [err]  2026-02-25 22:59:39,053 - bot - INFO - Late arrival for media group 14176482354404562: added file, total=4
+2026-02-25T22:59:39.622843617Z [err]  2026-02-25 22:59:39,053 - aiogram.event - INFO - Update id=681946727 is handled. Duration 5432 ms by bot id=8319533037
+2026-02-25T22:59:39.622850599Z [err]  2026-02-25 22:59:39,053 - bot - INFO - Processed incoming update: 681946727
+2026-02-25T22:59:44.091088198Z [err]  2026-02-25 22:59:43,470 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T22:59:44.869489048Z [err]  2026-02-25 22:59:44,290 - bot - INFO - Late arrival for media group 14176482354404562: added file, total=5
+2026-02-25T22:59:44.869493689Z [err]  2026-02-25 22:59:44,290 - aiogram.event - INFO - Update id=681946728 is handled. Duration 5234 ms by bot id=8319533037
+2026-02-25T22:59:44.869498236Z [err]  2026-02-25 22:59:44,290 - bot - INFO - Processed incoming update: 681946728
+2026-02-25T22:59:49.039818356Z [err]  2026-02-25 22:59:48,612 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T22:59:49.749768385Z [err]  2026-02-25 22:59:49,268 - bot - INFO - Saved message: chat=173, tg_id=11001, type=text, files=0
+2026-02-25T22:59:49.762071286Z [err]  2026-02-25 22:59:49,760 - aiogram.event - INFO - Update id=681946729 is handled. Duration 5466 ms by bot id=8319533037
+2026-02-25T22:59:49.762075597Z [err]  2026-02-25 22:59:49,760 - bot - INFO - Processed incoming update: 681946729
+2026-02-25T22:59:55.040313744Z [err]  2026-02-25 22:59:54,323 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T22:59:55.040326033Z [err]  2026-02-25 22:59:54,981 - bot - INFO - Saved message: chat=173, tg_id=11002, type=text, files=0
+2026-02-25T22:59:55.910921526Z [err]  2026-02-25 22:59:55,617 - aiogram.event - INFO - Update id=681946730 is handled. Duration 5854 ms by bot id=8319533037
+2026-02-25T22:59:55.910928448Z [err]  2026-02-25 22:59:55,617 - bot - INFO - Processed incoming update: 681946730
+2026-02-25T23:00:00.140981882Z [err]  2026-02-25 23:00:00,134 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:00:01.550618163Z [err]  2026-02-25 23:00:00,300 - bot - INFO - Buffered media group 14176482354404586: msg_id=11003, type=document
+2026-02-25T23:00:01.550646641Z [err]  2026-02-25 23:00:00,300 - aiogram.event - INFO - Update id=681946731 is handled. Duration 4681 ms by bot id=8319533037
+2026-02-25T23:00:01.550665425Z [err]  2026-02-25 23:00:00,301 - bot - INFO - Processed incoming update: 681946731
+2026-02-25T23:00:04.616667272Z [err]  2026-02-25 23:00:04,531 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:00:05.744661640Z [err]  2026-02-25 23:00:04,695 - bot - INFO - Buffered media group 14176482354404586: msg_id=11004, type=document
+2026-02-25T23:00:05.744667984Z [err]  2026-02-25 23:00:04,695 - aiogram.event - INFO - Update id=681946732 is handled. Duration 4380 ms by bot id=8319533037
+2026-02-25T23:00:05.744673983Z [err]  2026-02-25 23:00:04,695 - bot - INFO - Flushing media group 14176482354404586: 2 files, type=document
+2026-02-25T23:00:05.744680715Z [err]  2026-02-25 23:00:04,695 - bot - INFO - Processed incoming update: 681946732
+2026-02-25T23:00:05.744687713Z [err]  2026-02-25 23:00:05,188 - bot - INFO - Saved message: chat=173, tg_id=11003, type=document, files=2
+2026-02-25T23:00:09.822748748Z [err]  2026-02-25 23:00:09,673 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:00:11.049338888Z [err]  2026-02-25 23:00:10,492 - bot - INFO - Late arrival for media group 14176482354404586: added file, total=3
+2026-02-25T23:00:11.049343643Z [err]  2026-02-25 23:00:10,493 - aiogram.event - INFO - Update id=681946733 is handled. Duration 5139 ms by bot id=8319533037
+2026-02-25T23:00:11.049348053Z [err]  2026-02-25 23:00:10,494 - bot - INFO - Processed incoming update: 681946733
+2026-02-25T23:00:14.983604720Z [err]  2026-02-25 23:00:14,819 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:00:16.249247724Z [err]  2026-02-25 23:00:15,639 - bot - INFO - Late arrival for media group 14176482354404586: added file, total=4
+2026-02-25T23:00:16.249254701Z [err]  2026-02-25 23:00:15,639 - aiogram.event - INFO - Update id=681946734 is handled. Duration 5141 ms by bot id=8319533037
+2026-02-25T23:00:16.249261383Z [err]  2026-02-25 23:00:15,640 - bot - INFO - Processed incoming update: 681946734
+2026-02-25T23:00:19.321025001Z [err]  2026-02-25 23:00:19,208 - bot - INFO - 📬 Received 1 notifications
+2026-02-25T23:00:19.321032739Z [err]  2026-02-25 23:00:19,210 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772060419.118380, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-25T23:00:19.321038937Z [err]  2026-02-25 23:00:19,210 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-25T23:00:20.287667358Z [err]  2026-02-25 23:00:19,352 - sender_bot - INFO - Sent text: tg_id=11031
+2026-02-25T23:00:20.287753628Z [err]  2026-02-25 23:00:19,957 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:00:21.245647732Z [err]  2026-02-25 23:00:21,088 - bot - INFO - Late arrival for media group 14176482354404586: added file, total=5
+2026-02-25T23:00:21.245654727Z [err]  2026-02-25 23:00:21,088 - aiogram.event - INFO - Update id=681946735 is handled. Duration 5446 ms by bot id=8319533037
+2026-02-25T23:00:21.245661374Z [err]  2026-02-25 23:00:21,088 - bot - INFO - Processed incoming update: 681946735
+2026-02-25T23:00:26.309230551Z [err]  2026-02-25 23:00:25,637 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:00:27.202912494Z [err]  2026-02-25 23:00:26,511 - bot - INFO - Late arrival for media group 14176482354404586: added file, total=6
+2026-02-25T23:00:27.202921727Z [err]  2026-02-25 23:00:26,511 - aiogram.event - INFO - Update id=681946736 is handled. Duration 5412 ms by bot id=8319533037
+2026-02-25T23:00:27.202930139Z [err]  2026-02-25 23:00:26,513 - bot - INFO - Processed incoming update: 681946736
+2026-02-25T23:00:31.520098873Z [err]  2026-02-25 23:00:31,078 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:00:32.412318885Z [err]  2026-02-25 23:00:31,952 - bot - INFO - Late arrival for media group 14176482354404586: added file, total=7
+2026-02-25T23:00:32.412324281Z [err]  2026-02-25 23:00:31,953 - aiogram.event - INFO - Update id=681946737 is handled. Duration 5438 ms by bot id=8319533037
+2026-02-25T23:00:32.412369017Z [err]  2026-02-25 23:00:31,953 - bot - INFO - Processed incoming update: 681946737
+2026-02-25T23:00:36.724932873Z [err]  2026-02-25 23:00:36,529 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:00:37.836559267Z [err]  2026-02-25 23:00:37,404 - aiogram.event - INFO - Update id=681946738 is handled. Duration 5445 ms by bot id=8319533037
+2026-02-25T23:00:37.836568736Z [err]  2026-02-25 23:00:37,404 - bot - INFO - Processed incoming update: 681946738
+2026-02-25T23:00:37.837073416Z [err]  2026-02-25 23:00:37,404 - bot - INFO - Late arrival for media group 14176482354404586: added file, total=8
+2026-02-25T23:00:42.009325433Z [err]  2026-02-25 23:00:41,976 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:00:43.042717600Z [err]  2026-02-25 23:00:42,850 - bot - INFO - Late arrival for media group 14176482354404586: added file, total=9
+2026-02-25T23:00:43.042724642Z [err]  2026-02-25 23:00:42,851 - aiogram.event - INFO - Update id=681946739 is handled. Duration 5437 ms by bot id=8319533037
+2026-02-25T23:00:43.042731147Z [err]  2026-02-25 23:00:42,851 - bot - INFO - Processed incoming update: 681946739
+2026-02-25T23:00:47.378416618Z [err]  2026-02-25 23:00:47,266 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:00:48.255443339Z [err]  2026-02-25 23:00:48,140 - bot - INFO - Late arrival for media group 14176482354404586: added file, total=10
+2026-02-25T23:00:48.255453889Z [err]  2026-02-25 23:00:48,140 - aiogram.event - INFO - Update id=681946740 is handled. Duration 5286 ms by bot id=8319533037
+2026-02-25T23:00:48.255465421Z [err]  2026-02-25 23:00:48,142 - bot - INFO - Processed incoming update: 681946740
+2026-02-25T23:00:53.214365226Z [err]  2026-02-25 23:00:52,711 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:00:54.244352028Z [err]  2026-02-25 23:00:53,424 - bot - INFO - Saved message: chat=173, tg_id=11013, type=text, files=0
+2026-02-25T23:00:54.244359335Z [err]  2026-02-25 23:00:53,944 - aiogram.event - INFO - Update id=681946741 is handled. Duration 5797 ms by bot id=8319533037
+2026-02-25T23:00:54.244365375Z [err]  2026-02-25 23:00:53,950 - bot - INFO - Processed incoming update: 681946741
+2026-02-25T23:00:59.564787986Z [err]  2026-02-25 23:00:58,526 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:00:59.564794537Z [err]  2026-02-25 23:00:59,229 - bot - INFO - Saved message: chat=173, tg_id=11014, type=text, files=0
+2026-02-25T23:00:59.564799803Z [err]  2026-02-25 23:00:59,298 - bot - ERROR - ❌ Media get error: 
+2026-02-25T23:00:59.564808251Z [err]  Traceback (most recent call last):
+2026-02-25T23:00:59.564815715Z [err]    File "/app/bot.py", line 1013, in api_media_get
+2026-02-25T23:00:59.564822489Z [err]      cached_file = run_async(download())
+2026-02-25T23:00:59.564828648Z [err]                    ^^^^^^^^^^^^^^^^^^^^^
+2026-02-25T23:00:59.564834636Z [err]    File "/app/bot.py", line 121, in run_async
+2026-02-25T23:00:59.564840536Z [err]      return future.result(timeout=timeout)
+2026-02-25T23:00:59.564846347Z [err]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-02-25T23:00:59.564852837Z [err]    File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 458, in result
+2026-02-25T23:00:59.564859263Z [err]      raise TimeoutError()
+2026-02-25T23:00:59.564865516Z [err]  TimeoutError
+2026-02-25T23:00:59.564870776Z [err]  2026-02-25 23:00:59,456 - bot - ERROR - ❌ Media get error: 
+2026-02-25T23:00:59.564876513Z [err]  Traceback (most recent call last):
+2026-02-25T23:00:59.564883861Z [err]    File "/app/bot.py", line 1013, in api_media_get
+2026-02-25T23:00:59.564890663Z [err]      cached_file = run_async(download())
+2026-02-25T23:00:59.564896536Z [err]                    ^^^^^^^^^^^^^^^^^^^^^
+2026-02-25T23:00:59.564903235Z [err]    File "/app/bot.py", line 121, in run_async
+2026-02-25T23:00:59.564908867Z [err]      return future.result(timeout=timeout)
+2026-02-25T23:00:59.564913939Z [err]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-02-25T23:00:59.564920767Z [err]    File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 458, in result
+2026-02-25T23:01:00.380039964Z [err]      raise TimeoutError()
+2026-02-25T23:01:00.380046505Z [err]  TimeoutError
+2026-02-25T23:01:00.380053487Z [err]  2026-02-25 23:00:59,727 - aiogram.event - INFO - Update id=681946742 is handled. Duration 5763 ms by bot id=8319533037
+2026-02-25T23:01:00.380304852Z [err]  2026-02-25 23:00:59,732 - bot - INFO - Processed incoming update: 681946742
+2026-02-25T23:01:00.380310597Z [err]  2026-02-25 23:00:59,763 - bot - ERROR - ❌ Media get error: 
+2026-02-25T23:01:00.380315225Z [err]  Traceback (most recent call last):
+2026-02-25T23:01:00.380320086Z [err]    File "/app/bot.py", line 1013, in api_media_get
+2026-02-25T23:01:00.380324160Z [err]      cached_file = run_async(download())
+2026-02-25T23:01:00.380328557Z [err]                    ^^^^^^^^^^^^^^^^^^^^^
+2026-02-25T23:01:00.380332381Z [err]    File "/app/bot.py", line 121, in run_async
+2026-02-25T23:01:00.380336131Z [err]      return future.result(timeout=timeout)
+2026-02-25T23:01:00.380340356Z [err]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-02-25T23:01:00.380345984Z [err]    File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 458, in result
+2026-02-25T23:01:00.380350010Z [err]      raise TimeoutError()
+2026-02-25T23:01:00.380353979Z [err]  TimeoutError
+2026-02-25T23:01:04.556102859Z [err]  2026-02-25 23:01:04,344 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:01:04.556111101Z [err]  2026-02-25 23:01:04,520 - bot - INFO - Buffered media group 14176482354404610: msg_id=11015, type=document
+2026-02-25T23:01:04.556118634Z [err]  2026-02-25 23:01:04,520 - aiogram.event - INFO - Update id=681946743 is handled. Duration 4777 ms by bot id=8319533037
+2026-02-25T23:01:04.556126734Z [err]  2026-02-25 23:01:04,527 - bot - INFO - Processed incoming update: 681946743
+2026-02-25T23:01:09.404497946Z [err]  2026-02-25 23:01:08,997 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:01:09.404505413Z [err]  2026-02-25 23:01:09,172 - bot - INFO - Buffered media group 14176482354404610: msg_id=11016, type=document
+2026-02-25T23:01:09.404512077Z [err]  2026-02-25 23:01:09,172 - aiogram.event - INFO - Update id=681946744 is handled. Duration 4633 ms by bot id=8319533037
+2026-02-25T23:01:09.404518286Z [err]  2026-02-25 23:01:09,172 - bot - INFO - Flushing media group 14176482354404610: 2 files, type=document
+2026-02-25T23:01:09.404524724Z [err]  2026-02-25 23:01:09,172 - bot - INFO - Processed incoming update: 681946744
+2026-02-25T23:01:10.539654528Z [err]  2026-02-25 23:01:09,702 - bot - INFO - Saved message: chat=173, tg_id=11015, type=document, files=2
+2026-02-25T23:01:14.710997203Z [err]  2026-02-25 23:01:14,443 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:01:15.751256952Z [err]  2026-02-25 23:01:15,321 - bot - INFO - Late arrival for media group 14176482354404610: added file, total=3
+2026-02-25T23:01:15.751277322Z [err]  2026-02-25 23:01:15,321 - aiogram.event - INFO - Update id=681946745 is handled. Duration 5443 ms by bot id=8319533037
+2026-02-25T23:01:15.751284796Z [err]  2026-02-25 23:01:15,322 - bot - INFO - Processed incoming update: 681946745
+2026-02-25T23:01:19.919927343Z [err]  2026-02-25 23:01:19,889 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:01:20.983899870Z [err]  2026-02-25 23:01:20,766 - bot - INFO - Processed incoming update: 681946746
+2026-02-25T23:01:20.983950833Z [err]  2026-02-25 23:01:20,764 - bot - INFO - Late arrival for media group 14176482354404610: added file, total=4
+2026-02-25T23:01:20.983958807Z [err]  2026-02-25 23:01:20,764 - aiogram.event - INFO - Update id=681946746 is handled. Duration 5440 ms by bot id=8319533037
+2026-02-25T23:01:25.897774724Z [err]  2026-02-25 23:01:25,200 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:01:26.085045980Z [err]  2026-02-25 23:01:26,076 - bot - INFO - Late arrival for media group 14176482354404610: added file, total=5
+2026-02-25T23:01:26.085053413Z [err]  2026-02-25 23:01:26,076 - aiogram.event - INFO - Update id=681946747 is handled. Duration 5307 ms by bot id=8319533037
+2026-02-25T23:01:26.085061862Z [err]  2026-02-25 23:01:26,077 - bot - INFO - Processed incoming update: 681946747
+2026-02-25T23:01:30.974083966Z [err]  2026-02-25 23:01:30,654 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:01:32.161477250Z [err]  2026-02-25 23:01:31,528 - bot - INFO - Late arrival for media group 14176482354404610: added file, total=6
+2026-02-25T23:01:32.161486099Z [err]  2026-02-25 23:01:31,528 - aiogram.event - INFO - Update id=681946748 is handled. Duration 5448 ms by bot id=8319533037
+2026-02-25T23:01:32.161495453Z [err]  2026-02-25 23:01:31,531 - bot - INFO - Processed incoming update: 681946748
+2026-02-25T23:01:36.028871459Z [err]  2026-02-25 23:01:35,939 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:01:37.096087414Z [err]  2026-02-25 23:01:36,814 - bot - INFO - Late arrival for media group 14176482354404610: added file, total=7
+2026-02-25T23:01:37.096092757Z [err]  2026-02-25 23:01:36,814 - aiogram.event - INFO - Update id=681946749 is handled. Duration 5281 ms by bot id=8319533037
+2026-02-25T23:01:37.096098419Z [err]  2026-02-25 23:01:36,815 - bot - INFO - Processed incoming update: 681946749
+2026-02-25T23:01:42.303554955Z [err]  2026-02-25 23:01:41,374 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:01:43.145531108Z [err]  2026-02-25 23:01:42,850 - bot - INFO - No stuck messages found
+2026-02-25T23:01:43.145547123Z [err]  2026-02-25 23:01:43,030 - bot - INFO - Late arrival for media group 14176482354404610: added file, total=8
+2026-02-25T23:01:43.145557637Z [err]  2026-02-25 23:01:43,030 - aiogram.event - INFO - Update id=681946750 is handled. Duration 6213 ms by bot id=8319533037
+2026-02-25T23:01:43.145568888Z [err]  2026-02-25 23:01:43,031 - bot - INFO - Processed incoming update: 681946750
+2026-02-25T23:01:48.229180565Z [err]  2026-02-25 23:01:47,604 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:01:49.090782481Z [err]  2026-02-25 23:01:48,466 - bot - INFO - Late arrival for media group 14176482354404610: added file, total=9
+2026-02-25T23:01:49.090793881Z [err]  2026-02-25 23:01:48,466 - aiogram.event - INFO - Update id=681946751 is handled. Duration 5431 ms by bot id=8319533037
+2026-02-25T23:01:49.090803152Z [err]  2026-02-25 23:01:48,466 - bot - INFO - Processed incoming update: 681946751
+2026-02-25T23:01:53.278974947Z [err]  2026-02-25 23:01:52,963 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:01:54.181110231Z [err]                    ^^^^^^^^^^^^^^^^^^^^^
+2026-02-25T23:01:54.181122363Z [err]    File "/app/bot.py", line 121, in run_async
+2026-02-25T23:01:54.181130372Z [err]      return future.result(timeout=timeout)
+2026-02-25T23:01:54.181138189Z [err]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-02-25T23:01:54.181146301Z [err]    File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 458, in result
+2026-02-25T23:01:54.181157764Z [err]      raise TimeoutError()
+2026-02-25T23:01:54.181169151Z [err]  TimeoutError
+2026-02-25T23:01:54.181391708Z [err]  2026-02-25 23:01:53,663 - bot - INFO - Saved message: chat=173, tg_id=11024, type=text, files=0
+2026-02-25T23:01:54.181397802Z [err]  2026-02-25 23:01:53,819 - bot - ERROR - ❌ Media get error: 
+2026-02-25T23:01:54.181430278Z [err]  Traceback (most recent call last):
+2026-02-25T23:01:54.181437762Z [err]    File "/app/bot.py", line 1013, in api_media_get
+2026-02-25T23:01:54.181444928Z [err]      cached_file = run_async(download())
+2026-02-25T23:01:54.183861432Z [err]  2026-02-25 23:01:54,179 - aiogram.event - INFO - Update id=681946752 is handled. Duration 5710 ms by bot id=8319533037
+2026-02-25T23:01:54.183866677Z [err]  2026-02-25 23:01:54,180 - bot - INFO - Processed incoming update: 681946752
+2026-02-25T23:01:59.103696213Z [err]  2026-02-25 23:01:58,716 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:02:00.160019070Z [err]  2026-02-25 23:01:59,406 - bot - INFO - Saved message: chat=173, tg_id=11025, type=text, files=0
+2026-02-25T23:02:00.160026926Z [err]  2026-02-25 23:01:59,906 - aiogram.event - INFO - Update id=681946753 is handled. Duration 5693 ms by bot id=8319533037
+2026-02-25T23:02:00.160034006Z [err]  2026-02-25 23:01:59,906 - bot - INFO - Processed incoming update: 681946753
+2026-02-25T23:02:04.411001522Z [err]  2026-02-25 23:02:04,409 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:02:05.210035580Z [err]  2026-02-25 23:02:04,581 - bot - INFO - Buffered media group 14176482354404634: msg_id=11026, type=document
+2026-02-25T23:02:05.210046291Z [err]  2026-02-25 23:02:04,581 - aiogram.event - INFO - Update id=681946754 is handled. Duration 4672 ms by bot id=8319533037
+2026-02-25T23:02:05.210054184Z [err]  2026-02-25 23:02:04,581 - bot - INFO - Processed incoming update: 681946754
+2026-02-25T23:02:09.327051095Z [err]  2026-02-25 23:02:09,110 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:02:09.327059073Z [err]  2026-02-25 23:02:09,283 - bot - INFO - Buffered media group 14176482354404634: msg_id=11027, type=document
+2026-02-25T23:02:09.327139300Z [err]  2026-02-25 23:02:09,283 - aiogram.event - INFO - Update id=681946755 is handled. Duration 4699 ms by bot id=8319533037
+2026-02-25T23:02:09.327148782Z [err]  2026-02-25 23:02:09,285 - bot - INFO - Processed incoming update: 681946755
+2026-02-25T23:02:09.327155648Z [err]  2026-02-25 23:02:09,286 - bot - INFO - Flushing media group 14176482354404634: 2 files, type=document
+2026-02-25T23:02:10.517705209Z [err]  2026-02-25 23:02:09,804 - bot - INFO - Saved message: chat=173, tg_id=11026, type=document, files=2
+2026-02-25T23:02:14.506832332Z [err]  2026-02-25 23:02:14,480 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:02:15.319055532Z [err]  2026-02-25 23:02:15,170 - bot - INFO - Saved message: chat=173, tg_id=11028, type=text, files=0
+2026-02-25T23:02:16.250464334Z [err]  2026-02-25 23:02:15,666 - aiogram.event - INFO - Update id=681946756 is handled. Duration 5683 ms by bot id=8319533037
+2026-02-25T23:02:16.250470373Z [err]  2026-02-25 23:02:15,667 - bot - INFO - Processed incoming update: 681946756
+2026-02-25T23:02:20.455030104Z [err]  2026-02-25 23:02:20,179 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:02:21.442517483Z [err]  2026-02-25 23:02:20,869 - bot - INFO - Saved message: chat=173, tg_id=11029, type=document, files=1
+2026-02-25T23:02:21.442537369Z [err]  2026-02-25 23:02:21,367 - aiogram.event - INFO - Update id=681946757 is handled. Duration 5697 ms by bot id=8319533037
+2026-02-25T23:02:21.442550073Z [err]  2026-02-25 23:02:21,367 - bot - INFO - Processed incoming update: 681946757
+2026-02-25T23:02:26.411065311Z [err]  2026-02-25 23:02:25,866 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:02:26.573169094Z [err]  2026-02-25 23:02:26,557 - bot - INFO - Saved message: chat=173, tg_id=11030, type=document, files=1
+2026-02-25T23:02:27.502992825Z [err]  2026-02-25 23:02:27,056 - aiogram.event - INFO - Update id=681946758 is handled. Duration 5687 ms by bot id=8319533037
+2026-02-25T23:02:27.502997076Z [err]  2026-02-25 23:02:27,057 - bot - INFO - Processed incoming update: 681946758
+2026-02-25T23:03:37.686719784Z [err]  2026-02-25 23:03:27,600 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772060607.507759, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-25T23:03:37.686733255Z [err]  2026-02-25 23:03:27,600 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-25T23:03:37.686741345Z [err]  2026-02-25 23:03:27,650 - sender_bot - INFO - Sent text: tg_id=11032
+2026-02-25T23:03:37.686869725Z [err]  2026-02-25 23:03:27,599 - bot - INFO - 📬 Received 1 notifications
+2026-02-25T23:03:45.770110351Z [err]  2026-02-25 23:03:45,338 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:03:46.867570308Z [err]  2026-02-25 23:03:46,027 - bot - INFO - Saved message: chat=173, tg_id=11033, type=document, files=1
+2026-02-25T23:03:46.867578223Z [err]  2026-02-25 23:03:46,539 - aiogram.event - INFO - Update id=681946759 is handled. Duration 5717 ms by bot id=8319533037
+2026-02-25T23:03:46.867586816Z [err]  2026-02-25 23:03:46,540 - bot - INFO - Processed incoming update: 681946759
+2026-02-25T23:03:51.037331981Z [err]  2026-02-25 23:03:51,034 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:03:51.778275365Z [err]  2026-02-25 23:03:51,724 - bot - INFO - Saved message: chat=173, tg_id=11034, type=document, files=1
+2026-02-25T23:03:52.830205313Z [err]  2026-02-25 23:03:52,223 - aiogram.event - INFO - Update id=681946760 is handled. Duration 5681 ms by bot id=8319533037
+2026-02-25T23:03:52.830213706Z [err]  2026-02-25 23:03:52,224 - bot - INFO - Processed incoming update: 681946760
+2026-02-25T23:03:56.805324731Z [err]  2026-02-25 23:03:56,725 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:03:57.802821067Z [err]  2026-02-25 23:03:57,413 - bot - INFO - Saved message: chat=173, tg_id=11035, type=document, files=1
+2026-02-25T23:03:57.930922635Z [err]  2026-02-25 23:03:57,911 - aiogram.event - INFO - Update id=681946761 is handled. Duration 5686 ms by bot id=8319533037
+2026-02-25T23:03:57.930931709Z [err]  2026-02-25 23:03:57,912 - bot - INFO - Processed incoming update: 681946761
+2026-02-25T23:04:02.807605684Z [err]  2026-02-25 23:04:02,430 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:04:03.128692111Z [err]  2026-02-25 23:04:03,120 - bot - INFO - Saved message: chat=173, tg_id=11036, type=document, files=1
+2026-02-25T23:04:03.943500472Z [err]  2026-02-25 23:04:03,632 - aiogram.event - INFO - Update id=681946762 is handled. Duration 5718 ms by bot id=8319533037
+2026-02-25T23:04:03.943505851Z [err]  2026-02-25 23:04:03,633 - bot - INFO - Processed incoming update: 681946762
+2026-02-25T23:04:08.168725456Z [err]  2026-02-25 23:04:08,152 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:04:09.063034849Z [err]  2026-02-25 23:04:08,842 - bot - INFO - Saved message: chat=173, tg_id=11037, type=document, files=1
+2026-02-25T23:04:09.903333818Z [err]  2026-02-25 23:04:09,338 - aiogram.event - INFO - Update id=681946763 is handled. Duration 5703 ms by bot id=8319533037
+2026-02-25T23:04:09.903348276Z [err]  2026-02-25 23:04:09,339 - bot - INFO - Processed incoming update: 681946763
+2026-02-25T23:04:14.416114829Z [err]  2026-02-25 23:04:13,838 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:04:15.324283346Z [err]  2026-02-25 23:04:14,527 - bot - INFO - Saved message: chat=173, tg_id=11038, type=document, files=1
+2026-02-25T23:04:15.324289684Z [err]  2026-02-25 23:04:15,026 - aiogram.event - INFO - Update id=681946764 is handled. Duration 5684 ms by bot id=8319533037
+2026-02-25T23:04:15.324295741Z [err]  2026-02-25 23:04:15,026 - bot - INFO - Processed incoming update: 681946764
+2026-02-25T23:04:20.252571498Z [err]  2026-02-25 23:04:19,693 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:04:20.383995158Z [err]  2026-02-25 23:04:20,382 - bot - INFO - Saved message: chat=173, tg_id=11039, type=document, files=1
+2026-02-25T23:04:21.150031496Z [err]  2026-02-25 23:04:20,880 - aiogram.event - INFO - Update id=681946765 is handled. Duration 5851 ms by bot id=8319533037
+2026-02-25T23:04:21.150036512Z [err]  2026-02-25 23:04:20,880 - bot - INFO - Processed incoming update: 681946765
+2026-02-25T23:04:25.434883755Z [err]  2026-02-25 23:04:25,387 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:04:26.287575737Z [err]  2026-02-25 23:04:26,078 - bot - INFO - Saved message: chat=173, tg_id=11040, type=text, files=0
+2026-02-25T23:04:27.206326217Z [err]  2026-02-25 23:04:26,574 - bot - INFO - Processed incoming update: 681946766
+2026-02-25T23:04:27.206571565Z [err]  2026-02-25 23:04:26,574 - aiogram.event - INFO - Update id=681946766 is handled. Duration 5692 ms by bot id=8319533037
+2026-02-25T23:04:31.979511387Z [err]  2026-02-25 23:04:31,083 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:04:31.979518471Z [err]  2026-02-25 23:04:31,773 - bot - INFO - Saved message: chat=173, tg_id=11041, type=text, files=0
+2026-02-25T23:04:32.798532733Z [err]  2026-02-25 23:04:32,288 - aiogram.event - INFO - Update id=681946767 is handled. Duration 5712 ms by bot id=8319533037
+2026-02-25T23:04:32.798537013Z [err]  2026-02-25 23:04:32,289 - bot - INFO - Processed incoming update: 681946767
+2026-02-25T23:04:36.897741824Z [err]  2026-02-25 23:04:36,789 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:04:37.854049234Z [err]  2026-02-25 23:04:37,478 - bot - INFO - Saved message: chat=173, tg_id=11042, type=text, files=0
+2026-02-25T23:04:37.985568111Z [err]  2026-02-25 23:04:37,979 - aiogram.event - INFO - Update id=681946768 is handled. Duration 5688 ms by bot id=8319533037
+2026-02-25T23:04:37.985577942Z [err]  2026-02-25 23:04:37,980 - bot - INFO - Processed incoming update: 681946768
+2026-02-25T23:04:43.122363141Z [err]  2026-02-25 23:04:42,478 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:04:43.175115831Z [err]  2026-02-25 23:04:43,170 - bot - INFO - Saved message: chat=173, tg_id=11043, type=text, files=0
+2026-02-25T23:04:45.183606891Z [err]  2026-02-25 23:04:44,420 - aiogram.event - INFO - Update id=681946769 is handled. Duration 6437 ms by bot id=8319533037
+2026-02-25T23:04:45.183614360Z [err]  2026-02-25 23:04:44,420 - bot - INFO - Processed incoming update: 681946769
+2026-02-25T23:04:45.183621315Z [err]  2026-02-25 23:04:44,616 - bot - INFO - No stuck messages found
+2026-02-25T23:04:49.073403209Z [err]  2026-02-25 23:04:48,803 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:04:50.100600428Z [err]  2026-02-25 23:04:49,508 - bot - INFO - Saved message: chat=173, tg_id=11044, type=document, files=1
+2026-02-25T23:04:50.100611042Z [err]  2026-02-25 23:04:50,007 - aiogram.event - INFO - Update id=681946770 is handled. Duration 5584 ms by bot id=8319533037
+2026-02-25T23:04:50.100618883Z [err]  2026-02-25 23:04:50,008 - bot - INFO - Processed incoming update: 681946770
+2026-02-25T23:04:55.285493743Z [err]  2026-02-25 23:04:54,544 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:04:55.285501127Z [err]  2026-02-25 23:04:55,240 - bot - INFO - Saved message: chat=173, tg_id=11045, type=text, files=0
+2026-02-25T23:04:56.267530518Z [err]  2026-02-25 23:04:55,751 - aiogram.event - INFO - Update id=681946771 is handled. Duration 5738 ms by bot id=8319533037
+2026-02-25T23:04:56.267536929Z [err]  2026-02-25 23:04:55,752 - bot - INFO - Processed incoming update: 681946771
+2026-02-25T23:05:00.870177753Z [err]  2026-02-25 23:05:00,303 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:05:01.932105560Z [err]  2026-02-25 23:05:00,999 - bot - INFO - Saved message: chat=173, tg_id=11046, type=text, files=0
+2026-02-25T23:05:01.932112295Z [err]  2026-02-25 23:05:01,501 - aiogram.event - INFO - Update id=681946772 is handled. Duration 5747 ms by bot id=8319533037
+2026-02-25T23:05:01.932119095Z [err]  2026-02-25 23:05:01,502 - bot - INFO - Processed incoming update: 681946772
+2026-02-25T23:05:05.978003097Z [err]  2026-02-25 23:05:05,891 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:05:06.820806808Z [err]  2026-02-25 23:05:06,586 - bot - INFO - Saved message: chat=173, tg_id=11047, type=text, files=0
+2026-02-25T23:05:07.984221793Z [err]  2026-02-25 23:05:07,103 - aiogram.event - INFO - Update id=681946773 is handled. Duration 5594 ms by bot id=8319533037
+2026-02-25T23:05:07.984229186Z [err]  2026-02-25 23:05:07,103 - bot - INFO - Processed incoming update: 681946773
+2026-02-25T23:05:12.034391041Z [err]  2026-02-25 23:05:11,639 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:05:12.904570172Z [err]  2026-02-25 23:05:12,337 - bot - INFO - Saved message: chat=173, tg_id=11048, type=text, files=0
+2026-02-25T23:05:12.904577308Z [err]  2026-02-25 23:05:12,836 - aiogram.event - INFO - Update id=681946774 is handled. Duration 5731 ms by bot id=8319533037
+2026-02-25T23:05:12.904585198Z [err]  2026-02-25 23:05:12,837 - bot - INFO - Processed incoming update: 681946774
+2026-02-25T23:05:18.098006628Z [err]  2026-02-25 23:05:17,395 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:05:18.098015790Z [err]  2026-02-25 23:05:18,092 - bot - INFO - Saved message: chat=173, tg_id=11049, type=text, files=0
+2026-02-25T23:05:19.000638408Z [err]  2026-02-25 23:05:18,601 - aiogram.event - INFO - Update id=681946775 is handled. Duration 5762 ms by bot id=8319533037
+2026-02-25T23:05:19.000803852Z [err]  2026-02-25 23:05:18,601 - bot - INFO - Processed incoming update: 681946775
+2026-02-25T23:05:22.984352621Z [err]  2026-02-25 23:05:22,981 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:05:24.068035816Z [err]  2026-02-25 23:05:23,676 - bot - INFO - Saved message: chat=173, tg_id=11050, type=text, files=0
+2026-02-25T23:05:24.174653868Z [err]  2026-02-25 23:05:24,168 - aiogram.event - INFO - Update id=681946776 is handled. Duration 5564 ms by bot id=8319533037
+2026-02-25T23:05:24.174663834Z [err]  2026-02-25 23:05:24,168 - bot - INFO - Processed incoming update: 681946776
+2026-02-25T23:05:29.597829707Z [err]  2026-02-25 23:05:28,703 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:05:29.597837835Z [err]  2026-02-25 23:05:29,400 - bot - INFO - Saved message: chat=173, tg_id=11051, type=text, files=0
+2026-02-25T23:05:30.646924106Z [err]  2026-02-25 23:05:29,906 - aiogram.event - INFO - Update id=681946777 is handled. Duration 5735 ms by bot id=8319533037
+2026-02-25T23:05:30.646929958Z [err]  2026-02-25 23:05:29,906 - bot - INFO - Processed incoming update: 681946777
+2026-02-25T23:05:34.604440761Z [err]  2026-02-25 23:05:34,601 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:05:35.708578704Z [err]  2026-02-25 23:05:35,296 - bot - INFO - Saved message: chat=173, tg_id=11052, type=text, files=0
+2026-02-25T23:05:36.826728820Z [err]  2026-02-25 23:05:35,810 - aiogram.event - INFO - Update id=681946778 is handled. Duration 5902 ms by bot id=8319533037
+2026-02-25T23:05:36.826736883Z [err]  2026-02-25 23:05:35,810 - bot - INFO - Processed incoming update: 681946778
+2026-02-25T23:05:40.568655853Z [err]  2026-02-25 23:05:40,350 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:05:41.687368662Z [err]  2026-02-25 23:05:41,045 - bot - INFO - Saved message: chat=173, tg_id=11053, type=text, files=0
+2026-02-25T23:05:41.687373123Z [err]  2026-02-25 23:05:41,545 - aiogram.event - INFO - Update id=681946779 is handled. Duration 5732 ms by bot id=8319533037
+2026-02-25T23:05:41.687378644Z [err]  2026-02-25 23:05:41,545 - bot - INFO - Processed incoming update: 681946779
+2026-02-25T23:05:46.801065016Z [err]  2026-02-25 23:05:46,077 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:05:46.801070435Z [err]  2026-02-25 23:05:46,774 - bot - INFO - Saved message: chat=173, tg_id=11054, type=text, files=0
+2026-02-25T23:05:47.696806451Z [err]  2026-02-25 23:05:47,269 - aiogram.event - INFO - Update id=681946780 is handled. Duration 5722 ms by bot id=8319533037
+2026-02-25T23:05:47.696811822Z [err]  2026-02-25 23:05:47,271 - bot - INFO - Processed incoming update: 681946780
+2026-02-25T23:05:52.698543742Z [err]  2026-02-25 23:05:51,874 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:05:52.698551002Z [err]  2026-02-25 23:05:52,573 - bot - INFO - Saved message: chat=173, tg_id=11055, type=text, files=0
+2026-02-25T23:05:53.728304891Z [err]  2026-02-25 23:05:53,072 - aiogram.event - INFO - Update id=681946781 is handled. Duration 5798 ms by bot id=8319533037
+2026-02-25T23:05:53.728309504Z [err]  2026-02-25 23:05:53,072 - bot - INFO - Processed incoming update: 681946781
+2026-02-25T23:05:57.884397550Z [err]  2026-02-25 23:05:57,450 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:05:58.930792010Z [err]  2026-02-25 23:05:58,147 - bot - INFO - Saved message: chat=173, tg_id=11056, type=text, files=0
+2026-02-25T23:05:58.930802310Z [err]  2026-02-25 23:05:58,649 - aiogram.event - INFO - Update id=681946782 is handled. Duration 5574 ms by bot id=8319533037
+2026-02-25T23:05:58.930809721Z [err]  2026-02-25 23:05:58,649 - bot - INFO - Processed incoming update: 681946782
+2026-02-25T23:06:03.786808043Z [err]  2026-02-25 23:06:03,188 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:06:03.886116219Z [err]  2026-02-25 23:06:03,884 - bot - INFO - Saved message: chat=173, tg_id=11057, type=text, files=0
+2026-02-25T23:06:04.815395695Z [err]  2026-02-25 23:06:04,390 - aiogram.event - INFO - Update id=681946783 is handled. Duration 5739 ms by bot id=8319533037
+2026-02-25T23:06:04.815401697Z [err]  2026-02-25 23:06:04,391 - bot - INFO - Processed incoming update: 681946783
+2026-02-25T23:06:09.210656768Z [err]  2026-02-25 23:06:08,772 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:06:10.153751851Z [err]  2026-02-25 23:06:09,476 - bot - INFO - Saved message: chat=173, tg_id=11058, type=text, files=0
+2026-02-25T23:06:10.153761713Z [err]  2026-02-25 23:06:09,976 - aiogram.event - INFO - Update id=681946784 is handled. Duration 5583 ms by bot id=8319533037
+2026-02-25T23:06:10.153768125Z [err]  2026-02-25 23:06:09,976 - bot - INFO - Processed incoming update: 681946784
+2026-02-25T23:06:15.231426649Z [err]  2026-02-25 23:06:14,514 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:06:15.232418133Z [err]  2026-02-25 23:06:15,225 - bot - INFO - Saved message: chat=173, tg_id=11059, type=text, files=0
+2026-02-25T23:06:16.161314653Z [err]  2026-02-25 23:06:15,724 - aiogram.event - INFO - Update id=681946785 is handled. Duration 5744 ms by bot id=8319533037
+2026-02-25T23:06:16.161322716Z [err]  2026-02-25 23:06:15,724 - bot - INFO - Processed incoming update: 681946785
+2026-02-25T23:06:21.238456921Z [err]  2026-02-25 23:06:20,261 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:06:21.238464586Z [err]  2026-02-25 23:06:20,956 - bot - INFO - Saved message: chat=173, tg_id=11060, type=text, files=0
+2026-02-25T23:06:22.248143804Z [err]  2026-02-25 23:06:21,458 - aiogram.event - INFO - Update id=681946786 is handled. Duration 5732 ms by bot id=8319533037
+2026-02-25T23:06:22.248149041Z [err]  2026-02-25 23:06:21,458 - bot - INFO - Processed incoming update: 681946786
+2026-02-25T23:06:26.047769225Z [err]  2026-02-25 23:06:25,990 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:06:27.303016664Z [err]  2026-02-25 23:06:27,179 - aiogram.event - INFO - Update id=681946787 is handled. Duration 5718 ms by bot id=8319533037
+2026-02-25T23:06:27.303024949Z [err]  2026-02-25 23:06:27,180 - bot - INFO - Processed incoming update: 681946787
+2026-02-25T23:06:27.303098735Z [err]  2026-02-25 23:06:26,685 - bot - INFO - Saved message: chat=173, tg_id=11061, type=text, files=0
+2026-02-25T23:06:32.181338929Z [err]  2026-02-25 23:06:31,726 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:06:33.078968411Z [err]  2026-02-25 23:06:32,406 - bot - INFO - Saved message: chat=173, tg_id=11062, type=text, files=0
+2026-02-25T23:06:33.078975362Z [err]  2026-02-25 23:06:32,896 - aiogram.event - INFO - Update id=681946788 is handled. Duration 5714 ms by bot id=8319533037
+2026-02-25T23:06:33.078980833Z [err]  2026-02-25 23:06:32,897 - bot - INFO - Processed incoming update: 681946788
+2026-02-25T23:06:37.496867563Z [err]  2026-02-25 23:06:37,339 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:06:38.481388826Z [err]  2026-02-25 23:06:38,021 - bot - INFO - Saved message: chat=173, tg_id=11063, type=text, files=0
+2026-02-25T23:06:39.312106889Z [err]  2026-02-25 23:06:38,603 - aiogram.event - INFO - Update id=681946789 is handled. Duration 5704 ms by bot id=8319533037
+2026-02-25T23:06:39.312135259Z [err]  2026-02-25 23:06:38,605 - bot - INFO - Processed incoming update: 681946789
+2026-02-25T23:06:43.406753599Z [err]  2026-02-25 23:06:43,042 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:06:44.295025772Z [err]  2026-02-25 23:06:43,721 - bot - INFO - Saved message: chat=173, tg_id=11064, type=text, files=0
+2026-02-25T23:06:44.295031432Z [err]  2026-02-25 23:06:44,243 - aiogram.event - INFO - Update id=681946790 is handled. Duration 5636 ms by bot id=8319533037
+2026-02-25T23:06:44.295037266Z [err]  2026-02-25 23:06:44,243 - bot - INFO - Processed incoming update: 681946790
+2026-02-25T23:06:49.418159900Z [err]  2026-02-25 23:06:48,686 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:06:49.418165368Z [err]  2026-02-25 23:06:49,397 - bot - INFO - Saved message: chat=173, tg_id=11065, type=text, files=0
+2026-02-25T23:06:50.338279981Z [err]  2026-02-25 23:06:49,898 - aiogram.event - INFO - Update id=681946791 is handled. Duration 5652 ms by bot id=8319533037
+2026-02-25T23:06:50.338304595Z [err]  2026-02-25 23:06:49,898 - bot - INFO - Processed incoming update: 681946791
+2026-02-25T23:06:54.349443646Z [err]  2026-02-25 23:06:54,346 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:06:55.281501281Z [err]  2026-02-25 23:06:55,025 - bot - INFO - Saved message: chat=173, tg_id=11066, type=text, files=0
+2026-02-25T23:06:55.538612855Z [err]  2026-02-25 23:06:55,513 - aiogram.event - INFO - Update id=681946792 is handled. Duration 5613 ms by bot id=8319533037
+2026-02-25T23:06:55.538619334Z [err]  2026-02-25 23:06:55,513 - bot - INFO - Processed incoming update: 681946792
+2026-02-25T23:07:00.443572696Z [err]  2026-02-25 23:06:59,971 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:07:00.656496683Z [err]  2026-02-25 23:07:00,651 - bot - INFO - Saved message: chat=173, tg_id=11067, type=text, files=0
+2026-02-25T23:07:01.507091891Z [err]  2026-02-25 23:07:01,150 - bot - INFO - Processed incoming update: 681946793
+2026-02-25T23:07:01.507228647Z [err]  2026-02-25 23:07:01,150 - aiogram.event - INFO - Update id=681946793 is handled. Duration 5634 ms by bot id=8319533037
+2026-02-25T23:07:05.605174714Z [err]  2026-02-25 23:07:05,600 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:07:06.427088919Z [err]  2026-02-25 23:07:06,279 - bot - INFO - Saved message: chat=173, tg_id=11068, type=text, files=0
+2026-02-25T23:07:07.676883089Z [err]  2026-02-25 23:07:06,773 - aiogram.event - INFO - Update id=681946794 is handled. Duration 5621 ms by bot id=8319533037
+2026-02-25T23:07:07.676889851Z [err]  2026-02-25 23:07:06,774 - bot - INFO - Processed incoming update: 681946794
+2026-02-25T23:07:11.549954462Z [err]  2026-02-25 23:07:11,240 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:07:12.533511893Z [err]  2026-02-25 23:07:11,919 - bot - INFO - Saved message: chat=173, tg_id=11069, type=document, files=1
+2026-02-25T23:07:12.533526974Z [err]  2026-02-25 23:07:12,421 - aiogram.event - INFO - Update id=681946795 is handled. Duration 5644 ms by bot id=8319533037
+2026-02-25T23:07:12.533538010Z [err]  2026-02-25 23:07:12,422 - bot - INFO - Processed incoming update: 681946795
+2026-02-25T23:07:16.714405747Z [err]  2026-02-25 23:07:16,706 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:07:17.393831008Z [err]  2026-02-25 23:07:17,385 - bot - INFO - Saved message: chat=173, tg_id=11070, type=text, files=0
+2026-02-25T23:07:18.403509704Z [err]  2026-02-25 23:07:17,886 - aiogram.event - INFO - Update id=681946796 is handled. Duration 5461 ms by bot id=8319533037
+2026-02-25T23:07:18.403516133Z [err]  2026-02-25 23:07:17,886 - bot - INFO - Processed incoming update: 681946796
+2026-02-25T23:07:22.595210001Z [err]  2026-02-25 23:07:22,325 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:07:23.563364841Z [err]  2026-02-25 23:07:23,004 - bot - INFO - Saved message: chat=173, tg_id=11071, type=text, files=0
+2026-02-25T23:07:23.563370595Z [err]  2026-02-25 23:07:23,558 - aiogram.event - INFO - Update id=681946797 is handled. Duration 5669 ms by bot id=8319533037
+2026-02-25T23:07:23.563376745Z [err]  2026-02-25 23:07:23,558 - bot - INFO - Processed incoming update: 681946797
+2026-02-25T23:07:28.756546498Z [err]  2026-02-25 23:07:27,998 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:07:28.756551563Z [err]  2026-02-25 23:07:28,678 - bot - INFO - Saved message: chat=173, tg_id=11072, type=text, files=0
+2026-02-25T23:07:29.699542254Z [err]  2026-02-25 23:07:29,192 - aiogram.event - INFO - Update id=681946798 is handled. Duration 5632 ms by bot id=8319533037
+2026-02-25T23:07:29.699549359Z [err]  2026-02-25 23:07:29,192 - bot - INFO - Processed incoming update: 681946798
+2026-02-25T23:07:33.644471691Z [err]  2026-02-25 23:07:33,642 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:07:34.599166665Z [err]  2026-02-25 23:07:34,325 - bot - INFO - Saved message: chat=173, tg_id=11073, type=text, files=0
+2026-02-25T23:07:34.836673924Z [err]  2026-02-25 23:07:34,824 - aiogram.event - INFO - Update id=681946799 is handled. Duration 5630 ms by bot id=8319533037
+2026-02-25T23:07:34.836691152Z [err]  2026-02-25 23:07:34,825 - bot - INFO - Processed incoming update: 681946799
+2026-02-25T23:07:39.687669730Z [err]  2026-02-25 23:07:39,271 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:07:39.956239853Z [err]  2026-02-25 23:07:39,951 - bot - INFO - Saved message: chat=173, tg_id=11074, type=text, files=0
+2026-02-25T23:07:40.691100679Z [err]  2026-02-25 23:07:40,441 - aiogram.event - INFO - Update id=681946800 is handled. Duration 5614 ms by bot id=8319533037
+2026-02-25T23:07:40.691156003Z [err]  2026-02-25 23:07:40,441 - bot - INFO - Processed incoming update: 681946800
+2026-02-25T23:07:44.897076845Z [err]  2026-02-25 23:07:44,886 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:07:46.670570816Z [err]  2026-02-25 23:07:46,342 - bot - INFO - Saved message: chat=173, tg_id=11075, type=text, files=0
+2026-02-25T23:07:46.670578233Z [err]  2026-02-25 23:07:46,344 - bot - INFO - No stuck messages found
+2026-02-25T23:07:46.865985198Z [err]  2026-02-25 23:07:46,844 - aiogram.event - INFO - Update id=681946801 is handled. Duration 6399 ms by bot id=8319533037
+2026-02-25T23:07:46.865990420Z [err]  2026-02-25 23:07:46,845 - bot - INFO - Processed incoming update: 681946801
+2026-02-25T23:07:51.783740136Z [err]  2026-02-25 23:07:51,340 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:07:52.062625593Z [err]  2026-02-25 23:07:52,055 - bot - INFO - Saved message: chat=173, tg_id=11076, type=text, files=0
+2026-02-25T23:07:52.887045903Z [err]  2026-02-25 23:07:52,549 - aiogram.event - INFO - Update id=681946802 is handled. Duration 5703 ms by bot id=8319533037
+2026-02-25T23:07:52.887051496Z [err]  2026-02-25 23:07:52,550 - bot - INFO - Processed incoming update: 681946802
+2026-02-25T23:07:57.103375999Z [err]  2026-02-25 23:07:57,022 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:07:58.691784086Z [err]  2026-02-25 23:07:57,702 - bot - INFO - Saved message: chat=173, tg_id=11077, type=text, files=0
+2026-02-25T23:07:58.691790534Z [err]  2026-02-25 23:07:58,199 - aiogram.event - INFO - Update id=681946803 is handled. Duration 5647 ms by bot id=8319533037
+2026-02-25T23:07:58.691796589Z [err]  2026-02-25 23:07:58,200 - bot - INFO - Processed incoming update: 681946803
+2026-02-25T23:08:02.952971168Z [err]  2026-02-25 23:08:02,656 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:08:03.908438731Z [err]  2026-02-25 23:08:03,335 - bot - INFO - Saved message: chat=173, tg_id=11078, type=text, files=0
+2026-02-25T23:08:03.908443616Z [err]  2026-02-25 23:08:03,829 - aiogram.event - INFO - Update id=681946804 is handled. Duration 5626 ms by bot id=8319533037
+2026-02-25T23:08:03.908448325Z [err]  2026-02-25 23:08:03,829 - bot - INFO - Processed incoming update: 681946804
+2026-02-25T23:08:09.086124760Z [err]  2026-02-25 23:08:08,957 - bot - INFO - Saved message: chat=173, tg_id=11079, type=text, files=0
+2026-02-25T23:08:09.086139443Z [err]  2026-02-25 23:08:08,276 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:08:09.902981805Z [err]  2026-02-25 23:08:09,449 - aiogram.event - INFO - Update id=681946805 is handled. Duration 5618 ms by bot id=8319533037
+2026-02-25T23:08:09.902986495Z [err]  2026-02-25 23:08:09,449 - bot - INFO - Processed incoming update: 681946805
+2026-02-25T23:08:14.473958423Z [err]  2026-02-25 23:08:13,739 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:08:14.473969677Z [err]  2026-02-25 23:08:14,421 - bot - INFO - Saved message: chat=173, tg_id=11080, type=text, files=0
+2026-02-25T23:08:15.273555297Z [err]  2026-02-25 23:08:14,909 - aiogram.event - INFO - Update id=681946806 is handled. Duration 5458 ms by bot id=8319533037
+2026-02-25T23:08:15.273561758Z [err]  2026-02-25 23:08:14,909 - bot - INFO - Processed incoming update: 681946806
+2026-02-25T23:08:19.504388772Z [err]  2026-02-25 23:08:19,362 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:08:20.404028635Z [err]  2026-02-25 23:08:20,043 - bot - INFO - Saved message: chat=173, tg_id=11081, type=text, files=0
+2026-02-25T23:08:21.427317633Z [err]  2026-02-25 23:08:20,541 - aiogram.event - INFO - Update id=681946807 is handled. Duration 5628 ms by bot id=8319533037
+2026-02-25T23:08:21.427325953Z [err]  2026-02-25 23:08:20,541 - bot - INFO - Processed incoming update: 681946807
+2026-02-25T23:08:25.455104890Z [err]  2026-02-25 23:08:24,979 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:08:26.625851145Z [err]  2026-02-25 23:08:25,657 - bot - INFO - Saved message: chat=173, tg_id=11082, type=text, files=0
+2026-02-25T23:08:26.625861042Z [err]  2026-02-25 23:08:26,157 - aiogram.event - INFO - Update id=681946808 is handled. Duration 5612 ms by bot id=8319533037
+2026-02-25T23:08:26.625873043Z [err]  2026-02-25 23:08:26,157 - bot - INFO - Processed incoming update: 681946808
+2026-02-25T23:08:30.914194081Z [err]  2026-02-25 23:08:30,600 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:08:31.838040496Z [err]  2026-02-25 23:08:31,280 - bot - INFO - Saved message: chat=173, tg_id=11083, type=text, files=0
+2026-02-25T23:08:31.838046276Z [err]  2026-02-25 23:08:31,777 - aiogram.event - INFO - Update id=681946809 is handled. Duration 5618 ms by bot id=8319533037
+2026-02-25T23:08:31.838052098Z [err]  2026-02-25 23:08:31,778 - bot - INFO - Processed incoming update: 681946809
+2026-02-25T23:08:36.767583460Z [err]  2026-02-25 23:08:36,258 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:08:36.956764653Z [err]  2026-02-25 23:08:36,947 - bot - INFO - Saved message: chat=173, tg_id=11084, type=text, files=0
+2026-02-25T23:08:37.810685679Z [err]  2026-02-25 23:08:37,436 - aiogram.event - INFO - Update id=681946810 is handled. Duration 5657 ms by bot id=8319533037
+2026-02-25T23:08:37.810691979Z [err]  2026-02-25 23:08:37,437 - bot - INFO - Processed incoming update: 681946810
+2026-02-25T23:09:47.762042162Z [err]  2026-02-25 23:09:42,079 - bot - INFO - 📬 Received 1 notifications
+2026-02-25T23:09:47.762049578Z [err]  2026-02-25 23:09:42,081 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772060981.979073, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-25T23:09:47.762055776Z [err]  2026-02-25 23:09:42,081 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-25T23:09:47.762062480Z [err]  2026-02-25 23:09:42,138 - sender_bot - INFO - Sent text: tg_id=11085
+2026-02-25T23:10:47.686518467Z [err]  2026-02-25 23:10:47,026 - bot - INFO - No stuck messages found
+2026-02-25T23:13:48.955312546Z [err]  2026-02-25 23:13:47,704 - bot - INFO - No stuck messages found
+2026-02-25T23:16:50.218876547Z [err]  2026-02-25 23:16:48,381 - bot - INFO - No stuck messages found
+2026-02-25T23:19:51.071136866Z [err]  2026-02-25 23:19:49,066 - bot - INFO - No stuck messages found
+2026-02-25T23:22:51.972202896Z [err]  2026-02-25 23:22:49,760 - bot - INFO - No stuck messages found
+2026-02-25T23:22:51.972208126Z [err]  2026-02-25 23:22:49,950 - bot - INFO - 📬 Received 1 notifications
+2026-02-25T23:22:51.972213560Z [err]  2026-02-25 23:22:49,952 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772061769.859070, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-25T23:22:51.972219114Z [err]  2026-02-25 23:22:49,953 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-25T23:22:51.972225186Z [err]  2026-02-25 23:22:50,010 - sender_bot - INFO - Sent text: tg_id=11086
+2026-02-25T23:25:52.452250416Z [err]  2026-02-25 23:25:50,458 - bot - INFO - No stuck messages found
+2026-02-25T23:28:55.025199027Z [err]  2026-02-25 23:28:51,177 - bot - INFO - No stuck messages found
+2026-02-25T23:31:57.116230334Z [err]  2026-02-25 23:31:51,905 - bot - INFO - No stuck messages found
+2026-02-25T23:34:58.693992026Z [err]  2026-02-25 23:34:52,632 - bot - INFO - No stuck messages found
+2026-02-25T23:36:08.233820721Z [err]  2026-02-25 23:36:04,590 - bot - INFO - 📬 Received 1 notifications
+2026-02-25T23:36:08.233855715Z [err]  2026-02-25 23:36:04,592 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772062564.499831, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-25T23:36:08.233864130Z [err]  2026-02-25 23:36:04,592 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-25T23:36:08.233864236Z [err]  2026-02-25 23:36:04,642 - sender_bot - INFO - Sent text: tg_id=11087
+2026-02-25T23:38:01.851131483Z [err]  2026-02-25 23:37:53,325 - bot - INFO - No stuck messages found
+2026-02-25T23:38:41.826606250Z [err]  2026-02-25 23:38:35,468 - bot - INFO - Processed incoming update: 681946811
+2026-02-25T23:38:41.826626656Z [err]  2026-02-25 23:38:35,468 - aiogram.event - INFO - Update id=681946811 is handled. Duration 5850 ms by bot id=8319533037
+2026-02-25T23:38:41.826645261Z [err]  2026-02-25 23:38:34,264 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:38:41.826652979Z [err]  2026-02-25 23:38:34,949 - bot - INFO - Saved message: chat=173, tg_id=11088, type=text, files=0
+2026-02-25T23:39:52.491392571Z [err]  2026-02-25 23:39:48,958 - bot - INFO - 📬 Received 1 notifications
+2026-02-25T23:39:52.491400111Z [err]  2026-02-25 23:39:48,960 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772062788.868645, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-25T23:39:52.491406217Z [err]  2026-02-25 23:39:48,960 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-25T23:39:52.491411626Z [err]  2026-02-25 23:39:49,012 - sender_bot - INFO - Sent text: tg_id=11089
+2026-02-25T23:40:23.286324231Z [err]  2026-02-25 23:40:15,809 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:40:23.286328444Z [err]  2026-02-25 23:40:16,494 - bot - INFO - Saved message: chat=173, tg_id=11090, type=text, files=0
+2026-02-25T23:40:23.286332874Z [err]  2026-02-25 23:40:16,999 - aiogram.event - INFO - Update id=681946812 is handled. Duration 5987 ms by bot id=8319533037
+2026-02-25T23:40:23.286337547Z [err]  2026-02-25 23:40:17,001 - bot - INFO - Processed incoming update: 681946812
+2026-02-25T23:40:23.286342193Z [err]  2026-02-25 23:40:21,478 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:40:23.286350006Z [err]  2026-02-25 23:40:22,162 - bot - INFO - Saved message: chat=173, tg_id=11091, type=text, files=0
+2026-02-25T23:40:23.286355232Z [err]  2026-02-25 23:40:22,662 - aiogram.event - INFO - Update id=681946813 is handled. Duration 5659 ms by bot id=8319533037
+2026-02-25T23:40:23.286359765Z [err]  2026-02-25 23:40:22,664 - bot - INFO - Processed incoming update: 681946813
+2026-02-25T23:40:28.494091330Z [err]  2026-02-25 23:40:27,452 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:40:28.494097821Z [err]  2026-02-25 23:40:28,136 - bot - INFO - Saved message: chat=173, tg_id=11092, type=text, files=0
+2026-02-25T23:40:29.559973054Z [err]  2026-02-25 23:40:28,660 - aiogram.event - INFO - Update id=681946814 is handled. Duration 5993 ms by bot id=8319533037
+2026-02-25T23:40:29.559979358Z [err]  2026-02-25 23:40:28,661 - bot - INFO - Processed incoming update: 681946814
+2026-02-25T23:40:33.554805332Z [err]  2026-02-25 23:40:33,140 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:40:34.485653864Z [err]  2026-02-25 23:40:33,823 - bot - INFO - Saved message: chat=173, tg_id=11093, type=text, files=0
+2026-02-25T23:40:34.485660486Z [err]  2026-02-25 23:40:34,467 - aiogram.event - INFO - Update id=681946815 is handled. Duration 5804 ms by bot id=8319533037
+2026-02-25T23:40:34.485666872Z [err]  2026-02-25 23:40:34,468 - bot - INFO - Processed incoming update: 681946815
+2026-02-25T23:40:53.702514478Z [err]  2026-02-25 23:40:48,297 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:40:53.702518430Z [err]  2026-02-25 23:40:48,979 - bot - INFO - Saved message: chat=173, tg_id=11094, type=text, files=0
+2026-02-25T23:40:53.702522374Z [err]  2026-02-25 23:40:49,622 - aiogram.event - INFO - Update id=681946816 is handled. Duration 5787 ms by bot id=8319533037
+2026-02-25T23:40:53.702526546Z [err]  2026-02-25 23:40:49,623 - bot - INFO - Processed incoming update: 681946816
+2026-02-25T23:40:54.544320544Z [err]  2026-02-25 23:40:54,007 - bot - INFO - No stuck messages found
+2026-02-25T23:41:13.855852363Z [err]  2026-02-25 23:41:04,345 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:41:13.855859807Z [err]  2026-02-25 23:41:05,027 - bot - INFO - Saved message: chat=173, tg_id=11095, type=text, files=0
+2026-02-25T23:41:13.855867810Z [err]  2026-02-25 23:41:05,671 - aiogram.event - INFO - Update id=681946817 is handled. Duration 5798 ms by bot id=8319533037
+2026-02-25T23:41:13.855874984Z [err]  2026-02-25 23:41:05,672 - bot - INFO - Processed incoming update: 681946817
+2026-02-25T23:41:20.652816777Z [err]  2026-02-25 23:41:20,307 - bot - INFO - Added user 96 to group 5273094456
+2026-02-25T23:41:21.731170741Z [err]  2026-02-25 23:41:20,989 - bot - INFO - Saved message: chat=173, tg_id=11096, type=text, files=0
+2026-02-25T23:41:21.731177994Z [err]  2026-02-25 23:41:21,636 - aiogram.event - INFO - Update id=681946818 is handled. Duration 5801 ms by bot id=8319533037
+2026-02-25T23:41:21.731183970Z [err]  2026-02-25 23:41:21,636 - bot - INFO - Processed incoming update: 681946818
+2026-02-25T23:42:32.449092783Z [err]  2026-02-25 23:42:25,799 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-25T23:42:32.449099792Z [err]  2026-02-25 23:42:25,841 - sender_bot - INFO - Sent text: tg_id=11097
+2026-02-25T23:42:32.449144916Z [err]  2026-02-25 23:42:25,797 - bot - INFO - 📬 Received 1 notifications
+2026-02-25T23:42:32.449159208Z [err]  2026-02-25 23:42:25,799 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772062945.706252, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-25T23:44:03.311603629Z [err]  2026-02-25 23:43:54,722 - bot - INFO - No stuck messages found
+2026-02-25T23:47:04.326268862Z [err]  2026-02-25 23:46:55,421 - bot - INFO - No stuck messages found
+2026-02-25T23:49:56.475969561Z [err]  2026-02-25 23:49:56,110 - bot - INFO - No stuck messages found
+2026-02-25T23:52:58.130885817Z [err]  2026-02-25 23:52:56,773 - bot - INFO - No stuck messages found
+2026-02-25T23:56:01.459746754Z [err]  2026-02-25 23:55:57,429 - bot - INFO - No stuck messages found
+2026-02-25T23:59:03.127105557Z [err]  2026-02-25 23:58:58,089 - bot - INFO - No stuck messages found
+2026-02-26T00:04:56.534279823Z [err]  Traceback (most recent call last):
+2026-02-26T00:04:56.534289872Z [err]    File "/app/bot.py", line 1831, in pg_notify_listener_worker
+2026-02-26T00:04:56.534290477Z [err]      raise Exception("Keepalive failed")
+2026-02-26T00:04:56.534299083Z [err]      cur.execute("SELECT 1")
+2026-02-26T00:04:56.534301583Z [err]  Exception: Keepalive failed
+2026-02-26T00:04:56.534308316Z [err]  psycopg2.errors.QueryCanceled: canceling statement due to statement timeout
+2026-02-26T00:04:56.534310878Z [err]  2026-02-26 00:04:51,409 - bot - INFO - Waiting 5 seconds before reconnect...
+2026-02-26T00:04:56.534317978Z [err]  2026-02-26 00:04:56,409 - bot - INFO - 📌 Connecting to Postgres...
+2026-02-26T00:04:56.534345615Z [err]  2026-02-26 00:04:51,408 - bot - WARNING - ⚠️ Keepalive failed: canceling statement due to statement timeout
+2026-02-26T00:04:56.534353844Z [err]  , reconnecting...
+2026-02-26T00:04:56.534361973Z [err]  2026-02-26 00:04:51,408 - bot - ERROR - ❌ Listener error: Keepalive failed
+2026-02-26T00:04:56.534365278Z [err]  
+2026-02-26T00:04:56.534379451Z [err]  
+2026-02-26T00:04:56.534393495Z [err]  During handling of the above exception, another exception occurred:
+2026-02-26T00:04:56.534401829Z [err]  
+2026-02-26T00:04:56.534410681Z [err]  Traceback (most recent call last):
+2026-02-26T00:04:56.534418293Z [err]    File "/app/bot.py", line 1836, in pg_notify_listener_worker
+2026-02-26T00:05:26.627825350Z [err]  2026-02-26 00:05:25,882 - bot - ERROR - Incoming consumer error: 
+2026-02-26T00:07:51.870734963Z [err]  2026-02-26 00:07:45,221 - bot - ERROR - Incoming consumer error: 
+2026-02-26T00:08:21.599956024Z [err]             ^^^^^^^^^^^^^^
+2026-02-26T00:08:21.599967923Z [err]    File "/app/db.py", line 115, in db_connection
+2026-02-26T00:08:21.599969672Z [err]  2026-02-26 00:08:14,432 - bot - ERROR - retry_stuck_messages error: canceling statement due to statement timeout
+2026-02-26T00:08:21.599978747Z [err]      test_cur.execute("SELECT 1")
+2026-02-26T00:08:21.599979996Z [err]  
+2026-02-26T00:08:21.599987574Z [err]  psycopg2.errors.QueryCanceled: canceling statement due to statement timeout
+2026-02-26T00:08:21.599990078Z [err]  Traceback (most recent call last):
+2026-02-26T00:08:21.599996374Z [err]  
+2026-02-26T00:08:21.599999378Z [err]    File "/app/bot.py", line 1953, in retry_stuck_messages
+2026-02-26T00:08:21.600006246Z [err]      with db_connection() as conn:
+2026-02-26T00:08:21.600013080Z [err]    File "/usr/local/lib/python3.11/contextlib.py", line 137, in __enter__
+2026-02-26T00:08:21.600019353Z [err]      return next(self.gen)

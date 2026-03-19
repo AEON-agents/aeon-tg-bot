@@ -1,0 +1,886 @@
+2026-02-27T09:30:02.325778148Z [inf]  Mounting volume on: /var/lib/containers/railwayapp/bind-mounts/ee17521d-2691-4ac9-8af0-99e2aecd2959/vol_r78gq2hpno1an7m2
+2026-02-27T09:30:03.329986905Z [inf]  Starting Container
+2026-02-27T09:30:03.452594459Z [err]  [2026-02-27 09:30:02 +0000] [2] [INFO] Booting worker with pid: 2
+2026-02-27T09:30:03.452606634Z [err]  [2026-02-27 09:30:02 +0000] [1] [INFO] Starting gunicorn 23.0.0
+2026-02-27T09:30:03.452612787Z [err]  [2026-02-27 09:30:02 +0000] [1] [INFO] Listening at: http://0.0.0.0:8080 (1)
+2026-02-27T09:30:03.452620003Z [err]  [2026-02-27 09:30:02 +0000] [1] [INFO] Using worker: gthread
+2026-02-27T09:30:06.325090337Z [inf]  2026-02-27 09:30:06,175 - bot - INFO - 🚀 Starting AEON Telegram Bot...
+2026-02-27T09:30:06.325130148Z [inf]  2026-02-27 09:30:06,173 - bot - INFO - 🔧 Initializing AEON Telegram Bot...
+2026-02-27T09:30:06.325138694Z [inf]  2026-02-27 09:30:06,175 - bot - INFO - ✅ Main event loop started in dedicated thread
+2026-02-27T09:30:07.381323807Z [inf]  2026-02-27 09:30:07,374 - bot - INFO - ✅ Stuck messages retry worker started
+2026-02-27T09:30:07.381340177Z [inf]  2026-02-27 09:30:07,374 - sender_bot - INFO - ✅ RateLimiter initialized: RateLimitConfig(chat_messages_per_second=1.0, group_messages_per_minute=20, global_messages_per_second=25, global_api_requests_per_second=25, safety_factor=0.85)
+2026-02-27T09:30:07.381348057Z [inf]  2026-02-27 09:30:07,374 - sender_bot - INFO - Sender using shared DB pool
+2026-02-27T09:30:07.381355121Z [inf]  2026-02-27 09:30:07,374 - sender_bot - INFO - ✅ SenderBot initialized with rate limiting, chat actions, and reactions support
+2026-02-27T09:30:07.381362629Z [inf]  2026-02-27 09:30:07,375 - sender_bot - INFO - 🔄 SenderBot worker loop started
+2026-02-27T09:30:07.381369355Z [inf]  2026-02-27 09:30:07,375 - sender_bot - INFO - ✅ SenderBot worker started
+2026-02-27T09:30:07.381376217Z [inf]  2026-02-27 09:30:07,375 - bot - INFO - ✅ Sender started
+2026-02-27T09:30:07.381382991Z [inf]  2026-02-27 09:30:07,375 - bot - INFO - Starting incoming message consumer...
+2026-02-27T09:30:07.381501983Z [inf]  2026-02-27 09:30:07,372 - db - INFO - Database pool created
+2026-02-27T09:30:07.381510800Z [inf]  2026-02-27 09:30:07,373 - bot - INFO - 🔄 Starting pg_notify listener worker...
+2026-02-27T09:30:07.381511079Z [inf]  2026-02-27 09:30:07,372 - redis_client - INFO - Redis connection pool created
+2026-02-27T09:30:07.381520157Z [inf]  2026-02-27 09:30:07,373 - bot - INFO - 📌 Connecting to Postgres...
+2026-02-27T09:30:07.381520418Z [inf]  2026-02-27 09:30:07,373 - redis_client - INFO - Redis client created
+2026-02-27T09:30:07.381528720Z [inf]  2026-02-27 09:30:07,374 - bot - INFO - ✅ pg_notify listener thread started
+2026-02-27T09:30:07.381529684Z [inf]  2026-02-27 09:30:07,373 - bot - INFO - Redis client created
+2026-02-27T09:30:07.381537110Z [inf]  2026-02-27 09:30:07,374 - bot - INFO - 🔄 Starting stuck messages retry worker (interval: 180s)
+2026-02-27T09:30:07.384192550Z [inf]  2026-02-27 09:30:07,375 - bot - INFO - ✅ Incoming message consumer started
+2026-02-27T09:30:07.384205690Z [inf]  2026-02-27 09:30:07,376 - bot - INFO - ✅ Thread watchdog started
+2026-02-27T09:30:07.408620150Z [inf]  2026-02-27 09:30:07,400 - sender_bot - INFO - ✅ Worker Bot instance created
+2026-02-27T09:30:07.417857571Z [inf]  2026-02-27 09:30:07,411 - bot - INFO - ✅ Webhook set: https://believable-art-telegram-test.up.railway.app/webhook/telegram
+2026-02-27T09:30:08.199918905Z [inf]  2026-02-27 09:30:07,926 - bot - INFO - No stuck messages found
+2026-02-27T09:30:08.199925455Z [inf]  2026-02-27 09:30:08,100 - bot - INFO - ✅ Application initialized
+2026-02-27T09:30:09.116479562Z [inf]  2026-02-27 09:30:08,647 - bot - INFO - ✅ Redis connected
+2026-02-27T09:30:09.116520583Z [inf]  2026-02-27 09:30:08,640 - bot - INFO - ✅ Listening on 'telegram_send'
+2026-02-27T09:30:39.070688571Z [inf]  2026-02-27 09:30:37,376 - bot - INFO - 🐕 Thread watchdog started
+2026-02-27T09:31:09.582664060Z [inf]  2026-02-27 09:31:07,887 - bot - INFO - No stuck messages found
+2026-02-27T09:34:09.290059677Z [inf]  2026-02-27 09:34:08,571 - bot - INFO - No stuck messages found
+2026-02-27T09:36:39.912045567Z [inf]  2026-02-27 09:36:31,563 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T09:36:39.912051967Z [inf]  2026-02-27 09:36:31,564 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772184991.458458, "chat_ident": "331166237", "request_body": {"chat_id": "331166237",...
+2026-02-27T09:36:39.912058113Z [inf]  2026-02-27 09:36:31,564 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T09:36:39.912065490Z [inf]  2026-02-27 09:36:31,714 - sender_bot - INFO - Sent text: tg_id=11576
+2026-02-27T09:37:09.917268149Z [inf]  2026-02-27 09:37:09,281 - bot - INFO - No stuck messages found
+2026-02-27T09:40:10.967069854Z [inf]  2026-02-27 09:40:09,994 - bot - INFO - No stuck messages found
+2026-02-27T09:43:11.415797344Z [inf]  2026-02-27 09:43:10,704 - bot - INFO - No stuck messages found
+2026-02-27T09:46:21.240796039Z [inf]  2026-02-27 09:46:11,376 - bot - INFO - No stuck messages found
+2026-02-27T09:49:21.153433591Z [inf]  2026-02-27 09:49:12,035 - bot - INFO - No stuck messages found
+2026-02-27T09:52:22.408817560Z [inf]  2026-02-27 09:52:12,715 - bot - INFO - No stuck messages found
+2026-02-27T09:55:22.501966971Z [inf]  2026-02-27 09:55:13,388 - bot - INFO - No stuck messages found
+2026-02-27T09:58:15.957314628Z [inf]  2026-02-27 09:58:14,072 - bot - INFO - No stuck messages found
+2026-02-27T10:01:19.899147431Z [inf]  2026-02-27 10:01:14,759 - bot - INFO - No stuck messages found
+2026-02-27T10:04:19.735826462Z [inf]  2026-02-27 10:04:15,471 - bot - INFO - No stuck messages found
+2026-02-27T10:07:19.493215298Z [inf]  2026-02-27 10:07:16,192 - bot - INFO - No stuck messages found
+2026-02-27T10:10:20.127950653Z [inf]  2026-02-27 10:10:16,915 - bot - INFO - No stuck messages found
+2026-02-27T10:13:19.937684924Z [inf]  2026-02-27 10:13:17,638 - bot - INFO - No stuck messages found
+2026-02-27T10:16:22.705364310Z [inf]  2026-02-27 10:16:18,362 - bot - INFO - No stuck messages found
+2026-02-27T10:19:23.813772189Z [inf]  2026-02-27 10:19:19,075 - bot - INFO - No stuck messages found
+2026-02-27T10:22:28.875268860Z [inf]  2026-02-27 10:22:19,791 - bot - INFO - No stuck messages found
+2026-02-27T10:25:21.520427220Z [inf]  2026-02-27 10:25:12,996 - bot - INFO - Saved message: chat=158, tg_id=11577, type=text, files=0
+2026-02-27T10:25:21.520432416Z [err]  /usr/local/lib/python3.11/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (6.0.0.post1)/charset_normalizer (3.4.4) doesn't match a supported version!
+2026-02-27T10:25:21.520437006Z [err]    warnings.warn(
+2026-02-27T10:25:21.520441037Z [inf]  2026-02-27 10:25:13,850 - aiogram.event - INFO - Update id=681947047 is handled. Duration 6564 ms by bot id=8319533037
+2026-02-27T10:25:21.520445340Z [inf]  2026-02-27 10:25:13,850 - bot - INFO - Processed incoming update: 681947047
+2026-02-27T10:25:21.520449880Z [inf]  2026-02-27 10:25:20,502 - bot - INFO - No stuck messages found
+2026-02-27T10:25:51.518715912Z [inf]  2026-02-27 10:25:49,997 - aiogram.event - INFO - Update id=681947048 is not handled. Duration 0 ms by bot id=8319533037
+2026-02-27T10:25:51.518726026Z [inf]  2026-02-27 10:25:49,997 - bot - INFO - Processed incoming update: 681947048
+2026-02-27T10:28:26.046066880Z [inf]  2026-02-27 10:28:21,212 - bot - INFO - No stuck messages found
+2026-02-27T10:31:31.422406662Z [inf]  2026-02-27 10:31:21,906 - bot - INFO - No stuck messages found
+2026-02-27T10:34:24.464850163Z [inf]  2026-02-27 10:34:22,584 - bot - INFO - No stuck messages found
+2026-02-27T10:37:25.764246781Z [inf]  2026-02-27 10:37:23,262 - bot - INFO - No stuck messages found
+2026-02-27T10:40:27.605815616Z [inf]  2026-02-27 10:40:23,927 - bot - INFO - No stuck messages found
+2026-02-27T10:43:28.866537637Z [inf]  2026-02-27 10:43:24,595 - bot - INFO - No stuck messages found
+2026-02-27T10:46:30.788208261Z [inf]  2026-02-27 10:46:25,282 - bot - INFO - No stuck messages found
+2026-02-27T10:49:33.533284591Z [inf]  2026-02-27 10:49:25,974 - bot - INFO - No stuck messages found
+2026-02-27T10:52:35.177010307Z [inf]  2026-02-27 10:52:26,666 - bot - INFO - No stuck messages found
+2026-02-27T10:55:37.125237636Z [inf]  2026-02-27 10:55:27,328 - bot - INFO - No stuck messages found
+2026-02-27T10:58:31.696678668Z [inf]  2026-02-27 10:58:27,983 - bot - INFO - No stuck messages found
+2026-02-27T11:01:35.561255286Z [inf]  2026-02-27 11:01:28,636 - bot - INFO - No stuck messages found
+2026-02-27T11:04:36.061396539Z [inf]  2026-02-27 11:04:29,312 - bot - INFO - No stuck messages found
+2026-02-27T11:07:36.573661404Z [inf]  2026-02-27 11:07:30,003 - bot - INFO - No stuck messages found
+2026-02-27T11:10:37.777884689Z [inf]  2026-02-27 11:10:30,696 - bot - INFO - No stuck messages found
+2026-02-27T11:13:38.121330820Z [inf]  2026-02-27 11:13:31,390 - bot - INFO - No stuck messages found
+2026-02-27T11:16:38.978869014Z [inf]  2026-02-27 11:16:32,105 - bot - INFO - No stuck messages found
+2026-02-27T11:19:39.573447669Z [inf]  2026-02-27 11:19:32,838 - bot - INFO - No stuck messages found
+2026-02-27T11:22:43.221804663Z [inf]  2026-02-27 11:22:33,569 - bot - INFO - No stuck messages found
+2026-02-27T11:25:44.089648035Z [inf]  2026-02-27 11:25:34,292 - bot - INFO - No stuck messages found
+2026-02-27T11:28:39.918624914Z [inf]  2026-02-27 11:28:35,005 - bot - INFO - No stuck messages found
+2026-02-27T11:31:44.696413366Z [inf]  2026-02-27 11:31:35,708 - bot - INFO - No stuck messages found
+2026-02-27T11:34:38.393041167Z [inf]  2026-02-27 11:34:36,410 - bot - INFO - No stuck messages found
+2026-02-27T11:37:40.927989628Z [inf]  2026-02-27 11:37:37,118 - bot - INFO - No stuck messages found
+2026-02-27T11:40:44.204494646Z [inf]  2026-02-27 11:40:37,825 - bot - INFO - No stuck messages found
+2026-02-27T11:40:47.151354498Z [inf]  2026-02-27 11:40:46,652 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T11:40:47.151358710Z [inf]  2026-02-27 11:40:46,654 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772192446.521549, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-27T11:40:47.151363462Z [inf]  2026-02-27 11:40:46,654 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T11:40:47.151368057Z [inf]  2026-02-27 11:40:46,740 - sender_bot - INFO - Sent text: tg_id=11578
+2026-02-27T11:43:38.874660485Z [inf]  2026-02-27 11:43:38,530 - bot - INFO - No stuck messages found
+2026-02-27T11:46:43.202755548Z [inf]  2026-02-27 11:46:39,202 - bot - INFO - No stuck messages found
+2026-02-27T11:49:46.432223862Z [inf]  2026-02-27 11:49:39,862 - bot - INFO - No stuck messages found
+2026-02-27T11:50:16.551586578Z [inf]  2026-02-27 11:50:09,950 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T11:50:16.551598552Z [inf]  2026-02-27 11:50:09,951 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772193009.806367, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-27T11:50:16.551606562Z [inf]  2026-02-27 11:50:09,952 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T11:50:16.551616560Z [inf]  2026-02-27 11:50:10,075 - sender_bot - INFO - Sent text: tg_id=11579
+2026-02-27T11:50:16.551623535Z [inf]  2026-02-27 11:50:11,965 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T11:50:16.551648296Z [inf]  2026-02-27 11:50:11,967 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772193011.829159, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-27T11:50:16.551655876Z [inf]  2026-02-27 11:50:11,967 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T11:50:16.551662392Z [inf]  2026-02-27 11:50:12,194 - sender_bot - INFO - Sent text: tg_id=11580
+2026-02-27T11:52:48.635102370Z [inf]  2026-02-27 11:52:40,556 - bot - INFO - No stuck messages found
+2026-02-27T11:55:50.885296938Z [inf]  2026-02-27 11:55:41,262 - bot - INFO - No stuck messages found
+2026-02-27T11:57:23.495811535Z [inf]  2026-02-27 11:57:15,451 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T11:57:23.495819195Z [inf]  2026-02-27 11:57:15,456 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772193435.304067, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-27T11:57:23.495825974Z [inf]  2026-02-27 11:57:15,456 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T11:57:23.495833478Z [inf]  2026-02-27 11:57:15,733 - sender_bot - INFO - Sent text: tg_id=11581
+2026-02-27T11:58:46.243632519Z [inf]  2026-02-27 11:58:41,947 - bot - INFO - No stuck messages found
+2026-02-27T12:10:49.378393753Z [inf]  2026-02-27 12:10:39,928 - bot - WARNING - ⚠️ Keepalive failed: canceling statement due to statement timeout
+2026-02-27T12:10:49.378405163Z [inf]  , reconnecting...
+2026-02-27T12:10:49.378411628Z [inf]  2026-02-27 12:10:39,929 - bot - ERROR - ❌ Listener error: canceling statement due to statement timeout
+2026-02-27T12:10:49.378420605Z [inf]  
+2026-02-27T12:10:49.378428131Z [inf]  2026-02-27 12:10:39,931 - bot - ERROR - Traceback (most recent call last):
+2026-02-27T12:10:49.378437095Z [inf]    File "/app/bot.py", line 1895, in pg_notify_listener_worker
+2026-02-27T12:10:49.378444312Z [inf]      cur.execute("SELECT 1")
+2026-02-27T12:10:49.378451229Z [inf]  psycopg2.errors.QueryCanceled: canceling statement due to statement timeout
+2026-02-27T12:10:49.378458020Z [inf]  
+2026-02-27T12:10:49.378465683Z [inf]  
+2026-02-27T12:10:49.378474018Z [inf]  2026-02-27 12:10:39,931 - bot - INFO - Waiting 5 seconds before reconnect...
+2026-02-27T12:10:49.378481441Z [inf]  2026-02-27 12:10:44,931 - bot - INFO - 📌 Connecting to Postgres...
+2026-02-27T12:18:31.543753797Z [inf]  2026-02-27 12:18:27,410 - aiogram.event - INFO - Update id=681947049 is handled. Duration 6795 ms by bot id=8319533037
+2026-02-27T12:18:31.543771184Z [inf]  2026-02-27 12:18:27,411 - bot - INFO - Processed incoming update: 681947049
+2026-02-27T12:18:31.543910534Z [inf]  2026-02-27 12:18:26,766 - bot - INFO - Saved message: chat=173, tg_id=11582, type=text, files=0
+2026-02-27T13:22:30.193357824Z [inf]  Mounting volume on: /var/lib/containers/railwayapp/bind-mounts/ee17521d-2691-4ac9-8af0-99e2aecd2959/vol_r78gq2hpno1an7m2
+2026-02-27T13:22:31.758159772Z [err]  [2026-02-27 13:22:30 +0000] [2] [INFO] Booting worker with pid: 2
+2026-02-27T13:22:31.758176692Z [err]  [2026-02-27 13:22:26 +0000] [1] [INFO] Handling signal: term
+2026-02-27T13:22:31.758184661Z [err]  [2026-02-27 13:22:26 +0000] [2] [INFO] Worker exiting (pid: 2)
+2026-02-27T13:22:31.758192445Z [err]  [2026-02-27 13:22:27 +0000] [1] [INFO] Shutting down: Master
+2026-02-27T13:22:31.758198999Z [err]  [2026-02-27 13:22:30 +0000] [1] [INFO] Starting gunicorn 23.0.0
+2026-02-27T13:22:31.758212356Z [err]  [2026-02-27 13:22:30 +0000] [1] [INFO] Listening at: http://0.0.0.0:8080 (1)
+2026-02-27T13:22:31.758225488Z [err]  [2026-02-27 13:22:30 +0000] [1] [INFO] Using worker: gthread
+2026-02-27T13:22:34.693419566Z [inf]  2026-02-27 13:22:34,224 - bot - INFO - ✅ Main event loop started in dedicated thread
+2026-02-27T13:22:34.693436026Z [inf]  2026-02-27 13:22:34,225 - bot - INFO - 🚀 Starting AEON Telegram Bot...
+2026-02-27T13:22:34.693553619Z [inf]  2026-02-27 13:22:34,222 - bot - INFO - 🔧 Initializing AEON Telegram Bot...
+2026-02-27T13:22:35.637457786Z [inf]  2026-02-27 13:22:35,361 - sender_bot - INFO - ✅ SenderBot initialized with rate limiting, chat actions, and reactions support
+2026-02-27T13:22:35.637470575Z [inf]  2026-02-27 13:22:35,362 - sender_bot - INFO - 🔄 SenderBot worker loop started
+2026-02-27T13:22:35.637479240Z [inf]  2026-02-27 13:22:35,362 - sender_bot - INFO - ✅ SenderBot worker started
+2026-02-27T13:22:35.637486445Z [inf]  2026-02-27 13:22:35,362 - bot - INFO - ✅ Sender started
+2026-02-27T13:22:35.637493988Z [inf]  2026-02-27 13:22:35,362 - bot - INFO - Starting incoming message consumer...
+2026-02-27T13:22:35.637505801Z [inf]  2026-02-27 13:22:35,359 - db - INFO - Database pool created
+2026-02-27T13:22:35.637514868Z [inf]  2026-02-27 13:22:35,359 - redis_client - INFO - Redis connection pool created
+2026-02-27T13:22:35.637523213Z [inf]  2026-02-27 13:22:35,359 - redis_client - INFO - Redis client created
+2026-02-27T13:22:35.637546763Z [inf]  2026-02-27 13:22:35,359 - bot - INFO - Redis client created
+2026-02-27T13:22:35.637555396Z [inf]  2026-02-27 13:22:35,360 - bot - INFO - 🔄 Starting pg_notify listener worker...
+2026-02-27T13:22:35.637562743Z [inf]  2026-02-27 13:22:35,360 - bot - INFO - 📌 Connecting to Postgres...
+2026-02-27T13:22:35.637569309Z [inf]  2026-02-27 13:22:35,360 - bot - INFO - ✅ pg_notify listener thread started
+2026-02-27T13:22:35.637575603Z [inf]  2026-02-27 13:22:35,361 - bot - INFO - 🔄 Starting stuck messages retry worker (interval: 180s)
+2026-02-27T13:22:35.637581022Z [inf]  2026-02-27 13:22:35,361 - bot - INFO - ✅ Stuck messages retry worker started
+2026-02-27T13:22:35.637586165Z [inf]  2026-02-27 13:22:35,361 - sender_bot - INFO - ✅ RateLimiter initialized: RateLimitConfig(chat_messages_per_second=1.0, group_messages_per_minute=20, global_messages_per_second=25, global_api_requests_per_second=25, safety_factor=0.85)
+2026-02-27T13:22:35.637592977Z [inf]  2026-02-27 13:22:35,361 - sender_bot - INFO - Sender using shared DB pool
+2026-02-27T13:22:35.638232213Z [inf]  2026-02-27 13:22:35,363 - bot - INFO - ✅ Incoming message consumer started
+2026-02-27T13:22:35.638236238Z [inf]  2026-02-27 13:22:35,367 - bot - INFO - ✅ Thread watchdog started
+2026-02-27T13:22:35.638240215Z [inf]  2026-02-27 13:22:35,380 - sender_bot - INFO - ✅ Worker Bot instance created
+2026-02-27T13:22:35.638244429Z [inf]  2026-02-27 13:22:35,400 - bot - INFO - ✅ Webhook set: https://believable-art-telegram-test.up.railway.app/webhook/telegram
+2026-02-27T13:22:35.908592620Z [inf]  2026-02-27 13:22:35,905 - bot - INFO - No stuck messages found
+2026-02-27T13:22:36.629800054Z [inf]  2026-02-27 13:22:36,071 - bot - INFO - ✅ Application initialized
+2026-02-27T13:22:36.629805066Z [inf]  2026-02-27 13:22:36,576 - bot - INFO - ✅ Listening on 'telegram_send'
+2026-02-27T13:22:36.794138970Z [inf]  2026-02-27 13:22:36,790 - bot - INFO - ✅ Redis connected
+2026-02-27T13:23:06.284752481Z [inf]  2026-02-27 13:23:05,367 - bot - INFO - 🐕 Thread watchdog started
+2026-02-27T13:23:36.366909219Z [inf]  2026-02-27 13:23:35,869 - bot - INFO - No stuck messages found
+2026-02-27T13:24:36.150895633Z [inf]  2026-02-27 13:24:31,550 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:24:36.150899925Z [inf]  2026-02-27 13:24:31,551 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772198671.414741, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T13:24:36.150903795Z [inf]  2026-02-27 13:24:31,552 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:24:36.150907926Z [inf]  2026-02-27 13:24:31,650 - sender_bot - INFO - Sent text: tg_id=11583
+2026-02-27T13:24:40.766925648Z [inf]  2026-02-27 13:24:40,442 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:24:40.766930668Z [inf]  2026-02-27 13:24:40,443 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772198680.137521, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T13:24:40.766935541Z [inf]  2026-02-27 13:24:40,443 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:24:40.766940368Z [inf]  2026-02-27 13:24:40,627 - sender_bot - INFO - Sent text: tg_id=11584
+2026-02-27T13:24:46.817113292Z [inf]  2026-02-27 13:24:46,405 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:24:46.817124606Z [inf]  2026-02-27 13:24:46,407 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772198686.275534, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T13:24:46.817133755Z [inf]  2026-02-27 13:24:46,407 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:24:46.817140723Z [inf]  2026-02-27 13:24:46,469 - sender_bot - INFO - Sent text: tg_id=11585
+2026-02-27T13:25:06.259931903Z [inf]  2026-02-27 13:24:56,843 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:25:06.259947752Z [inf]  2026-02-27 13:24:56,844 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772198696.706452, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T13:25:06.259956397Z [inf]  2026-02-27 13:24:56,844 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:25:06.259963528Z [inf]  2026-02-27 13:24:56,901 - sender_bot - INFO - Sent text: tg_id=11586
+2026-02-27T13:25:09.374235271Z [inf]  2026-02-27 13:25:08,565 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:25:09.374241802Z [inf]  2026-02-27 13:25:08,566 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772198708.428679, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T13:25:09.374248954Z [inf]  2026-02-27 13:25:08,567 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:25:09.374258094Z [inf]  2026-02-27 13:25:08,811 - sender_bot - INFO - Sent text: tg_id=11587
+2026-02-27T13:25:29.234000119Z [inf]  2026-02-27 13:25:19,629 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:25:29.234007517Z [inf]  2026-02-27 13:25:19,631 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772198719.493652, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T13:25:29.234017565Z [inf]  2026-02-27 13:25:19,631 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:25:29.234024708Z [inf]  2026-02-27 13:25:19,692 - sender_bot - INFO - Sent text: tg_id=11588
+2026-02-27T13:25:29.234067191Z [inf]  2026-02-27 13:25:25,679 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:25:29.234074255Z [inf]  2026-02-27 13:25:25,680 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772198725.549554, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T13:25:29.234080956Z [inf]  2026-02-27 13:25:25,680 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:25:29.234090956Z [inf]  2026-02-27 13:25:25,732 - sender_bot - INFO - Sent text: tg_id=11589
+2026-02-27T13:26:39.761368431Z [inf]  2026-02-27 13:26:36,588 - bot - INFO - No stuck messages found
+2026-02-27T13:26:59.614959464Z [inf]  2026-02-27 13:26:54,106 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:26:59.614966213Z [inf]  2026-02-27 13:26:54,108 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772198813.969798, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-27T13:26:59.614973131Z [inf]  2026-02-27 13:26:54,108 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:26:59.614979340Z [inf]  2026-02-27 13:26:54,165 - sender_bot - INFO - Sent text: tg_id=11590
+2026-02-27T13:27:59.753131295Z [inf]  2026-02-27 13:27:50,348 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:27:59.753138862Z [inf]  2026-02-27 13:27:50,350 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772198870.211296, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-27T13:27:59.753148012Z [inf]  2026-02-27 13:27:50,351 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:27:59.753155576Z [inf]  2026-02-27 13:27:50,405 - sender_bot - INFO - Sent text: tg_id=11591
+2026-02-27T13:29:41.460036380Z [inf]  2026-02-27 13:29:37,316 - bot - INFO - No stuck messages found
+2026-02-27T13:32:47.690038233Z [inf]  2026-02-27 13:32:38,044 - bot - INFO - No stuck messages found
+2026-02-27T13:35:39.508400524Z [inf]  2026-02-27 13:35:38,751 - bot - INFO - No stuck messages found
+2026-02-27T13:37:31.941931490Z [inf]  2026-02-27 13:37:22,750 - bot - INFO - Saved message: chat=158, tg_id=11592, type=document, files=1
+2026-02-27T13:37:31.941936925Z [err]  /usr/local/lib/python3.11/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (6.0.0.post1)/charset_normalizer (3.4.4) doesn't match a supported version!
+2026-02-27T13:37:31.941961225Z [err]    warnings.warn(
+2026-02-27T13:37:31.941971284Z [inf]  2026-02-27 13:37:23,853 - aiogram.event - INFO - Update id=681947050 is handled. Duration 8754 ms by bot id=8319533037
+2026-02-27T13:37:31.941978742Z [inf]  2026-02-27 13:37:23,853 - bot - INFO - Processed incoming update: 681947050
+2026-02-27T13:37:35.531976744Z [inf]  2026-02-27 13:37:35,087 - bot - INFO - Saved message: chat=158, tg_id=11593, type=text, files=0
+2026-02-27T13:37:36.395645464Z [inf]  2026-02-27 13:37:35,803 - aiogram.event - INFO - Update id=681947051 is handled. Duration 8340 ms by bot id=8319533037
+2026-02-27T13:37:36.395652119Z [inf]  2026-02-27 13:37:35,803 - bot - INFO - Processed incoming update: 681947051
+2026-02-27T13:38:36.719418965Z [inf]  2026-02-27 13:38:32,734 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:38:36.719430829Z [inf]  2026-02-27 13:38:32,736 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772199512.617397, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T13:38:36.719438272Z [inf]  2026-02-27 13:38:32,736 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:38:36.719446111Z [inf]  2026-02-27 13:38:32,886 - sender_bot - INFO - Sent text: tg_id=11594
+2026-02-27T13:38:39.586736644Z [inf]  2026-02-27 13:38:39,441 - bot - INFO - No stuck messages found
+2026-02-27T13:41:42.311268479Z [inf]  2026-02-27 13:41:40,122 - bot - INFO - No stuck messages found
+2026-02-27T13:41:49.668980080Z [inf]  2026-02-27 13:41:49,014 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:41:49.668985417Z [inf]  2026-02-27 13:41:49,020 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772199708.906713, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T13:41:49.668989979Z [inf]  2026-02-27 13:41:49,021 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:41:49.668994616Z [inf]  2026-02-27 13:41:49,178 - sender_bot - INFO - Sent text: tg_id=11595
+2026-02-27T13:42:39.672996534Z [inf]  2026-02-27 13:42:34,511 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:42:39.673006322Z [inf]  2026-02-27 13:42:34,512 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772199754.404201, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-27T13:42:39.673012390Z [inf]  2026-02-27 13:42:34,512 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:42:39.673019484Z [inf]  2026-02-27 13:42:34,563 - sender_bot - INFO - Sent text: tg_id=11596
+2026-02-27T13:43:19.541265985Z [inf]  2026-02-27 13:43:11,630 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772199791.523257, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-27T13:43:19.541276213Z [inf]  2026-02-27 13:43:11,630 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:43:19.541283474Z [inf]  2026-02-27 13:43:11,685 - sender_bot - INFO - Sent text: tg_id=11597
+2026-02-27T13:43:19.541295113Z [inf]  2026-02-27 13:43:11,628 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:44:51.496862492Z [inf]  2026-02-27 13:44:40,801 - bot - INFO - No stuck messages found
+2026-02-27T13:44:51.496869302Z [inf]  2026-02-27 13:44:45,988 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:44:51.496877966Z [inf]  2026-02-27 13:44:45,990 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772199885.885794, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-27T13:44:51.496884264Z [inf]  2026-02-27 13:44:45,990 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:44:51.496890453Z [inf]  2026-02-27 13:44:46,059 - sender_bot - INFO - Sent text: tg_id=11598
+2026-02-27T13:44:54.503808958Z [inf]  2026-02-27 13:44:53,800 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:44:54.503824877Z [inf]  2026-02-27 13:44:53,801 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772199893.701461, "chat_ident": "-5273094456", "request_body": {"caption": "shot 01 —...
+2026-02-27T13:44:54.503833453Z [inf]  2026-02-27 13:44:53,802 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:44:55.986315582Z [inf]  2026-02-27 13:44:55,447 - handlers - INFO - ✅ Downloaded media from URL: 2437599 bytes
+2026-02-27T13:44:55.986322717Z [inf]  2026-02-27 13:44:55,859 - sender_bot - INFO - Sent document: tg_id=11599
+2026-02-27T13:45:00.290381914Z [inf]  2026-02-27 13:44:59,902 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:45:00.290395154Z [inf]  2026-02-27 13:44:59,903 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772199899.806145, "chat_ident": "-5273094456", "request_body": {"caption": "shot 02 —...
+2026-02-27T13:45:00.290402723Z [inf]  2026-02-27 13:44:59,903 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:45:01.735238822Z [inf]  2026-02-27 13:45:01,556 - handlers - INFO - ✅ Downloaded media from URL: 665690 bytes
+2026-02-27T13:45:01.735327316Z [inf]  2026-02-27 13:45:01,692 - sender_bot - INFO - Sent document: tg_id=11600
+2026-02-27T13:45:07.620682041Z [inf]  2026-02-27 13:45:06,560 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:45:07.620688822Z [inf]  2026-02-27 13:45:06,562 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772199906.461567, "chat_ident": "-5273094456", "request_body": {"caption": "shot 03 —...
+2026-02-27T13:45:07.620695276Z [inf]  2026-02-27 13:45:06,562 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:45:08.649692891Z [inf]  2026-02-27 13:45:07,831 - handlers - INFO - ✅ Downloaded media from URL: 678261 bytes
+2026-02-27T13:45:08.649699681Z [inf]  2026-02-27 13:45:07,959 - sender_bot - INFO - Sent document: tg_id=11601
+2026-02-27T13:45:13.179798803Z [inf]  2026-02-27 13:45:12,341 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:45:13.179807669Z [inf]  2026-02-27 13:45:12,342 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772199912.244184, "chat_ident": "-5273094456", "request_body": {"caption": "shot 04 —...
+2026-02-27T13:45:13.179815717Z [inf]  2026-02-27 13:45:12,342 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:45:14.517830722Z [inf]  2026-02-27 13:45:13,814 - handlers - INFO - ✅ Downloaded media from URL: 652971 bytes
+2026-02-27T13:45:14.517839781Z [inf]  2026-02-27 13:45:13,954 - sender_bot - INFO - Sent document: tg_id=11602
+2026-02-27T13:45:19.330297842Z [inf]  2026-02-27 13:45:18,862 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:45:19.330301852Z [inf]  2026-02-27 13:45:18,863 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772199918.765829, "chat_ident": "-5273094456", "request_body": {"caption": "shot 05 —...
+2026-02-27T13:45:19.330305775Z [inf]  2026-02-27 13:45:18,863 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:45:21.208817165Z [inf]  2026-02-27 13:45:20,486 - handlers - INFO - ✅ Downloaded media from URL: 2136841 bytes
+2026-02-27T13:45:21.208824654Z [inf]  2026-02-27 13:45:20,906 - sender_bot - INFO - Sent document: tg_id=11603
+2026-02-27T13:45:25.241958274Z [inf]  2026-02-27 13:45:24,979 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:45:25.241964978Z [inf]  2026-02-27 13:45:24,981 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772199924.884439, "chat_ident": "-5273094456", "request_body": {"caption": "shot 06 —...
+2026-02-27T13:45:25.241972063Z [inf]  2026-02-27 13:45:24,981 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:45:27.666290920Z [inf]  2026-02-27 13:45:26,731 - handlers - INFO - ✅ Downloaded media from URL: 2468687 bytes
+2026-02-27T13:45:27.666298382Z [inf]  2026-02-27 13:45:27,026 - sender_bot - INFO - Sent document: tg_id=11604
+2026-02-27T13:45:31.783947468Z [inf]  2026-02-27 13:45:30,851 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:45:31.783952757Z [inf]  2026-02-27 13:45:30,852 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772199930.756366, "chat_ident": "-5273094456", "request_body": {"caption": "shot 07 —...
+2026-02-27T13:45:31.783957113Z [inf]  2026-02-27 13:45:30,852 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:45:32.904743474Z [inf]  2026-02-27 13:45:32,619 - handlers - INFO - ✅ Downloaded media from URL: 5518575 bytes
+2026-02-27T13:45:33.860928644Z [inf]  2026-02-27 13:45:33,185 - sender_bot - INFO - Sent document: tg_id=11605
+2026-02-27T13:45:38.006505887Z [inf]  2026-02-27 13:45:37,933 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:45:38.006512718Z [inf]  2026-02-27 13:45:37,936 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772199937.838052, "chat_ident": "-5273094456", "request_body": {"caption": "shot 08 —...
+2026-02-27T13:45:38.006519713Z [inf]  2026-02-27 13:45:37,936 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:45:39.897233659Z [inf]  2026-02-27 13:45:39,531 - handlers - INFO - ✅ Downloaded media from URL: 1908256 bytes
+2026-02-27T13:45:40.051374644Z [inf]  2026-02-27 13:45:40,045 - sender_bot - INFO - Sent document: tg_id=11606
+2026-02-27T13:45:44.214962841Z [inf]  2026-02-27 13:45:43,718 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:45:44.214974061Z [inf]  2026-02-27 13:45:43,721 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772199943.453962, "chat_ident": "-5273094456", "request_body": {"caption": "shot 09 —...
+2026-02-27T13:45:44.214983439Z [inf]  2026-02-27 13:45:43,721 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:45:45.978977969Z [inf]  2026-02-27 13:45:45,213 - handlers - INFO - ✅ Downloaded media from URL: 2328002 bytes
+2026-02-27T13:45:45.978985522Z [inf]  2026-02-27 13:45:45,606 - sender_bot - INFO - Sent document: tg_id=11607
+2026-02-27T13:45:51.218803344Z [inf]  2026-02-27 13:45:50,579 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:45:51.218810035Z [inf]  2026-02-27 13:45:50,580 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772199950.484513, "chat_ident": "-5273094456", "request_body": {"caption": "shot 10 —...
+2026-02-27T13:45:51.218816122Z [inf]  2026-02-27 13:45:50,580 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:45:52.576450328Z [inf]  2026-02-27 13:45:52,200 - handlers - INFO - ✅ Downloaded media from URL: 2580876 bytes
+2026-02-27T13:45:52.576456314Z [inf]  2026-02-27 13:45:52,482 - sender_bot - INFO - Sent document: tg_id=11608
+2026-02-27T13:45:56.664703708Z [inf]  2026-02-27 13:45:56,512 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:45:56.664710777Z [inf]  2026-02-27 13:45:56,515 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772199956.417941, "chat_ident": "-5273094456", "request_body": {"caption": "shot 11 —...
+2026-02-27T13:45:56.664717665Z [inf]  2026-02-27 13:45:56,515 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:45:59.135643988Z [inf]  2026-02-27 13:45:58,632 - sender_bot - INFO - Sent document: tg_id=11609
+2026-02-27T13:45:59.135650064Z [inf]  2026-02-27 13:45:58,286 - handlers - INFO - ✅ Downloaded media from URL: 2275309 bytes
+2026-02-27T13:46:04.753290258Z [inf]  2026-02-27 13:46:04,245 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:46:04.753295777Z [inf]  2026-02-27 13:46:04,246 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772199964.151096, "chat_ident": "-5273094456", "request_body": {"caption": "shot 13 —...
+2026-02-27T13:46:04.753301862Z [inf]  2026-02-27 13:46:04,247 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:46:05.877457723Z [inf]  2026-02-27 13:46:05,523 - handlers - INFO - ✅ Downloaded media from URL: 586012 bytes
+2026-02-27T13:46:05.877467602Z [inf]  2026-02-27 13:46:05,670 - sender_bot - INFO - Sent document: tg_id=11610
+2026-02-27T13:46:11.090843009Z [inf]  2026-02-27 13:46:10,567 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:46:11.090860385Z [inf]  2026-02-27 13:46:10,568 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772199970.473030, "chat_ident": "-5273094456", "request_body": {"caption": "shot 14 —...
+2026-02-27T13:46:11.090869375Z [inf]  2026-02-27 13:46:10,569 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:46:13.465940266Z [inf]  2026-02-27 13:46:12,327 - handlers - INFO - ✅ Downloaded media from URL: 5657352 bytes
+2026-02-27T13:46:13.465947210Z [inf]  2026-02-27 13:46:12,867 - sender_bot - INFO - Sent document: tg_id=11611
+2026-02-27T13:46:18.297167532Z [inf]  2026-02-27 13:46:17,176 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:46:18.297173886Z [inf]  2026-02-27 13:46:17,178 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772199977.075586, "chat_ident": "-5273094456", "request_body": {"caption": "shot 15 —...
+2026-02-27T13:46:18.297179938Z [inf]  2026-02-27 13:46:17,178 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:46:19.524662497Z [inf]  2026-02-27 13:46:18,522 - handlers - INFO - ✅ Downloaded media from URL: 656708 bytes
+2026-02-27T13:46:19.524669717Z [inf]  2026-02-27 13:46:18,891 - sender_bot - INFO - Sent document: tg_id=11612
+2026-02-27T13:46:23.350981962Z [inf]  2026-02-27 13:46:22,941 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:46:23.350989299Z [inf]  2026-02-27 13:46:22,943 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772199982.842733, "chat_ident": "-5273094456", "request_body": {"caption": "shot 18 —...
+2026-02-27T13:46:23.350997942Z [inf]  2026-02-27 13:46:22,943 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:46:25.793484063Z [inf]  2026-02-27 13:46:24,716 - handlers - INFO - ✅ Downloaded media from URL: 5790922 bytes
+2026-02-27T13:46:25.793491775Z [inf]  2026-02-27 13:46:25,170 - sender_bot - INFO - Sent document: tg_id=11613
+2026-02-27T13:46:29.554834148Z [inf]  2026-02-27 13:46:29,374 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:46:29.554838538Z [inf]  2026-02-27 13:46:29,376 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772199989.280589, "chat_ident": "-5273094456", "request_body": {"caption": "shot 19 —...
+2026-02-27T13:46:29.554842801Z [inf]  2026-02-27 13:46:29,376 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:46:31.416104112Z [inf]  2026-02-27 13:46:30,670 - handlers - INFO - ✅ Downloaded media from URL: 602436 bytes
+2026-02-27T13:46:31.416114113Z [inf]  2026-02-27 13:46:30,809 - sender_bot - INFO - Sent document: tg_id=11614
+2026-02-27T13:46:40.702573905Z [inf]  2026-02-27 13:46:39,688 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:46:40.702587044Z [inf]  2026-02-27 13:46:39,689 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772199999.587524, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-27T13:46:40.702597854Z [inf]  2026-02-27 13:46:39,689 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:46:40.702606693Z [inf]  2026-02-27 13:46:39,736 - sender_bot - INFO - Sent text: tg_id=11615
+2026-02-27T13:47:20.059056081Z [inf]  2026-02-27 13:47:18,498 - handlers - INFO - ✅ Downloaded media from URL: 2204182 bytes
+2026-02-27T13:47:20.059063426Z [inf]  2026-02-27 13:47:18,813 - sender_bot - INFO - Sent document: tg_id=11616
+2026-02-27T13:47:20.059126918Z [inf]  2026-02-27 13:47:17,014 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:47:20.059131854Z [inf]  2026-02-27 13:47:17,018 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772200036.915159, "chat_ident": "-5273094456", "request_body": {"caption": "shot 12 —...
+2026-02-27T13:47:20.059136873Z [inf]  2026-02-27 13:47:17,018 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:47:23.258484800Z [inf]  2026-02-27 13:47:22,835 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:47:23.258493915Z [inf]  2026-02-27 13:47:22,836 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772200042.741979, "chat_ident": "-5273094456", "request_body": {"caption": "shot 20 —...
+2026-02-27T13:47:23.258503798Z [inf]  2026-02-27 13:47:22,836 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:47:24.255362437Z [inf]  2026-02-27 13:47:23,958 - handlers - INFO - ✅ Downloaded media from URL: 532799 bytes
+2026-02-27T13:47:24.255369714Z [inf]  2026-02-27 13:47:24,067 - sender_bot - INFO - Sent document: tg_id=11617
+2026-02-27T13:47:44.254310528Z [inf]  2026-02-27 13:47:41,480 - bot - INFO - No stuck messages found
+2026-02-27T13:49:17.291501166Z [inf]  2026-02-27 13:49:14,618 - sender_bot - INFO - Sent document: tg_id=11619
+2026-02-27T13:49:17.291773559Z [inf]  2026-02-27 13:49:10,442 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772200150.340563, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T13:49:17.291777253Z [inf]  2026-02-27 13:49:10,437 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:49:17.291782267Z [inf]  2026-02-27 13:49:10,442 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:49:17.291801366Z [inf]  2026-02-27 13:49:13,536 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:49:17.291808839Z [inf]  2026-02-27 13:49:10,506 - sender_bot - INFO - Sent text: tg_id=11618
+2026-02-27T13:49:17.291812503Z [inf]  2026-02-27 13:49:14,528 - handlers - INFO - ✅ Downloaded media from URL: 388191 bytes
+2026-02-27T13:49:17.291820120Z [inf]  2026-02-27 13:49:13,535 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:49:17.291827402Z [inf]  2026-02-27 13:49:13,536 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772200153.444347, "chat_ident": "-5016356402", "request_body": {"caption": "Стратегия...
+2026-02-27T13:50:51.324951683Z [inf]  2026-02-27 13:50:42,159 - bot - INFO - No stuck messages found
+2026-02-27T13:53:43.978091029Z [inf]  2026-02-27 13:53:43,331 - bot - INFO - No stuck messages found
+2026-02-27T13:55:14.965008995Z [inf]  2026-02-27 13:55:05,811 - bot - INFO - Saved message: chat=173, tg_id=11620, type=text, files=0
+2026-02-27T13:55:14.965031673Z [inf]  2026-02-27 13:55:06,841 - aiogram.event - INFO - Update id=681947052 is handled. Duration 13965 ms by bot id=8319533037
+2026-02-27T13:55:14.965053136Z [inf]  2026-02-27 13:55:06,841 - bot - INFO - Processed incoming update: 681947052
+2026-02-27T13:56:49.943791439Z [inf]  2026-02-27 13:56:39,688 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T13:56:49.943796812Z [inf]  2026-02-27 13:56:39,691 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772200599.596140, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-27T13:56:49.943802156Z [inf]  2026-02-27 13:56:39,691 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T13:56:49.943813337Z [inf]  2026-02-27 13:56:39,773 - sender_bot - INFO - Sent text: tg_id=11621
+2026-02-27T13:56:49.943820057Z [inf]  2026-02-27 13:56:44,174 - bot - INFO - No stuck messages found
+2026-02-27T13:59:46.429635550Z [inf]  2026-02-27 13:59:44,859 - bot - INFO - No stuck messages found
+2026-02-27T14:01:09.831065254Z [inf]  2026-02-27 14:00:59,650 - aiogram.event - INFO - Update id=681947053 is not handled. Duration 1 ms by bot id=8319533037
+2026-02-27T14:01:09.831080731Z [inf]  2026-02-27 14:00:59,651 - bot - INFO - Processed incoming update: 681947053
+2026-02-27T14:01:09.831094544Z [inf]  2026-02-27 14:00:59,671 - aiogram.event - INFO - Update id=681947054 is not handled. Duration 6 ms by bot id=8319533037
+2026-02-27T14:01:09.831103994Z [inf]  2026-02-27 14:00:59,672 - bot - INFO - Processed incoming update: 681947054
+2026-02-27T14:01:19.377249929Z [inf]  2026-02-27 14:01:18,839 - bot - INFO - Created new group: telegram_group_id=5196876426
+2026-02-27T14:01:19.416679842Z [inf]  2026-02-27 14:01:19,411 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T14:01:19.416688168Z [inf]  2026-02-27 14:01:19,413 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772200879.329035, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-27T14:01:19.416694223Z [inf]  2026-02-27 14:01:19,413 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T14:01:20.650220436Z [inf]  2026-02-27 14:01:19,696 - bot - INFO - Created new chat: type=group, id=175
+2026-02-27T14:01:20.650308646Z [inf]  2026-02-27 14:01:19,660 - sender_bot - INFO - Sent text: tg_id=11624
+2026-02-27T14:01:24.712869879Z [inf]  2026-02-27 14:01:24,258 - bot - INFO - Saved message: chat=175, tg_id=11623, type=text, files=0
+2026-02-27T14:01:25.624828078Z [inf]  2026-02-27 14:01:24,769 - aiogram.event - INFO - Update id=681947055 is handled. Duration 6617 ms by bot id=8319533037
+2026-02-27T14:01:25.624843869Z [inf]  2026-02-27 14:01:24,769 - bot - INFO - Processed incoming update: 681947055
+2026-02-27T14:01:45.529414791Z [inf]  2026-02-27 14:01:44,881 - bot - INFO - Saved message: chat=173, tg_id=11626, type=text, files=0
+2026-02-27T14:01:45.529425898Z [inf]  2026-02-27 14:01:45,386 - aiogram.event - INFO - Update id=681947057 is handled. Duration 5758 ms by bot id=8319533037
+2026-02-27T14:01:45.529433253Z [inf]  2026-02-27 14:01:45,387 - bot - INFO - Processed incoming update: 681947057
+2026-02-27T14:01:45.529464572Z [inf]  2026-02-27 14:01:38,978 - bot - INFO - Saved message: chat=173, tg_id=11625, type=text, files=0
+2026-02-27T14:01:45.529473750Z [inf]  2026-02-27 14:01:39,623 - aiogram.event - INFO - Update id=681947056 is handled. Duration 6043 ms by bot id=8319533037
+2026-02-27T14:01:45.529482747Z [inf]  2026-02-27 14:01:39,623 - bot - INFO - Processed incoming update: 681947056
+2026-02-27T14:01:51.507268198Z [inf]  2026-02-27 14:01:50,781 - bot - INFO - Saved message: chat=175, tg_id=11627, type=text, files=0
+2026-02-27T14:01:51.507305728Z [inf]  2026-02-27 14:01:51,276 - aiogram.event - INFO - Update id=681947058 is handled. Duration 5886 ms by bot id=8319533037
+2026-02-27T14:01:51.507312905Z [inf]  2026-02-27 14:01:51,277 - bot - INFO - Processed incoming update: 681947058
+2026-02-27T14:01:57.399506029Z [inf]  2026-02-27 14:01:56,677 - bot - INFO - Saved message: chat=173, tg_id=11628, type=text, files=0
+2026-02-27T14:01:57.399513076Z [inf]  2026-02-27 14:01:57,313 - aiogram.event - INFO - Update id=681947059 is handled. Duration 6033 ms by bot id=8319533037
+2026-02-27T14:01:57.399521495Z [inf]  2026-02-27 14:01:57,313 - bot - INFO - Processed incoming update: 681947059
+2026-02-27T14:02:03.199677998Z [inf]  2026-02-27 14:02:02,557 - bot - INFO - Saved message: chat=173, tg_id=11629, type=text, files=0
+2026-02-27T14:02:04.198525664Z [inf]  2026-02-27 14:02:03,220 - aiogram.event - INFO - Update id=681947060 is handled. Duration 5902 ms by bot id=8319533037
+2026-02-27T14:02:04.198533397Z [inf]  2026-02-27 14:02:03,221 - bot - INFO - Processed incoming update: 681947060
+2026-02-27T14:02:09.436734889Z [inf]  2026-02-27 14:02:08,451 - bot - INFO - Saved message: chat=173, tg_id=11630, type=text, files=0
+2026-02-27T14:02:09.436744013Z [inf]  2026-02-27 14:02:08,952 - aiogram.event - INFO - Update id=681947061 is handled. Duration 5728 ms by bot id=8319533037
+2026-02-27T14:02:09.436759268Z [inf]  2026-02-27 14:02:08,953 - bot - INFO - Processed incoming update: 681947061
+2026-02-27T14:02:09.437005155Z [inf]  2026-02-27 14:02:08,958 - aiogram.event - INFO - Update id=681947062 is not handled. Duration 2 ms by bot id=8319533037
+2026-02-27T14:02:09.437015117Z [inf]  2026-02-27 14:02:08,958 - bot - INFO - Processed incoming update: 681947062
+2026-02-27T14:02:14.892556497Z [inf]  2026-02-27 14:02:14,548 - aiogram.event - INFO - Update id=681947063 is handled. Duration 5588 ms by bot id=8319533037
+2026-02-27T14:02:14.892569633Z [inf]  2026-02-27 14:02:14,548 - bot - INFO - Processed incoming update: 681947063
+2026-02-27T14:02:14.892657148Z [inf]  2026-02-27 14:02:14,052 - bot - INFO - Saved message: chat=173, tg_id=11632, type=text, files=0
+2026-02-27T14:02:20.011793521Z [inf]  2026-02-27 14:02:19,841 - bot - INFO - Saved message: chat=173, tg_id=11633, type=text, files=0
+2026-02-27T14:02:20.666059675Z [inf]  2026-02-27 14:02:20,490 - aiogram.event - INFO - Update id=681947064 is handled. Duration 5940 ms by bot id=8319533037
+2026-02-27T14:02:20.666106237Z [inf]  2026-02-27 14:02:20,491 - bot - INFO - Processed incoming update: 681947064
+2026-02-27T14:02:26.486430847Z [inf]  2026-02-27 14:02:25,728 - bot - INFO - Saved message: chat=173, tg_id=11634, type=text, files=0
+2026-02-27T14:02:26.486437969Z [inf]  2026-02-27 14:02:26,365 - aiogram.event - INFO - Update id=681947065 is handled. Duration 5872 ms by bot id=8319533037
+2026-02-27T14:02:26.486444941Z [inf]  2026-02-27 14:02:26,365 - bot - INFO - Processed incoming update: 681947065
+2026-02-27T14:02:31.707088448Z [inf]  2026-02-27 14:02:31,451 - bot - INFO - Saved message: chat=173, tg_id=11635, type=text, files=0
+2026-02-27T14:02:32.451585800Z [inf]  2026-02-27 14:02:31,946 - aiogram.event - INFO - Update id=681947066 is handled. Duration 5578 ms by bot id=8319533037
+2026-02-27T14:02:32.451591944Z [inf]  2026-02-27 14:02:31,946 - bot - INFO - Processed incoming update: 681947066
+2026-02-27T14:02:37.633132212Z [inf]  2026-02-27 14:02:37,179 - bot - INFO - Saved message: chat=173, tg_id=11636, type=text, files=0
+2026-02-27T14:02:38.811589904Z [inf]  2026-02-27 14:02:37,814 - aiogram.event - INFO - Update id=681947067 is handled. Duration 5865 ms by bot id=8319533037
+2026-02-27T14:02:38.811596909Z [inf]  2026-02-27 14:02:37,814 - bot - INFO - Processed incoming update: 681947067
+2026-02-27T14:02:43.935745144Z [inf]  2026-02-27 14:02:43,045 - bot - INFO - Saved message: chat=173, tg_id=11637, type=text, files=0
+2026-02-27T14:02:43.935758282Z [inf]  2026-02-27 14:02:43,718 - aiogram.event - INFO - Update id=681947068 is handled. Duration 5902 ms by bot id=8319533037
+2026-02-27T14:02:43.935767984Z [inf]  2026-02-27 14:02:43,719 - bot - INFO - Processed incoming update: 681947068
+2026-02-27T14:02:46.702141815Z [inf]  2026-02-27 14:02:46,601 - bot - INFO - No stuck messages found
+2026-02-27T14:02:49.735597757Z [inf]  2026-02-27 14:02:49,732 - bot - INFO - Saved message: chat=173, tg_id=11638, type=text, files=0
+2026-02-27T14:02:50.941986972Z [inf]  2026-02-27 14:02:50,253 - aiogram.event - INFO - Update id=681947069 is handled. Duration 6532 ms by bot id=8319533037
+2026-02-27T14:02:50.941992632Z [inf]  2026-02-27 14:02:50,253 - bot - INFO - Processed incoming update: 681947069
+2026-02-27T14:03:30.469806443Z [inf]  2026-02-27 14:03:22,166 - bot - INFO - Saved message: chat=99, tg_id=11639, type=text, files=0
+2026-02-27T14:03:30.469817399Z [inf]  2026-02-27 14:03:22,819 - aiogram.event - INFO - Update id=681947070 is handled. Duration 2708 ms by bot id=8319533037
+2026-02-27T14:03:30.469824836Z [inf]  2026-02-27 14:03:22,819 - bot - INFO - Processed incoming update: 681947070
+2026-02-27T14:04:31.093883258Z [inf]  2026-02-27 14:04:29,681 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T14:04:31.093891014Z [inf]  2026-02-27 14:04:29,682 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772201069.577825, "chat_ident": "980045051", "request_body": {"chat_id": "980045051",...
+2026-02-27T14:04:31.093897647Z [inf]  2026-02-27 14:04:29,682 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T14:04:31.093903385Z [inf]  2026-02-27 14:04:29,775 - sender_bot - INFO - Sent text: tg_id=11640
+2026-02-27T14:05:51.363481922Z [inf]  2026-02-27 14:05:47,285 - bot - INFO - No stuck messages found
+2026-02-27T14:08:33.866201410Z [inf]  2026-02-27 14:08:32,216 - bot - INFO - Saved message: chat=158, tg_id=11641, type=text, files=0
+2026-02-27T14:08:33.866209752Z [inf]  2026-02-27 14:08:32,870 - aiogram.event - INFO - Update id=681947071 is handled. Duration 5829 ms by bot id=8319533037
+2026-02-27T14:08:33.866215901Z [inf]  2026-02-27 14:08:32,870 - bot - INFO - Processed incoming update: 681947071
+2026-02-27T14:08:53.086803805Z [inf]  2026-02-27 14:08:47,969 - bot - INFO - No stuck messages found
+2026-02-27T14:10:33.479678740Z [inf]  2026-02-27 14:10:24,980 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772201424.885366, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T14:10:33.479684450Z [inf]  2026-02-27 14:10:24,980 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T14:10:33.479690849Z [inf]  2026-02-27 14:10:24,979 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T14:10:33.479691808Z [inf]  2026-02-27 14:10:25,058 - sender_bot - INFO - Sent text: tg_id=11642
+2026-02-27T14:11:53.515772380Z [inf]  2026-02-27 14:11:48,647 - bot - INFO - No stuck messages found
+2026-02-27T14:13:04.273514754Z [inf]  2026-02-27 14:13:03,583 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T14:13:04.273530195Z [inf]  2026-02-27 14:13:03,585 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772201583.477992, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-27T14:13:04.273540498Z [inf]  2026-02-27 14:13:03,585 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T14:13:04.273549562Z [inf]  2026-02-27 14:13:03,652 - sender_bot - INFO - Sent text: tg_id=11643
+2026-02-27T14:14:54.856406007Z [inf]  2026-02-27 14:14:45,039 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T14:14:54.856414721Z [inf]  2026-02-27 14:14:45,041 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772201684.933640, "chat_ident": "-5196876426", "request_body": {"chat_id": "-51968764...
+2026-02-27T14:14:54.856420390Z [inf]  2026-02-27 14:14:45,041 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T14:14:54.856431253Z [inf]  2026-02-27 14:14:45,139 - sender_bot - INFO - Sent text: tg_id=11644
+2026-02-27T14:14:54.856436402Z [inf]  2026-02-27 14:14:49,327 - bot - INFO - No stuck messages found
+2026-02-27T14:16:46.418026555Z [inf]  2026-02-27 14:16:38,082 - bot - INFO - Created new chat: type=user, id=176
+2026-02-27T14:16:46.418138169Z [inf]  2026-02-27 14:16:37,226 - bot - INFO - Created new user: 480882877 -> id=149
+2026-02-27T14:16:46.418267765Z [inf]  2026-02-27 14:16:40,196 - bot - INFO - Saved message: chat=175, tg_id=11645, type=text, files=0
+2026-02-27T14:16:46.418279510Z [inf]  2026-02-27 14:16:40,699 - aiogram.event - INFO - Update id=681947072 is handled. Duration 5698 ms by bot id=8319533037
+2026-02-27T14:16:46.418288919Z [inf]  2026-02-27 14:16:40,700 - bot - INFO - Processed incoming update: 681947072
+2026-02-27T14:17:06.579627730Z [inf]  2026-02-27 14:17:05,150 - aiogram.event - INFO - Update id=681947073 is handled. Duration 6042 ms by bot id=8319533037
+2026-02-27T14:17:06.579647844Z [inf]  2026-02-27 14:17:05,150 - bot - INFO - Processed incoming update: 681947073
+2026-02-27T14:17:06.580261679Z [inf]  2026-02-27 14:17:04,663 - bot - INFO - Saved message: chat=158, tg_id=11646, type=text, files=0
+2026-02-27T14:17:10.693246030Z [inf]  2026-02-27 14:17:10,344 - bot - INFO - Saved message: chat=158, tg_id=11647, type=text, files=0
+2026-02-27T14:17:11.802547616Z [inf]  2026-02-27 14:17:10,832 - aiogram.event - INFO - Update id=681947074 is handled. Duration 5680 ms by bot id=8319533037
+2026-02-27T14:17:11.802904840Z [inf]  2026-02-27 14:17:10,832 - bot - INFO - Processed incoming update: 681947074
+2026-02-27T14:17:20.821723299Z [inf]  2026-02-27 14:17:20,816 - bot - INFO - Saved message: chat=175, tg_id=11648, type=text, files=0
+2026-02-27T14:17:21.630833164Z [inf]  2026-02-27 14:17:21,315 - aiogram.event - INFO - Update id=681947075 is handled. Duration 5653 ms by bot id=8319533037
+2026-02-27T14:17:21.630841281Z [inf]  2026-02-27 14:17:21,315 - bot - INFO - Processed incoming update: 681947075
+2026-02-27T14:18:01.261622882Z [inf]  2026-02-27 14:17:51,044 - bot - INFO - No stuck messages found
+2026-02-27T14:18:01.261632134Z [inf]  2026-02-27 14:17:52,798 - bot - INFO - Saved message: chat=158, tg_id=11649, type=text, files=0
+2026-02-27T14:18:01.261639708Z [inf]  2026-02-27 14:17:53,305 - aiogram.event - INFO - Update id=681947076 is handled. Duration 6777 ms by bot id=8319533037
+2026-02-27T14:18:01.261666826Z [inf]  2026-02-27 14:17:53,306 - bot - INFO - Processed incoming update: 681947076
+2026-02-27T14:18:31.336426778Z [inf]  2026-02-27 14:18:29,704 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T14:18:31.336433369Z [inf]  2026-02-27 14:18:29,705 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772201909.588935, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T14:18:31.336440140Z [inf]  2026-02-27 14:18:29,705 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T14:18:31.336446527Z [inf]  2026-02-27 14:18:29,767 - sender_bot - INFO - Sent text: tg_id=11650
+2026-02-27T14:18:34.284905083Z [inf]  2026-02-27 14:18:34,212 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T14:18:34.284910724Z [inf]  2026-02-27 14:18:34,214 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772201914.100878, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T14:18:34.284916385Z [inf]  2026-02-27 14:18:34,214 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T14:18:34.284922499Z [inf]  2026-02-27 14:18:34,279 - sender_bot - INFO - Sent text: tg_id=11651
+2026-02-27T14:19:03.570689403Z [inf]  2026-02-27 14:18:57,167 - bot - INFO - Saved message: chat=158, tg_id=11652, type=text, files=0
+2026-02-27T14:19:03.570693712Z [inf]  2026-02-27 14:18:57,661 - aiogram.event - INFO - Update id=681947077 is handled. Duration 5607 ms by bot id=8319533037
+2026-02-27T14:19:03.570698547Z [inf]  2026-02-27 14:18:57,661 - bot - INFO - Processed incoming update: 681947077
+2026-02-27T14:19:22.868189413Z [inf]  2026-02-27 14:19:17,652 - bot - INFO - Saved message: chat=158, tg_id=11653, type=text, files=0
+2026-02-27T14:19:22.868196089Z [inf]  2026-02-27 14:19:18,135 - aiogram.event - INFO - Update id=681947078 is handled. Duration 5571 ms by bot id=8319533037
+2026-02-27T14:19:22.868203336Z [inf]  2026-02-27 14:19:18,136 - bot - INFO - Processed incoming update: 681947078
+2026-02-27T14:19:23.645954707Z [inf]  2026-02-27 14:19:23,399 - bot - INFO - Saved message: chat=158, tg_id=11654, type=text, files=0
+2026-02-27T14:19:23.892629745Z [inf]  2026-02-27 14:19:23,884 - aiogram.event - INFO - Update id=681947079 is handled. Duration 5747 ms by bot id=8319533037
+2026-02-27T14:19:23.892645707Z [inf]  2026-02-27 14:19:23,885 - bot - INFO - Processed incoming update: 681947079
+2026-02-27T14:19:44.165181822Z [inf]  2026-02-27 14:19:40,094 - bot - INFO - Saved message: chat=99, tg_id=11655, type=text, files=0
+2026-02-27T14:19:44.165190621Z [inf]  2026-02-27 14:19:40,585 - aiogram.event - INFO - Update id=681947080 is handled. Duration 2591 ms by bot id=8319533037
+2026-02-27T14:19:44.165199095Z [inf]  2026-02-27 14:19:40,585 - bot - INFO - Processed incoming update: 681947080
+2026-02-27T14:20:04.497777656Z [inf]  2026-02-27 14:19:54,885 - bot - INFO - Processed incoming update: 681947081
+2026-02-27T14:20:04.497788054Z [inf]  2026-02-27 14:20:00,195 - bot - INFO - Saved message: chat=158, tg_id=11657, type=text, files=0
+2026-02-27T14:20:04.497794292Z [inf]  2026-02-27 14:20:00,706 - aiogram.event - INFO - Update id=681947082 is handled. Duration 5531 ms by bot id=8319533037
+2026-02-27T14:20:04.497799790Z [inf]  2026-02-27 14:20:00,707 - bot - INFO - Processed incoming update: 681947082
+2026-02-27T14:20:04.497837812Z [inf]  2026-02-27 14:19:54,403 - bot - INFO - Saved message: chat=175, tg_id=11656, type=text, files=0
+2026-02-27T14:20:04.497867505Z [inf]  2026-02-27 14:19:54,885 - aiogram.event - INFO - Update id=681947081 is handled. Duration 5747 ms by bot id=8319533037
+2026-02-27T14:20:06.546949173Z [inf]  2026-02-27 14:20:05,840 - bot - INFO - Saved message: chat=175, tg_id=11658, type=text, files=0
+2026-02-27T14:20:06.546975603Z [inf]  2026-02-27 14:20:06,335 - aiogram.event - INFO - Update id=681947083 is handled. Duration 5622 ms by bot id=8319533037
+2026-02-27T14:20:06.546982837Z [inf]  2026-02-27 14:20:06,335 - bot - INFO - Processed incoming update: 681947083
+2026-02-27T14:20:26.778906729Z [inf]  2026-02-27 14:20:24,653 - bot - INFO - Saved message: chat=158, tg_id=11659, type=text, files=0
+2026-02-27T14:20:26.778911043Z [inf]  2026-02-27 14:20:25,147 - aiogram.event - INFO - Update id=681947084 is handled. Duration 5798 ms by bot id=8319533037
+2026-02-27T14:20:26.778915851Z [inf]  2026-02-27 14:20:25,147 - bot - INFO - Processed incoming update: 681947084
+2026-02-27T14:20:57.461930934Z [inf]  2026-02-27 14:20:51,719 - bot - INFO - No stuck messages found
+2026-02-27T14:21:27.060554883Z [inf]  2026-02-27 14:21:23,213 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T14:21:27.060559285Z [inf]  2026-02-27 14:21:23,217 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772202083.091087, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T14:21:27.060563749Z [inf]  2026-02-27 14:21:23,217 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T14:21:27.060567733Z [inf]  2026-02-27 14:21:23,273 - sender_bot - INFO - Sent text: tg_id=11660
+2026-02-27T14:21:29.223480141Z [inf]  2026-02-27 14:21:28,963 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T14:21:29.223488084Z [inf]  2026-02-27 14:21:28,966 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772202088.846422, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T14:21:29.223496973Z [inf]  2026-02-27 14:21:28,966 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T14:21:29.223503506Z [inf]  2026-02-27 14:21:29,068 - sender_bot - INFO - Sent text: tg_id=11661
+2026-02-27T14:21:59.603626467Z [inf]  2026-02-27 14:21:53,260 - bot - INFO - Saved message: chat=175, tg_id=11662, type=text, files=0
+2026-02-27T14:21:59.603633494Z [inf]  2026-02-27 14:21:53,758 - aiogram.event - INFO - Update id=681947085 is handled. Duration 5639 ms by bot id=8319533037
+2026-02-27T14:21:59.603639619Z [inf]  2026-02-27 14:21:53,758 - bot - INFO - Processed incoming update: 681947085
+2026-02-27T14:22:30.055650939Z [inf]  2026-02-27 14:22:20,988 - bot - INFO - Processed incoming update: 681947086
+2026-02-27T14:22:30.055685774Z [inf]  2026-02-27 14:22:20,491 - bot - INFO - Saved message: chat=175, tg_id=11663, type=text, files=0
+2026-02-27T14:22:30.055697752Z [inf]  2026-02-27 14:22:20,985 - aiogram.event - INFO - Update id=681947086 is handled. Duration 5656 ms by bot id=8319533037
+2026-02-27T14:22:34.040688708Z [inf]  2026-02-27 14:22:33,547 - bot - INFO - Saved message: chat=175, tg_id=11664, type=text, files=0
+2026-02-27T14:22:34.044209760Z [inf]  2026-02-27 14:22:34,038 - aiogram.event - INFO - Update id=681947087 is handled. Duration 5465 ms by bot id=8319533037
+2026-02-27T14:22:34.044222729Z [inf]  2026-02-27 14:22:34,039 - bot - INFO - Processed incoming update: 681947087
+2026-02-27T14:22:53.308116843Z [inf]  2026-02-27 14:22:52,000 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T14:22:53.308126869Z [inf]  2026-02-27 14:22:52,002 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772202171.875586, "chat_ident": "980045051", "request_body": {"chat_id": "980045051",...
+2026-02-27T14:22:53.308134659Z [inf]  2026-02-27 14:22:52,002 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T14:22:53.308141804Z [inf]  2026-02-27 14:22:52,287 - sender_bot - INFO - Sent text: tg_id=11666
+2026-02-27T14:22:57.619505326Z [inf]  2026-02-27 14:22:56,912 - bot - INFO - Saved message: chat=175, tg_id=11665, type=document, files=1
+2026-02-27T14:22:57.619511515Z [inf]  2026-02-27 14:22:57,424 - aiogram.event - INFO - Update id=681947088 is handled. Duration 6201 ms by bot id=8319533037
+2026-02-27T14:22:57.619517033Z [inf]  2026-02-27 14:22:57,424 - bot - INFO - Processed incoming update: 681947088
+2026-02-27T14:23:03.813290410Z [inf]  2026-02-27 14:23:03,017 - bot - INFO - Saved message: chat=175, tg_id=11667, type=text, files=0
+2026-02-27T14:23:03.813297722Z [inf]  2026-02-27 14:23:03,510 - aiogram.event - INFO - Update id=681947089 is handled. Duration 6083 ms by bot id=8319533037
+2026-02-27T14:23:03.813344525Z [inf]  2026-02-27 14:23:03,510 - bot - INFO - Processed incoming update: 681947089
+2026-02-27T14:23:54.031265471Z [inf]  2026-02-27 14:23:51,791 - bot - INFO - Saved message: chat=99, tg_id=11668, type=text, files=0
+2026-02-27T14:23:54.031271231Z [inf]  2026-02-27 14:23:53,285 - aiogram.event - INFO - Update id=681947090 is handled. Duration 3609 ms by bot id=8319533037
+2026-02-27T14:23:54.031276933Z [inf]  2026-02-27 14:23:53,285 - bot - INFO - Processed incoming update: 681947090
+2026-02-27T14:23:54.031282777Z [inf]  2026-02-27 14:23:53,500 - bot - INFO - No stuck messages found
+2026-02-27T14:23:59.136305822Z [inf]  2026-02-27 14:23:58,656 - bot - INFO - Saved message: chat=175, tg_id=11669, type=document, files=1
+2026-02-27T14:23:59.933103546Z [inf]  2026-02-27 14:23:59,172 - aiogram.event - INFO - Update id=681947091 is handled. Duration 5884 ms by bot id=8319533037
+2026-02-27T14:23:59.933110060Z [inf]  2026-02-27 14:23:59,172 - bot - INFO - Processed incoming update: 681947091
+2026-02-27T14:24:01.875831445Z [inf]  2026-02-27 14:24:01,343 - bot - INFO - Saved message: chat=99, tg_id=11670, type=text, files=0
+2026-02-27T14:24:01.875835909Z [inf]  2026-02-27 14:24:01,841 - aiogram.event - INFO - Update id=681947092 is handled. Duration 2667 ms by bot id=8319533037
+2026-02-27T14:24:01.875840712Z [inf]  2026-02-27 14:24:01,842 - bot - INFO - Processed incoming update: 681947092
+2026-02-27T14:24:43.427408495Z [inf]  2026-02-27 14:24:36,325 - bot - INFO - Saved message: chat=175, tg_id=11671, type=document, files=1
+2026-02-27T14:24:43.427414317Z [inf]  2026-02-27 14:24:36,826 - aiogram.event - INFO - Update id=681947093 is handled. Duration 5922 ms by bot id=8319533037
+2026-02-27T14:24:43.427420107Z [inf]  2026-02-27 14:24:36,826 - bot - INFO - Processed incoming update: 681947093
+2026-02-27T14:24:52.479591747Z [inf]  2026-02-27 14:24:51,574 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T14:24:52.479599730Z [inf]  2026-02-27 14:24:51,575 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772202291.447962, "chat_ident": "980045051", "request_body": {"chat_id": "980045051",...
+2026-02-27T14:24:52.479607207Z [inf]  2026-02-27 14:24:51,575 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T14:24:52.479614552Z [inf]  2026-02-27 14:24:51,749 - sender_bot - INFO - Sent text: tg_id=11672
+2026-02-27T14:25:33.428853740Z [inf]  2026-02-27 14:25:31,984 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772202331.679429, "chat_ident": "980045051", "request_body": {"chat_id": "980045051",...
+2026-02-27T14:25:33.428865735Z [inf]  2026-02-27 14:25:31,984 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T14:25:33.428876828Z [inf]  2026-02-27 14:25:32,058 - sender_bot - INFO - Sent text: tg_id=11673
+2026-02-27T14:25:33.428964991Z [inf]  2026-02-27 14:25:31,982 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T14:27:04.678465045Z [inf]  2026-02-27 14:26:54,217 - bot - INFO - No stuck messages found
+2026-02-27T14:30:02.429574537Z [inf]  2026-02-27 14:29:54,927 - bot - INFO - No stuck messages found
+2026-02-27T14:33:01.295249054Z [inf]  2026-02-27 14:32:55,635 - bot - INFO - No stuck messages found
+2026-02-27T14:33:07.418082213Z [inf]  2026-02-27 14:33:06,967 - aiogram.event - INFO - Update id=681947094 is handled. Duration 5912 ms by bot id=8319533037
+2026-02-27T14:33:07.418093434Z [inf]  2026-02-27 14:33:06,967 - bot - INFO - Processed incoming update: 681947094
+2026-02-27T14:33:07.418128099Z [inf]  2026-02-27 14:33:06,456 - bot - INFO - Saved message: chat=158, tg_id=11674, type=document, files=1
+2026-02-27T14:36:02.379617715Z [inf]  2026-02-27 14:35:56,336 - bot - INFO - No stuck messages found
+2026-02-27T14:39:05.800840789Z [inf]  2026-02-27 14:38:57,037 - bot - INFO - No stuck messages found
+2026-02-27T14:42:02.359876131Z [inf]  2026-02-27 14:41:57,736 - bot - INFO - No stuck messages found
+2026-02-27T14:45:05.790723220Z [inf]  2026-02-27 14:44:58,436 - bot - INFO - No stuck messages found
+2026-02-27T14:48:02.126127425Z [inf]  2026-02-27 14:47:59,135 - bot - INFO - No stuck messages found
+2026-02-27T14:50:38.483693682Z [inf]  2026-02-27 14:50:29,400 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T14:50:38.483698720Z [inf]  2026-02-27 14:50:29,402 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772203829.269683, "chat_ident": "980045051", "request_body": {"chat_id": "980045051",...
+2026-02-27T14:50:38.483704095Z [inf]  2026-02-27 14:50:29,402 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T14:50:38.483708580Z [inf]  2026-02-27 14:50:29,481 - sender_bot - INFO - Sent text: tg_id=11675
+2026-02-27T14:50:57.719343355Z [inf]  2026-02-27 14:50:55,955 - bot - INFO - Saved message: chat=175, tg_id=11676, type=text, files=0
+2026-02-27T14:50:57.719348353Z [inf]  2026-02-27 14:50:56,453 - aiogram.event - INFO - Update id=681947095 is handled. Duration 5845 ms by bot id=8319533037
+2026-02-27T14:50:57.719352831Z [inf]  2026-02-27 14:50:56,453 - bot - INFO - Processed incoming update: 681947095
+2026-02-27T14:51:00.305995392Z [inf]  2026-02-27 14:50:59,801 - bot - INFO - No stuck messages found
+2026-02-27T14:52:45.090006430Z [inf]  2026-02-27 14:52:35,025 - bot - INFO - Saved message: chat=99, tg_id=11677, type=text, files=0
+2026-02-27T14:52:45.090014328Z [inf]  2026-02-27 14:52:35,523 - aiogram.event - INFO - Update id=681947096 is handled. Duration 2478 ms by bot id=8319533037
+2026-02-27T14:52:45.090022071Z [inf]  2026-02-27 14:52:35,523 - bot - INFO - Processed incoming update: 681947096
+2026-02-27T14:53:04.787174482Z [inf]  2026-02-27 14:53:01,322 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T14:53:04.787180925Z [inf]  2026-02-27 14:53:01,324 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772203981.182725, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-27T14:53:04.787187971Z [inf]  2026-02-27 14:53:01,324 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T14:53:04.787196926Z [inf]  2026-02-27 14:53:01,443 - sender_bot - INFO - Sent text: tg_id=11678
+2026-02-27T14:53:25.207284334Z [inf]  2026-02-27 14:53:17,040 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T14:53:25.207290740Z [inf]  2026-02-27 14:53:17,043 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772203996.910282, "chat_ident": "980045051", "request_body": {"chat_id": "980045051",...
+2026-02-27T14:53:25.207297094Z [inf]  2026-02-27 14:53:17,044 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T14:53:25.207304506Z [inf]  2026-02-27 14:53:17,151 - sender_bot - INFO - Sent text: tg_id=11679
+2026-02-27T14:54:05.918942476Z [inf]  2026-02-27 14:54:00,517 - bot - INFO - No stuck messages found
+2026-02-27T14:54:10.789177050Z [inf]  2026-02-27 14:54:09,836 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T14:54:10.789184215Z [inf]  2026-02-27 14:54:09,838 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772204049.536996, "chat_ident": "980045051", "request_body": {"chat_id": "980045051",...
+2026-02-27T14:54:10.789190023Z [inf]  2026-02-27 14:54:09,838 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T14:54:10.789195569Z [inf]  2026-02-27 14:54:10,129 - sender_bot - INFO - Sent text: tg_id=11680
+2026-02-27T14:57:10.142226676Z [inf]  2026-02-27 14:57:02,287 - bot - INFO - No stuck messages found
+2026-02-27T14:57:10.142233474Z [inf]  2026-02-27 14:57:06,349 - bot - INFO - Saved message: chat=158, tg_id=11681, type=document, files=1
+2026-02-27T14:57:10.142239305Z [inf]  2026-02-27 14:57:06,853 - aiogram.event - INFO - Update id=681947097 is handled. Duration 7021 ms by bot id=8319533037
+2026-02-27T14:57:10.142247349Z [inf]  2026-02-27 14:57:06,853 - bot - INFO - Processed incoming update: 681947097
+2026-02-27T15:00:06.412872199Z [inf]  2026-02-27 15:00:02,976 - bot - INFO - No stuck messages found
+2026-02-27T15:00:25.404987689Z [inf]  2026-02-27 15:00:17,056 - bot - INFO - Saved message: chat=158, tg_id=11682, type=text, files=0
+2026-02-27T15:00:25.404992154Z [inf]  2026-02-27 15:00:17,561 - aiogram.event - INFO - Update id=681947098 is handled. Duration 5705 ms by bot id=8319533037
+2026-02-27T15:00:25.404996422Z [inf]  2026-02-27 15:00:17,564 - bot - INFO - Processed incoming update: 681947098
+2026-02-27T15:03:10.483897457Z [inf]  2026-02-27 15:03:03,653 - bot - INFO - No stuck messages found
+2026-02-27T15:04:30.479779035Z [inf]  2026-02-27 15:04:28,676 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:04:30.479793900Z [inf]  2026-02-27 15:04:28,679 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772204668.549042, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T15:04:30.479801026Z [inf]  2026-02-27 15:04:28,679 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:04:30.479806800Z [inf]  2026-02-27 15:04:28,722 - sender_bot - ERROR - ❌ Bad request: Telegram server says - Bad Request: message to be replied not found
+2026-02-27T15:04:31.872690985Z [inf]  2026-02-27 15:04:31,491 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:04:31.872698825Z [inf]  2026-02-27 15:04:31,493 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772204671.368991, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T15:04:31.872708764Z [inf]  2026-02-27 15:04:31,493 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:04:31.872716794Z [inf]  2026-02-27 15:04:31,553 - sender_bot - INFO - Sent text: tg_id=11683
+2026-02-27T15:05:41.247123926Z [inf]  2026-02-27 15:05:37,900 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:05:41.247139586Z [inf]  2026-02-27 15:05:37,902 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772204737.771858, "chat_ident": "980045051", "request_body": {"chat_id": "980045051",...
+2026-02-27T15:05:41.247148244Z [inf]  2026-02-27 15:05:37,902 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:05:41.247155642Z [inf]  2026-02-27 15:05:37,981 - sender_bot - INFO - Sent text: tg_id=11684
+2026-02-27T15:06:01.625741467Z [inf]  2026-02-27 15:05:53,996 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:06:01.625750064Z [inf]  2026-02-27 15:05:53,997 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772204753.868413, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T15:06:01.625757021Z [inf]  2026-02-27 15:05:53,997 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:06:01.625773770Z [inf]  2026-02-27 15:05:54,090 - sender_bot - INFO - Sent text: tg_id=11685
+2026-02-27T15:06:01.625779786Z [inf]  2026-02-27 15:05:55,988 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:06:01.625785927Z [inf]  2026-02-27 15:05:55,989 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772204755.867055, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T15:06:01.625792160Z [inf]  2026-02-27 15:05:55,989 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:06:01.625901740Z [inf]  2026-02-27 15:05:56,024 - sender_bot - INFO - Sent text: tg_id=11686
+2026-02-27T15:06:05.225290644Z [inf]  2026-02-27 15:06:04,326 - bot - INFO - No stuck messages found
+2026-02-27T15:06:56.504362283Z [err]  Traceback (most recent call last):
+2026-02-27T15:06:56.504374302Z [err]    File "/app/bot.py", line 1017, in api_media_get
+2026-02-27T15:06:56.504382483Z [err]      cached_file = run_async(download())
+2026-02-27T15:06:56.504390458Z [err]                    ^^^^^^^^^^^^^^^^^^^^^
+2026-02-27T15:06:56.504397174Z [err]    File "/app/bot.py", line 124, in run_async
+2026-02-27T15:06:56.504404947Z [err]      return future.result(timeout=timeout)
+2026-02-27T15:06:56.504414806Z [err]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-02-27T15:06:56.504422651Z [err]    File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 456, in result
+2026-02-27T15:06:56.504429732Z [err]    File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+2026-02-27T15:06:56.504430507Z [err]      return self.__get_result()
+2026-02-27T15:06:56.504439630Z [err]             ^^^^^^^^^^^^^^^^^^^
+2026-02-27T15:06:56.504440136Z [err]      raise self._exception
+2026-02-27T15:06:56.504444602Z [inf]  2026-02-27 15:06:55,777 - bot - ERROR - ❌ Media get error: Telegram server says - Bad Request: file is too big
+2026-02-27T15:06:56.504448947Z [err]    File "/app/bot.py", line 1005, in download
+2026-02-27T15:06:56.504479528Z [err]      file = await bot.get_file(file_id)
+2026-02-27T15:06:56.504496028Z [err]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-02-27T15:06:56.504501699Z [err]    File "/usr/local/lib/python3.11/site-packages/aiogram/client/bot.py", line 488, in __call__
+2026-02-27T15:06:56.504503105Z [err]    File "/usr/local/lib/python3.11/site-packages/aiogram/client/bot.py", line 1786, in get_file
+2026-02-27T15:06:56.504510081Z [err]      return await self(call, request_timeout=request_timeout)
+2026-02-27T15:06:56.504516141Z [err]      return await self.session(self, method, timeout=request_timeout)
+2026-02-27T15:06:56.504517430Z [err]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-02-27T15:06:56.505639493Z [err]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-02-27T15:06:56.505650130Z [err]    File "/usr/local/lib/python3.11/site-packages/aiogram/client/session/base.py", line 254, in __call__
+2026-02-27T15:06:56.505657985Z [err]      return cast(TelegramType, await middleware(bot, method))
+2026-02-27T15:06:56.505665401Z [err]                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-02-27T15:06:56.505672443Z [err]    File "/usr/local/lib/python3.11/site-packages/aiogram/client/session/aiohttp.py", line 189, in make_request
+2026-02-27T15:06:56.505684737Z [err]      response = self.check_response(
+2026-02-27T15:06:56.505692080Z [err]                 ^^^^^^^^^^^^^^^^^^^^
+2026-02-27T15:06:56.505698559Z [err]    File "/usr/local/lib/python3.11/site-packages/aiogram/client/session/base.py", line 120, in check_response
+2026-02-27T15:06:56.505705106Z [err]      raise TelegramBadRequest(method=method, message=description)
+2026-02-27T15:06:56.505712271Z [err]  aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: file is too big
+2026-02-27T15:08:27.857568882Z [inf]  2026-02-27 15:08:19,440 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:08:27.857572967Z [inf]  2026-02-27 15:08:19,442 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772204899.311977, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T15:08:27.857577561Z [inf]  2026-02-27 15:08:19,442 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:08:27.857582668Z [inf]  2026-02-27 15:08:19,502 - sender_bot - INFO - Sent text: tg_id=11687
+2026-02-27T15:09:09.043172157Z [inf]  2026-02-27 15:09:05,032 - bot - INFO - No stuck messages found
+2026-02-27T15:09:50.374392015Z [inf]  2026-02-27 15:09:46,024 - bot - INFO - Saved message: chat=158, tg_id=11688, type=text, files=0
+2026-02-27T15:09:50.374399758Z [inf]  2026-02-27 15:09:46,682 - aiogram.event - INFO - Update id=681947099 is handled. Duration 6040 ms by bot id=8319533037
+2026-02-27T15:09:50.374408024Z [inf]  2026-02-27 15:09:46,682 - bot - INFO - Processed incoming update: 681947099
+2026-02-27T15:09:54.546099766Z [inf]  2026-02-27 15:09:53,716 - bot - INFO - Saved message: chat=99, tg_id=11689, type=document, files=1
+2026-02-27T15:09:54.546104290Z [inf]  2026-02-27 15:09:54,361 - aiogram.event - INFO - Update id=681947100 is handled. Duration 2799 ms by bot id=8319533037
+2026-02-27T15:09:54.546109255Z [inf]  2026-02-27 15:09:54,361 - bot - INFO - Processed incoming update: 681947100
+2026-02-27T15:09:59.865128889Z [inf]  2026-02-27 15:09:59,246 - bot - INFO - Saved message: chat=99, tg_id=11690, type=text, files=0
+2026-02-27T15:09:59.865135466Z [inf]  2026-02-27 15:09:59,744 - aiogram.event - INFO - Update id=681947101 is handled. Duration 2649 ms by bot id=8319533037
+2026-02-27T15:09:59.865142310Z [inf]  2026-02-27 15:09:59,745 - bot - INFO - Processed incoming update: 681947101
+2026-02-27T15:10:40.489149417Z [inf]  2026-02-27 15:10:30,920 - bot - INFO - Saved message: chat=175, tg_id=11691, type=text, files=0
+2026-02-27T15:10:40.489160452Z [inf]  2026-02-27 15:10:31,420 - aiogram.event - INFO - Update id=681947102 is handled. Duration 5889 ms by bot id=8319533037
+2026-02-27T15:10:40.489168654Z [inf]  2026-02-27 15:10:31,420 - bot - INFO - Processed incoming update: 681947102
+2026-02-27T15:11:32.261271863Z [inf]  2026-02-27 15:11:27,989 - sender_bot - INFO - Sent text: tg_id=11693
+2026-02-27T15:11:32.261282320Z [inf]  2026-02-27 15:11:29,657 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:11:32.261293747Z [inf]  2026-02-27 15:11:29,661 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772205089.522895, "chat_ident": "980045051", "request_body": {"chat_id": "980045051",...
+2026-02-27T15:11:32.261300411Z [inf]  2026-02-27 15:11:29,662 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:11:32.261307784Z [inf]  2026-02-27 15:11:29,730 - sender_bot - INFO - Sent text: tg_id=11694
+2026-02-27T15:11:32.261405232Z [inf]  2026-02-27 15:11:24,829 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:11:32.261411779Z [inf]  2026-02-27 15:11:24,831 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772205084.694673, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T15:11:32.261419065Z [inf]  2026-02-27 15:11:24,831 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:11:32.261427971Z [inf]  2026-02-27 15:11:24,992 - sender_bot - INFO - Sent text: tg_id=11692
+2026-02-27T15:11:32.261436069Z [inf]  2026-02-27 15:11:27,954 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:11:32.261444969Z [inf]  2026-02-27 15:11:27,955 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772205087.827722, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T15:11:32.261453615Z [inf]  2026-02-27 15:11:27,955 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:11:34.403055833Z [inf]  2026-02-27 15:11:33,887 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:11:34.403064814Z [inf]  2026-02-27 15:11:33,888 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772205093.760201, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T15:11:34.403072848Z [inf]  2026-02-27 15:11:33,888 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:11:34.403080969Z [inf]  2026-02-27 15:11:33,971 - sender_bot - INFO - Sent text: tg_id=11695
+2026-02-27T15:11:38.456959022Z [inf]  2026-02-27 15:11:38,005 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:11:38.456965642Z [inf]  2026-02-27 15:11:38,008 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772205097.877772, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T15:11:38.456972021Z [inf]  2026-02-27 15:11:38,009 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:11:38.456979170Z [inf]  2026-02-27 15:11:38,197 - sender_bot - INFO - Sent text: tg_id=11696
+2026-02-27T15:11:41.662843274Z [inf]  2026-02-27 15:11:40,810 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:11:41.662871503Z [inf]  2026-02-27 15:11:40,811 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772205100.683735, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T15:11:41.662879568Z [inf]  2026-02-27 15:11:40,812 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:11:41.662885687Z [inf]  2026-02-27 15:11:40,856 - sender_bot - INFO - Sent text: tg_id=11697
+2026-02-27T15:12:11.706056861Z [inf]  2026-02-27 15:12:05,749 - bot - INFO - No stuck messages found
+2026-02-27T15:13:02.683052097Z [inf]  2026-02-27 15:12:52,721 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:13:02.683059817Z [inf]  2026-02-27 15:12:52,722 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772205172.588175, "chat_ident": "980045051", "request_body": {"chat_id": "980045051",...
+2026-02-27T15:13:02.683067244Z [inf]  2026-02-27 15:12:52,723 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:13:02.683074670Z [inf]  2026-02-27 15:12:52,784 - sender_bot - INFO - Sent text: tg_id=11698
+2026-02-27T15:13:53.990801892Z [inf]  2026-02-27 15:13:47,698 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:13:53.990808614Z [inf]  2026-02-27 15:13:47,699 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772205227.388044, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T15:13:53.990814262Z [inf]  2026-02-27 15:13:47,699 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:13:53.990819671Z [inf]  2026-02-27 15:13:47,821 - sender_bot - INFO - Sent text: tg_id=11699
+2026-02-27T15:13:53.990825613Z [inf]  2026-02-27 15:13:51,180 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:13:53.990835065Z [inf]  2026-02-27 15:13:51,182 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772205231.054974, "chat_ident": "-5016356402", "request_body": {"caption": "Партнёрск...
+2026-02-27T15:13:53.990841182Z [inf]  2026-02-27 15:13:51,183 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:13:53.990849141Z [inf]  2026-02-27 15:13:52,320 - handlers - INFO - ✅ Downloaded media from URL: 307547 bytes
+2026-02-27T15:13:53.990855712Z [inf]  2026-02-27 15:13:52,654 - sender_bot - INFO - Sent document: tg_id=11700
+2026-02-27T15:15:15.720053810Z [inf]  2026-02-27 15:15:06,462 - bot - INFO - No stuck messages found
+2026-02-27T15:18:08.161981371Z [inf]  2026-02-27 15:18:07,174 - bot - INFO - No stuck messages found
+2026-02-27T15:21:15.380353396Z [inf]  2026-02-27 15:21:07,892 - bot - INFO - No stuck messages found
+2026-02-27T15:22:36.455587647Z [inf]  2026-02-27 15:22:34,804 - bot - INFO - Saved message: chat=173, tg_id=11701, type=text, files=0
+2026-02-27T15:22:36.455596403Z [inf]  2026-02-27 15:22:35,317 - aiogram.event - INFO - Update id=681947103 is handled. Duration 6337 ms by bot id=8319533037
+2026-02-27T15:22:36.455603922Z [inf]  2026-02-27 15:22:35,317 - bot - INFO - Processed incoming update: 681947103
+2026-02-27T15:24:07.502507399Z [inf]  2026-02-27 15:24:04,751 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:24:07.502513557Z [inf]  2026-02-27 15:24:04,755 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772205844.615619, "chat_ident": "-5273094456", "request_body": {"chat_id": "-52730944...
+2026-02-27T15:24:07.502519339Z [inf]  2026-02-27 15:24:04,755 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:24:07.502525354Z [inf]  2026-02-27 15:24:04,812 - sender_bot - INFO - Sent text: tg_id=11702
+2026-02-27T15:24:09.316703214Z [inf]  2026-02-27 15:24:08,625 - bot - INFO - No stuck messages found
+2026-02-27T15:27:17.358825382Z [inf]  2026-02-27 15:27:09,346 - bot - INFO - No stuck messages found
+2026-02-27T15:27:17.358829757Z [inf]  2026-02-27 15:27:15,944 - bot - INFO - Processed incoming update: 681947104
+2026-02-27T15:27:17.358838277Z [inf]  2026-02-27 15:27:15,944 - aiogram.event - INFO - Update id=681947104 is not handled. Duration 3 ms by bot id=8319533037
+2026-02-27T15:27:17.358843651Z [inf]  2026-02-27 15:27:16,451 - aiogram.event - INFO - Update id=681947105 is not handled. Duration 1 ms by bot id=8319533037
+2026-02-27T15:27:17.358851375Z [inf]  2026-02-27 15:27:16,452 - bot - INFO - Processed incoming update: 681947105
+2026-02-27T15:27:17.358860125Z [inf]  2026-02-27 15:27:16,461 - aiogram.event - INFO - Update id=681947106 is not handled. Duration 3 ms by bot id=8319533037
+2026-02-27T15:27:17.358860482Z [inf]  2026-02-27 15:27:16,462 - bot - INFO - Processed incoming update: 681947106
+2026-02-27T15:27:58.819279394Z [inf]  2026-02-27 15:27:58,148 - aiogram.event - INFO - Update id=681947107 is not handled. Duration 10 ms by bot id=8319533037
+2026-02-27T15:27:58.819286828Z [inf]  2026-02-27 15:27:58,150 - bot - INFO - Processed incoming update: 681947107
+2026-02-27T15:28:39.679817066Z [inf]  2026-02-27 15:28:30,517 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:28:39.679824244Z [inf]  2026-02-27 15:28:30,519 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772206110.382990, "chat_ident": "-5196876426", "request_body": {"chat_id": "-51968764...
+2026-02-27T15:28:39.679830803Z [inf]  2026-02-27 15:28:30,519 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:28:39.679836659Z [inf]  2026-02-27 15:28:30,604 - sender_bot - INFO - Sent text: tg_id=11707
+2026-02-27T15:29:09.166701373Z [inf]  2026-02-27 15:29:02,424 - bot - INFO - Saved message: chat=175, tg_id=11708, type=text, files=0
+2026-02-27T15:29:09.166707651Z [inf]  2026-02-27 15:29:03,204 - aiogram.event - INFO - Update id=681947108 is handled. Duration 6024 ms by bot id=8319533037
+2026-02-27T15:29:09.166713251Z [inf]  2026-02-27 15:29:03,205 - bot - INFO - Processed incoming update: 681947108
+2026-02-27T15:29:17.526294890Z [inf]  2026-02-27 15:29:16,982 - bot - INFO - Saved message: chat=175, tg_id=11709, type=text, files=0
+2026-02-27T15:29:17.526307762Z [inf]  2026-02-27 15:29:17,480 - aiogram.event - INFO - Update id=681947109 is handled. Duration 5920 ms by bot id=8319533037
+2026-02-27T15:29:17.526315816Z [inf]  2026-02-27 15:29:17,481 - bot - INFO - Processed incoming update: 681947109
+2026-02-27T15:29:36.775046628Z [inf]  2026-02-27 15:29:35,837 - bot - INFO - Saved message: chat=175, tg_id=11710, type=text, files=0
+2026-02-27T15:29:36.775051016Z [inf]  2026-02-27 15:29:36,492 - aiogram.event - INFO - Update id=681947110 is handled. Duration 5883 ms by bot id=8319533037
+2026-02-27T15:29:36.775055890Z [inf]  2026-02-27 15:29:36,492 - bot - INFO - Processed incoming update: 681947110
+2026-02-27T15:30:06.377433787Z [inf]  2026-02-27 15:29:59,249 - bot - INFO - Saved message: chat=99, tg_id=11711, type=text, files=0
+2026-02-27T15:30:06.377439915Z [inf]  2026-02-27 15:29:59,884 - aiogram.event - INFO - Update id=681947111 is handled. Duration 2719 ms by bot id=8319533037
+2026-02-27T15:30:06.377447286Z [inf]  2026-02-27 15:29:59,884 - bot - INFO - Processed incoming update: 681947111
+2026-02-27T15:30:10.703555981Z [inf]  2026-02-27 15:30:10,045 - bot - INFO - No stuck messages found
+2026-02-27T15:30:41.051365754Z [inf]  2026-02-27 15:30:31,877 - bot - INFO - Saved message: chat=158, tg_id=11712, type=text, files=0
+2026-02-27T15:30:41.051371599Z [inf]  2026-02-27 15:30:32,527 - aiogram.event - INFO - Update id=681947112 is handled. Duration 5889 ms by bot id=8319533037
+2026-02-27T15:30:41.051377811Z [inf]  2026-02-27 15:30:32,527 - bot - INFO - Processed incoming update: 681947112
+2026-02-27T15:30:42.163798300Z [inf]  2026-02-27 15:30:42,069 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:30:42.163807668Z [inf]  2026-02-27 15:30:42,070 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772206241.942101, "chat_ident": "980045051", "request_body": {"chat_id": "980045051",...
+2026-02-27T15:30:42.163816350Z [inf]  2026-02-27 15:30:42,071 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:30:42.251555798Z [inf]  2026-02-27 15:30:42,245 - sender_bot - INFO - Sent text: tg_id=11713
+2026-02-27T15:31:23.964009558Z [inf]  2026-02-27 15:31:14,642 - aiogram.event - INFO - Update id=681947113 is not handled. Duration 1 ms by bot id=8319533037
+2026-02-27T15:31:23.964013159Z [inf]  2026-02-27 15:31:16,280 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:31:23.964021770Z [inf]  2026-02-27 15:31:16,283 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772206276.152414, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T15:31:23.964027214Z [inf]  2026-02-27 15:31:14,642 - bot - INFO - Processed incoming update: 681947113
+2026-02-27T15:31:23.964030693Z [inf]  2026-02-27 15:31:16,283 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:31:23.964039105Z [inf]  2026-02-27 15:31:16,369 - sender_bot - INFO - Sent text: tg_id=11714
+2026-02-27T15:32:36.447872490Z [inf]  2026-02-27 15:32:32,820 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:32:36.447879646Z [inf]  2026-02-27 15:32:32,821 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772206352.693044, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T15:32:36.447887026Z [inf]  2026-02-27 15:32:32,821 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:32:36.447895290Z [inf]  2026-02-27 15:32:32,884 - sender_bot - INFO - Sent text: tg_id=11715
+2026-02-27T15:32:36.447903818Z [inf]  2026-02-27 15:32:34,955 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:32:36.447911735Z [inf]  2026-02-27 15:32:34,956 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772206354.834737, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T15:32:36.447918458Z [inf]  2026-02-27 15:32:34,956 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:32:36.447924929Z [inf]  2026-02-27 15:32:34,994 - sender_bot - INFO - Sent text: tg_id=11716
+2026-02-27T15:33:16.745626717Z [inf]  2026-02-27 15:33:10,740 - bot - INFO - No stuck messages found
+2026-02-27T15:33:36.298903835Z [inf]  2026-02-27 15:33:28,237 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:33:36.298914373Z [inf]  2026-02-27 15:33:28,340 - sender_bot - INFO - Sent text: tg_id=11717
+2026-02-27T15:33:36.298920772Z [inf]  2026-02-27 15:33:30,675 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:33:36.298927971Z [inf]  2026-02-27 15:33:30,678 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772206410.555566, "chat_ident": "-5196876426", "request_body": {"caption": "полный юр...
+2026-02-27T15:33:36.298934282Z [inf]  2026-02-27 15:33:30,678 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:33:36.298940054Z [inf]  2026-02-27 15:33:31,363 - handlers - INFO - ✅ Downloaded media from URL: 29932 bytes
+2026-02-27T15:33:36.298945542Z [inf]  2026-02-27 15:33:31,417 - sender_bot - INFO - Sent document: tg_id=11718
+2026-02-27T15:33:36.299048576Z [inf]  2026-02-27 15:33:28,236 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:33:36.299055690Z [inf]  2026-02-27 15:33:28,237 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772206408.107346, "chat_ident": "-5196876426", "request_body": {"chat_id": "-51968764...
+2026-02-27T15:34:49.039753912Z [inf]  2026-02-27 15:34:38,479 - bot - INFO - Saved message: chat=175, tg_id=11719, type=text, files=0
+2026-02-27T15:34:49.039759776Z [inf]  2026-02-27 15:34:39,018 - aiogram.event - INFO - Update id=681947114 is handled. Duration 6869 ms by bot id=8319533037
+2026-02-27T15:34:49.039766030Z [inf]  2026-02-27 15:34:39,019 - bot - INFO - Processed incoming update: 681947114
+2026-02-27T15:36:13.778951399Z [inf]  2026-02-27 15:36:11,466 - bot - INFO - No stuck messages found
+2026-02-27T15:36:54.588729769Z [inf]  2026-02-27 15:36:51,226 - bot - INFO - Saved message: chat=158, tg_id=11720, type=text, files=0
+2026-02-27T15:36:54.588735812Z [inf]  2026-02-27 15:36:51,767 - aiogram.event - INFO - Update id=681947115 is handled. Duration 7034 ms by bot id=8319533037
+2026-02-27T15:36:54.588741883Z [inf]  2026-02-27 15:36:51,767 - bot - INFO - Processed incoming update: 681947115
+2026-02-27T15:37:13.658376652Z [inf]  2026-02-27 15:37:12,857 - aiogram.event - INFO - Update id=681947116 is handled. Duration 6750 ms by bot id=8319533037
+2026-02-27T15:37:13.658388469Z [inf]  2026-02-27 15:37:12,858 - bot - INFO - Processed incoming update: 681947116
+2026-02-27T15:37:13.658465828Z [inf]  2026-02-27 15:37:08,624 - bot - INFO - Created new user: 679676738 -> id=150
+2026-02-27T15:37:13.658478174Z [inf]  2026-02-27 15:37:09,549 - bot - INFO - Created new chat: type=user, id=177
+2026-02-27T15:37:13.658488380Z [inf]  2026-02-27 15:37:12,175 - bot - INFO - Saved message: chat=175, tg_id=11721, type=text, files=0
+2026-02-27T15:38:47.910743139Z [inf]  2026-02-27 15:38:37,886 - bot - INFO - Saved message: chat=158, tg_id=11722, type=text, files=0
+2026-02-27T15:38:47.910749002Z [inf]  2026-02-27 15:38:38,557 - aiogram.event - INFO - Update id=681947117 is handled. Duration 6185 ms by bot id=8319533037
+2026-02-27T15:38:47.910754207Z [inf]  2026-02-27 15:38:38,558 - bot - INFO - Processed incoming update: 681947117
+2026-02-27T15:38:47.910759919Z [inf]  2026-02-27 15:38:47,346 - bot - INFO - Saved message: chat=99, tg_id=11723, type=text, files=0
+2026-02-27T15:38:47.910765406Z [inf]  2026-02-27 15:38:47,859 - aiogram.event - INFO - Update id=681947118 is handled. Duration 2724 ms by bot id=8319533037
+2026-02-27T15:38:47.910770634Z [inf]  2026-02-27 15:38:47,860 - bot - INFO - Processed incoming update: 681947118
+2026-02-27T15:38:52.941349701Z [inf]  2026-02-27 15:38:52,666 - bot - INFO - Saved message: chat=99, tg_id=11724, type=text, files=0
+2026-02-27T15:38:54.247710181Z [inf]  2026-02-27 15:38:53,171 - aiogram.event - INFO - Update id=681947119 is handled. Duration 2711 ms by bot id=8319533037
+2026-02-27T15:38:54.247717311Z [inf]  2026-02-27 15:38:53,171 - bot - INFO - Processed incoming update: 681947119
+2026-02-27T15:38:55.694437276Z [inf]  2026-02-27 15:38:55,391 - bot - INFO - Saved message: chat=99, tg_id=11725, type=text, files=0
+2026-02-27T15:38:56.992275543Z [inf]  2026-02-27 15:38:56,043 - aiogram.event - INFO - Update id=681947120 is handled. Duration 2867 ms by bot id=8319533037
+2026-02-27T15:38:56.992282061Z [inf]  2026-02-27 15:38:56,043 - bot - INFO - Processed incoming update: 681947120
+2026-02-27T15:39:17.164376737Z [inf]  2026-02-27 15:39:08,623 - bot - INFO - Saved message: chat=99, tg_id=11726, type=text, files=0
+2026-02-27T15:39:17.164383902Z [inf]  2026-02-27 15:39:09,304 - aiogram.event - INFO - Update id=681947121 is handled. Duration 2889 ms by bot id=8319533037
+2026-02-27T15:39:17.164391295Z [inf]  2026-02-27 15:39:09,304 - bot - INFO - Processed incoming update: 681947121
+2026-02-27T15:39:17.164401216Z [inf]  2026-02-27 15:39:10,897 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:39:17.164408912Z [inf]  2026-02-27 15:39:10,901 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772206750.767650, "chat_ident": "-5016356402", "request_body": {"chat_id": "-50163564...
+2026-02-27T15:39:17.164416152Z [inf]  2026-02-27 15:39:10,901 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:39:17.164436713Z [inf]  2026-02-27 15:39:10,970 - sender_bot - INFO - Sent text: tg_id=11727
+2026-02-27T15:39:17.164444566Z [inf]  2026-02-27 15:39:13,152 - bot - INFO - No stuck messages found
+2026-02-27T15:39:37.826602377Z [inf]  2026-02-27 15:39:37,690 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:39:37.826606630Z [inf]  2026-02-27 15:39:37,691 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772206777.311523, "chat_ident": "980045051", "request_body": {"chat_id": "980045051",...
+2026-02-27T15:39:37.826982401Z [inf]  2026-02-27 15:39:37,691 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:39:37.826988537Z [inf]  2026-02-27 15:39:37,755 - sender_bot - INFO - Sent text: tg_id=11728
+2026-02-27T15:41:24.539927567Z [inf]  2026-02-27 15:41:14,546 - bot - INFO - Saved message: chat=158, tg_id=11729, type=text, files=0
+2026-02-27T15:41:24.539943567Z [inf]  2026-02-27 15:41:15,096 - aiogram.event - INFO - Update id=681947122 is handled. Duration 7503 ms by bot id=8319533037
+2026-02-27T15:41:24.539951997Z [inf]  2026-02-27 15:41:15,096 - bot - INFO - Processed incoming update: 681947122
+2026-02-27T15:42:15.555851155Z [inf]  2026-02-27 15:42:13,690 - bot - INFO - No stuck messages found
+2026-02-27T15:42:56.619957882Z [inf]  2026-02-27 15:42:54,751 - bot - INFO - Saved message: chat=158, tg_id=11730, type=text, files=0
+2026-02-27T15:42:56.619962006Z [inf]  2026-02-27 15:42:55,261 - aiogram.event - INFO - Update id=681947123 is handled. Duration 5892 ms by bot id=8319533037
+2026-02-27T15:42:56.620012697Z [inf]  2026-02-27 15:42:55,261 - bot - INFO - Processed incoming update: 681947123
+2026-02-27T15:45:21.437393749Z [inf]  2026-02-27 15:45:14,413 - bot - INFO - No stuck messages found
+2026-02-27T15:46:32.743997130Z [inf]  2026-02-27 15:46:26,565 - bot - INFO - Created new user: 366266176 -> id=151
+2026-02-27T15:46:32.744003475Z [inf]  2026-02-27 15:46:27,470 - bot - INFO - Created new chat: type=user, id=178
+2026-02-27T15:46:32.744011312Z [inf]  2026-02-27 15:46:29,867 - bot - INFO - Saved message: chat=175, tg_id=11731, type=text, files=0
+2026-02-27T15:46:32.744017589Z [inf]  2026-02-27 15:46:30,385 - aiogram.event - INFO - Update id=681947124 is handled. Duration 6182 ms by bot id=8319533037
+2026-02-27T15:46:32.744023548Z [inf]  2026-02-27 15:46:30,385 - bot - INFO - Processed incoming update: 681947124
+2026-02-27T15:46:37.174720328Z [inf]  2026-02-27 15:46:36,203 - bot - INFO - Saved message: chat=175, tg_id=11732, type=text, files=0
+2026-02-27T15:46:37.174725657Z [inf]  2026-02-27 15:46:36,725 - aiogram.event - INFO - Update id=681947125 is handled. Duration 6334 ms by bot id=8319533037
+2026-02-27T15:46:37.174731244Z [inf]  2026-02-27 15:46:36,726 - bot - INFO - Processed incoming update: 681947125
+2026-02-27T15:46:42.857859278Z [inf]  2026-02-27 15:46:42,480 - bot - INFO - Saved message: chat=175, tg_id=11733, type=text, files=0
+2026-02-27T15:46:43.959642292Z [inf]  2026-02-27 15:46:42,987 - aiogram.event - INFO - Update id=681947126 is handled. Duration 6258 ms by bot id=8319533037
+2026-02-27T15:46:43.959649613Z [inf]  2026-02-27 15:46:42,987 - bot - INFO - Processed incoming update: 681947126
+2026-02-27T15:46:48.794453339Z [inf]  2026-02-27 15:46:48,418 - bot - INFO - Saved message: chat=175, tg_id=11734, type=text, files=0
+2026-02-27T15:46:50.177470137Z [inf]  2026-02-27 15:46:49,065 - aiogram.event - INFO - Update id=681947127 is handled. Duration 6073 ms by bot id=8319533037
+2026-02-27T15:46:50.177478032Z [inf]  2026-02-27 15:46:49,066 - bot - INFO - Processed incoming update: 681947127
+2026-02-27T15:46:52.681223749Z [inf]  2026-02-27 15:46:52,675 - bot - INFO - Saved message: chat=99, tg_id=11735, type=text, files=0
+2026-02-27T15:46:53.679417865Z [inf]  2026-02-27 15:46:53,177 - aiogram.event - INFO - Update id=681947128 is handled. Duration 2678 ms by bot id=8319533037
+2026-02-27T15:46:53.679425570Z [inf]  2026-02-27 15:46:53,178 - bot - INFO - Processed incoming update: 681947128
+2026-02-27T15:47:56.920214411Z [inf]  2026-02-27 15:47:50,009 - bot - INFO - Created new user: 1125502071 -> id=152
+2026-02-27T15:47:56.920222080Z [inf]  2026-02-27 15:47:50,913 - bot - INFO - Created new chat: type=user, id=179
+2026-02-27T15:47:56.920228384Z [inf]  2026-02-27 15:47:53,271 - bot - INFO - Saved message: chat=175, tg_id=11736, type=text, files=0
+2026-02-27T15:47:56.920235351Z [inf]  2026-02-27 15:47:53,787 - aiogram.event - INFO - Update id=681947129 is handled. Duration 6132 ms by bot id=8319533037
+2026-02-27T15:47:56.920243612Z [inf]  2026-02-27 15:47:53,787 - bot - INFO - Processed incoming update: 681947129
+2026-02-27T15:48:05.410165444Z [inf]  2026-02-27 15:48:04,424 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:48:05.410171611Z [inf]  2026-02-27 15:48:04,426 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772207284.289783, "chat_ident": "980045051", "request_body": {"chat_id": "980045051",...
+2026-02-27T15:48:05.410180010Z [inf]  2026-02-27 15:48:04,426 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:48:05.410185802Z [inf]  2026-02-27 15:48:04,701 - sender_bot - INFO - Sent text: tg_id=11737
+2026-02-27T15:48:25.075257835Z [inf]  2026-02-27 15:48:15,138 - bot - INFO - No stuck messages found
+2026-02-27T15:50:09.309051317Z [inf]  2026-02-27 15:50:03,633 - bot - INFO - Saved message: chat=99, tg_id=11738, type=text, files=0
+2026-02-27T15:50:09.309057885Z [inf]  2026-02-27 15:50:04,161 - aiogram.event - INFO - Update id=681947130 is handled. Duration 3424 ms by bot id=8319533037
+2026-02-27T15:50:09.309064750Z [inf]  2026-02-27 15:50:04,161 - bot - INFO - Processed incoming update: 681947130
+2026-02-27T15:50:10.757217303Z [inf]  2026-02-27 15:50:10,134 - bot - INFO - Saved message: chat=175, tg_id=11739, type=text, files=0
+2026-02-27T15:50:10.757224300Z [inf]  2026-02-27 15:50:10,654 - aiogram.event - INFO - Update id=681947131 is handled. Duration 6485 ms by bot id=8319533037
+2026-02-27T15:50:10.757234742Z [inf]  2026-02-27 15:50:10,654 - bot - INFO - Processed incoming update: 681947131
+2026-02-27T15:50:50.861709158Z [inf]  2026-02-27 15:50:42,349 - bot - INFO - Buffered media group 14177659498288658: msg_id=11740, type=photo
+2026-02-27T15:50:50.861729019Z [inf]  2026-02-27 15:50:42,349 - aiogram.event - INFO - Update id=681947132 is handled. Duration 4943 ms by bot id=8319533037
+2026-02-27T15:50:50.861737205Z [inf]  2026-02-27 15:50:42,350 - bot - INFO - Processed incoming update: 681947132
+2026-02-27T15:50:50.861743688Z [inf]  2026-02-27 15:50:47,289 - bot - INFO - Buffered media group 14177659498288658: msg_id=11741, type=photo
+2026-02-27T15:50:50.861750611Z [inf]  2026-02-27 15:50:47,290 - aiogram.event - INFO - Update id=681947133 is handled. Duration 4938 ms by bot id=8319533037
+2026-02-27T15:50:50.861757084Z [inf]  2026-02-27 15:50:47,290 - bot - INFO - Flushing media group 14177659498288658: 2 files, type=photo
+2026-02-27T15:50:50.861763394Z [inf]  2026-02-27 15:50:47,290 - bot - INFO - Processed incoming update: 681947133
+2026-02-27T15:50:50.861769761Z [inf]  2026-02-27 15:50:47,843 - bot - INFO - Saved message: chat=175, tg_id=11740, type=photo, files=2
+2026-02-27T15:50:52.011123911Z [inf]  2026-02-27 15:50:51,407 - bot - INFO - Saved message: chat=99, tg_id=11742, type=text, files=0
+2026-02-27T15:50:52.011128188Z [inf]  2026-02-27 15:50:51,908 - aiogram.event - INFO - Update id=681947134 is handled. Duration 2715 ms by bot id=8319533037
+2026-02-27T15:50:52.011132450Z [inf]  2026-02-27 15:50:51,908 - bot - INFO - Processed incoming update: 681947134
+2026-02-27T15:51:11.013039105Z [inf]  2026-02-27 15:51:02,557 - bot - INFO - Saved message: chat=99, tg_id=11743, type=text, files=0
+2026-02-27T15:51:11.013045811Z [inf]  2026-02-27 15:51:03,074 - aiogram.event - INFO - Update id=681947135 is handled. Duration 2736 ms by bot id=8319533037
+2026-02-27T15:51:11.013051606Z [inf]  2026-02-27 15:51:03,074 - bot - INFO - Processed incoming update: 681947135
+2026-02-27T15:51:11.013119204Z [inf]  2026-02-27 15:51:08,599 - bot - INFO - Saved message: chat=175, tg_id=11744, type=text, files=0
+2026-02-27T15:51:11.013127026Z [inf]  2026-02-27 15:51:09,131 - aiogram.event - INFO - Update id=681947136 is handled. Duration 6052 ms by bot id=8319533037
+2026-02-27T15:51:11.013136362Z [inf]  2026-02-27 15:51:09,132 - bot - INFO - Processed incoming update: 681947136
+2026-02-27T15:51:12.011100516Z [inf]  2026-02-27 15:51:11,343 - bot - INFO - Saved message: chat=99, tg_id=11745, type=text, files=0
+2026-02-27T15:51:12.011106985Z [inf]  2026-02-27 15:51:11,849 - aiogram.event - INFO - Update id=681947137 is handled. Duration 2715 ms by bot id=8319533037
+2026-02-27T15:51:12.011119906Z [inf]  2026-02-27 15:51:11,849 - bot - INFO - Processed incoming update: 681947137
+2026-02-27T15:51:15.948934265Z [inf]  2026-02-27 15:51:14,667 - bot - INFO - Saved message: chat=99, tg_id=11746, type=text, files=0
+2026-02-27T15:51:15.948940591Z [inf]  2026-02-27 15:51:15,328 - aiogram.event - INFO - Update id=681947138 is handled. Duration 2869 ms by bot id=8319533037
+2026-02-27T15:51:15.948947117Z [inf]  2026-02-27 15:51:15,329 - bot - INFO - Processed incoming update: 681947138
+2026-02-27T15:51:15.948961085Z [inf]  2026-02-27 15:51:15,870 - bot - INFO - No stuck messages found
+2026-02-27T15:51:36.319987365Z [inf]  2026-02-27 15:51:31,131 - aiogram.event - INFO - Update id=681947139 is handled. Duration 6216 ms by bot id=8319533037
+2026-02-27T15:51:36.320001411Z [inf]  2026-02-27 15:51:27,307 - bot - INFO - Created new user: 106998938 -> id=153
+2026-02-27T15:51:36.320004348Z [inf]  2026-02-27 15:51:31,132 - bot - INFO - Processed incoming update: 681947139
+2026-02-27T15:51:36.320010965Z [inf]  2026-02-27 15:51:28,228 - bot - INFO - Created new chat: type=user, id=180
+2026-02-27T15:51:36.320017435Z [inf]  2026-02-27 15:51:30,611 - bot - INFO - Saved message: chat=175, tg_id=11747, type=text, files=0
+2026-02-27T15:52:06.314121952Z [inf]  2026-02-27 15:51:58,770 - bot - INFO - Saved message: chat=175, tg_id=11748, type=text, files=0
+2026-02-27T15:52:06.314126893Z [inf]  2026-02-27 15:51:59,286 - aiogram.event - INFO - Update id=681947140 is handled. Duration 6025 ms by bot id=8319533037
+2026-02-27T15:52:06.314131314Z [inf]  2026-02-27 15:51:59,287 - bot - INFO - Processed incoming update: 681947140
+2026-02-27T15:52:09.752955907Z [inf]  2026-02-27 15:52:09,511 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:52:09.752961068Z [inf]  2026-02-27 15:52:09,512 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772207529.385335, "chat_ident": "980045051", "request_body": {"chat_id": "980045051",...
+2026-02-27T15:52:09.752967374Z [inf]  2026-02-27 15:52:09,513 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:52:09.752973929Z [inf]  2026-02-27 15:52:09,576 - sender_bot - INFO - Sent text: tg_id=11749
+2026-02-27T15:52:40.664239051Z [inf]  2026-02-27 15:52:36,456 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:52:40.664246408Z [inf]  2026-02-27 15:52:36,458 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772207556.332527, "chat_ident": "980045051", "request_body": {"chat_id": "980045051",...
+2026-02-27T15:52:40.664253040Z [inf]  2026-02-27 15:52:36,458 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:52:40.664710077Z [inf]  2026-02-27 15:52:36,518 - sender_bot - INFO - Sent text: tg_id=11750
+2026-02-27T15:53:10.887988218Z [inf]  2026-02-27 15:53:05,683 - bot - INFO - Saved message: chat=175, tg_id=11751, type=text, files=0
+2026-02-27T15:53:10.887989438Z [inf]  2026-02-27 15:53:06,202 - aiogram.event - INFO - Update id=681947141 is handled. Duration 6238 ms by bot id=8319533037
+2026-02-27T15:53:10.887995686Z [inf]  2026-02-27 15:53:06,203 - bot - INFO - Processed incoming update: 681947141
+2026-02-27T15:53:18.581387209Z [inf]  2026-02-27 15:53:18,257 - bot - INFO - Saved message: chat=175, tg_id=11752, type=text, files=0
+2026-02-27T15:53:19.429689059Z [inf]  2026-02-27 15:53:18,758 - aiogram.event - INFO - Update id=681947142 is handled. Duration 5997 ms by bot id=8319533037
+2026-02-27T15:53:19.429695488Z [inf]  2026-02-27 15:53:18,760 - bot - INFO - Processed incoming update: 681947142
+2026-02-27T15:54:12.394861488Z [inf]  2026-02-27 15:54:03,672 - bot - INFO - Saved message: chat=175, tg_id=11753, type=photo, files=1
+2026-02-27T15:54:12.394876680Z [inf]  2026-02-27 15:54:04,187 - aiogram.event - INFO - Update id=681947143 is handled. Duration 5954 ms by bot id=8319533037
+2026-02-27T15:54:12.394891343Z [inf]  2026-02-27 15:54:04,187 - bot - INFO - Processed incoming update: 681947143
+2026-02-27T15:54:12.394903181Z [inf]  2026-02-27 15:54:11,444 - aiogram.event - INFO - Update id=681947144 is not handled. Duration 0 ms by bot id=8319533037
+2026-02-27T15:54:12.394910598Z [inf]  2026-02-27 15:54:11,445 - bot - INFO - Processed incoming update: 681947144
+2026-02-27T15:54:16.734676899Z [inf]  2026-02-27 15:54:16,593 - bot - INFO - No stuck messages found
+2026-02-27T15:54:26.648405061Z [inf]  2026-02-27 15:54:26,072 - bot - INFO - Saved message: chat=175, tg_id=11754, type=text, files=0
+2026-02-27T15:54:26.648411958Z [inf]  2026-02-27 15:54:26,586 - aiogram.event - INFO - Update id=681947145 is handled. Duration 5897 ms by bot id=8319533037
+2026-02-27T15:54:26.648419107Z [inf]  2026-02-27 15:54:26,586 - bot - INFO - Processed incoming update: 681947145
+2026-02-27T15:54:57.466964369Z [inf]  2026-02-27 15:54:52,366 - aiogram.event - INFO - Update id=681947146 is not handled. Duration 0 ms by bot id=8319533037
+2026-02-27T15:54:57.466970536Z [inf]  2026-02-27 15:54:52,369 - bot - INFO - Processed incoming update: 681947146
+2026-02-27T15:55:49.356576003Z [inf]  2026-02-27 15:55:48,295 - bot - INFO - 📬 Received 1 notifications
+2026-02-27T15:55:49.356582323Z [inf]  2026-02-27 15:55:48,296 - bot - INFO - 📥 Pushed to Redis [1/1]: {"queued_at": 1772207748.187729, "chat_ident": "-5196876426", "request_body": {"chat_id": "-51968764...
+2026-02-27T15:55:49.356590489Z [inf]  2026-02-27 15:55:48,296 - bot - INFO - ✅ Total pushed: 1/1
+2026-02-27T15:55:49.356597624Z [inf]  2026-02-27 15:55:48,373 - sender_bot - INFO - Sent text: tg_id=11755

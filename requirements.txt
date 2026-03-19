@@ -1,0 +1,22 @@
+# Bot API Framework
+aiogram==3.13.1
+
+# Web Framework  
+Flask==3.0.3
+gunicorn==23.0.0
+
+# Database
+psycopg2-binary==2.9.9
+
+# Redis
+redis==5.0.8
+
+# HTTP client for async operations
+aiohttp==3.10.5
+
+# Requests for sync HTTP calls
+requests==2.32.3
+
+# Document generation
+python-docx==1.1.2
+reportlab==4.2.4
