@@ -2079,8 +2079,8 @@ def _pg_connect_with_timeout(database_url: str, timeout: int = 15):
                 database_url,
                 connect_timeout=10,
                 keepalives=1,
-                keepalives_idle=30,
-                keepalives_interval=10,
+                keepalives_idle=10,     # Send TCP keepalive after 10s idle (was 30)
+                keepalives_interval=5,  # Retry every 5s (was 10)
                 keepalives_count=3,
                 options='-c statement_timeout=0'  # Explicit: no timeout for LISTEN
             )
@@ -2159,10 +2159,10 @@ def pg_notify_listener_worker(redis_url: str, database_url: str):
             now = time.time()
             if now - last_keepalive >= KEEPALIVE_INTERVAL:
                 try:
-                    cur.execute("SET statement_timeout = '10000'")
+                    # Simple keepalive — no statement_timeout wrapper
+                    # (SET statement_timeout was being cancelled by Supabase)
                     cur.execute("SELECT 1")
                     cur.fetchone()
-                    cur.execute("SET statement_timeout = '0'")
                     last_keepalive = now
                     _health_state['pg_listener_last_activity'] = now
                 except Exception as e:
@@ -2316,7 +2316,11 @@ def thread_watchdog():
                 _health_state['pg_listener_last_activity'] = time.time()
                 logger.info(f"[WATCHDOG] PgNotifyListener restarted (#{restart_counter}, consecutive={consecutive_pg_restarts})")
             else:
-                consecutive_pg_restarts = 0
+                # Only reset consecutive counter after 5+ minutes of stability
+                pg_healthy_duration = time.time() - _health_state.get('pg_listener_last_activity', 0)
+                if pg_healthy_duration < 30 and consecutive_pg_restarts > 0:
+                    # Recently active = truly healthy, reset counter
+                    consecutive_pg_restarts = 0
 
             # Check StuckMessagesRetry
             if retry_worker_thread and not retry_worker_thread.is_alive():
@@ -2377,6 +2381,24 @@ def thread_watchdog():
                     sender_bot.is_running = False
                     sender_bot.start()
                     logger.info("[WATCHDOG] SenderBot restarted")
+
+            # Count dead critical threads — if all dead, exit for Railway restart
+            critical_dead = 0
+            if pg_listener_thread and not pg_listener_thread.is_alive():
+                critical_dead += 1
+            if incoming_consumer_thread and not incoming_consumer_thread.is_alive():
+                critical_dead += 1
+            if sender_bot and sender_bot.worker_thread and not sender_bot.worker_thread.is_alive():
+                critical_dead += 1
+
+            if critical_dead >= 2:
+                logger.critical(f"[WATCHDOG] {critical_dead} critical threads dead — exiting for Railway restart")
+                os._exit(1)
+
+            # Total restart counter — too many restarts means something is fundamentally broken
+            if restart_counter >= 15:
+                logger.critical(f"[WATCHDOG] {restart_counter} total restarts — exiting for Railway restart")
+                os._exit(1)
 
             # Periodic health status log
             now = time.time()
@@ -2685,13 +2707,17 @@ def _ensure_initialized():
 
 def _auto_init():
     """Auto-initialize on module import (for gunicorn)"""
+    # Skip in test environment
+    if os.environ.get('PYTEST_CURRENT_TEST') or os.environ.get('TESTING'):
+        return
     # Initialize synchronously - no threading delays
     # This ensures the bot is ready before first request
     try:
         _ensure_initialized()
     except Exception as e:
-        logger.exception(f"Auto-init failed: {e}")
-        # Don't crash - will retry on first request
+        logger.critical(f"Auto-init failed: {e}")
+        # Exit so Railway restarts with fresh state
+        os._exit(1)
 
 
 # Auto-init when imported (e.g., by gunicorn)
@@ -2705,5 +2731,9 @@ if __name__ == '__main__':
     # Run Flask (blocking)
     try:
         run_flask()
+    except Exception as e:
+        logger.critical(f"Flask crashed: {e}")
+        import sys
+        sys.exit(1)
     finally:
         run_async(on_shutdown())
