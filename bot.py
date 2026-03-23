@@ -912,6 +912,33 @@ def api_queue_dedup():
         return jsonify({"error": str(e)}), 500
 
 
+@flask_app.route('/telegram/queue/force_send', methods=['POST'])
+def api_queue_force_send():
+    """Force re-send specific message IDs by clearing dedup keys and re-queuing.
+    Body: {"ids": [139123]}
+    """
+    try:
+        data = request.get_json() or {}
+        ids = data.get('ids', [])
+        if not ids:
+            return jsonify({"error": "ids required"}), 400
+
+        # Clear dedup keys
+        for msg_id in ids:
+            redis_client.delete(f'telegram:sent:{msg_id}')
+            # Clear content dedup keys too
+            for key in redis_client.scan_iter(f'tg:dedup:*'):
+                val = redis_client.get(key)
+                if val and str(msg_id).encode() in val:
+                    redis_client.delete(key)
+
+        # Re-queue via retry_stuck
+        count = retry_stuck_messages(max_age_minutes=1440)  # 24h window
+        return jsonify({"success": True, "dedup_cleared": ids, "requeued": count})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
 @flask_app.route('/telegram/retry_stuck', methods=['POST'])
 def api_retry_stuck():
     """
