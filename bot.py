@@ -932,8 +932,8 @@ def api_queue_force_send():
                 if val and str(msg_id).encode() in val:
                     redis_client.delete(key)
 
-        # Re-queue via retry_stuck
-        count = retry_stuck_messages(max_age_minutes=1440)  # 24h window
+        # Re-queue via retry_stuck with force_send to bypass dedup
+        count = retry_stuck_messages(max_age_minutes=1440, force_send=True)  # 24h window
         return jsonify({"success": True, "dedup_cleared": ids, "requeued": count})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
@@ -2060,10 +2060,11 @@ def incoming_message_consumer():
     logger.info(f"[CONSUMER] Stopped ({reason})")
 
 
-def retry_stuck_messages(max_age_minutes: int = 30):
+def retry_stuck_messages(max_age_minutes: int = 30, force_send: bool = False):
     """
     Find and re-queue stuck messages (status='queued' but no tg_id).
     When listener is degraded, picks up messages after 5 seconds instead of 60.
+    force_send: if True, adds force_send flag to bypass sender dedup.
     """
     from redis_client import get_redis
 
@@ -2151,13 +2152,16 @@ def retry_stuck_messages(max_age_minutes: int = 30):
                     if reply_row and reply_row[0]:
                         request_body['reply_to'] = reply_row[0]
 
-                task_json = json.dumps({
+                task = {
                     'chat_history_id': msg_id,
                     'chat_ident': chat_ident,
                     'request_body': request_body,
                     'queued_at': time.time(),
                     'retry': True
-                })
+                }
+                if force_send:
+                    task['force_send'] = True
+                task_json = json.dumps(task)
 
                 redis_client_local.rpush(queue_key, task_json)
                 requeued += 1

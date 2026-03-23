@@ -1351,7 +1351,8 @@ class SenderBot:
         # 🔥 ДЕДУПЛИКАЦИЯ (как в PostgreSQL индексе)
         # chat_id + type + type_of_message + thought_sessions_id + md5(message) + 5-min slot
         # ========================================
-        if not is_reaction and not is_typing_only and not is_delete:
+        skip_dedup = task_data.get('force_send', False)
+        if not is_reaction and not is_typing_only and not is_delete and not skip_dedup:
             
             thought_sessions_id = task_data.get('thought_sessions_id')
             message_text = request_body.get('message', '')
