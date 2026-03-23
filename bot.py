@@ -93,6 +93,7 @@ _shutdown_event = threading.Event()
 _health_state = {
     'pg_listener_last_activity': time.time(),
     'consumer_last_activity': time.time(),
+    'consumer_heartbeat': time.time(),  # Updates every BLPOP cycle (even idle) — proves thread is alive
 }
 
 # Listener degraded flag — when True, retry worker polls aggressively
@@ -804,6 +805,11 @@ def health_check():
     from db import get_pool_stats
     pool_stats = get_pool_stats()
 
+    now = time.time()
+    consumer_hb = _health_state.get('consumer_heartbeat', 0)
+    consumer_act = _health_state.get('consumer_last_activity', 0)
+    listener_act = _health_state.get('pg_listener_last_activity', 0)
+
     status_data = {
         "status": "ok",
         "bot_initialized": bot_ok,
@@ -813,8 +819,11 @@ def health_check():
         "db_pool": pool_stats,
         "pg_listener_alive": pg_listener_alive,
         "pg_listener_degraded": _listener_degraded,
+        "pg_listener_last_activity_ago": round(now - listener_act) if listener_act else None,
         "stuck_retry_alive": retry_ok,
         "incoming_consumer_alive": consumer_ok,
+        "consumer_heartbeat_ago": round(now - consumer_hb) if consumer_hb else None,
+        "consumer_last_activity_ago": round(now - consumer_act) if consumer_act else None,
         "queue_length": queue_len,
         "ffmpeg_available": has_ffmpeg,
     }
@@ -830,6 +839,77 @@ def health_check():
         status_data["status"] = "degraded"
 
     return jsonify(status_data)
+
+
+@flask_app.route('/telegram/queue/peek', methods=['GET'])
+def api_queue_peek():
+    """Peek at send queue contents without removing them"""
+    try:
+        limit = request.args.get('limit', 50, type=int)
+        items = redis_client.lrange('telegram:send_queue', 0, limit - 1)
+        result = []
+        for raw in items:
+            try:
+                task = json.loads(raw)
+                rb = task.get('request_body', {})
+                result.append({
+                    "chat_history_id": task.get('chat_history_id'),
+                    "chat_id": rb.get('chat_id'),
+                    "text": (rb.get('text') or '')[:120],
+                    "type": rb.get('type_of_message', 'text'),
+                    "retry_count": task.get('retry_count', 0),
+                })
+            except Exception:
+                result.append({"raw": str(raw)[:200]})
+        return jsonify({"queue_length": len(items), "items": result})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@flask_app.route('/telegram/queue/flush', methods=['POST'])
+def api_queue_flush():
+    """Flush entire send queue (emergency). Returns deleted count."""
+    try:
+        length = redis_client.llen('telegram:send_queue')
+        redis_client.delete('telegram:send_queue')
+        logger.warning(f"[QUEUE] Flushed {length} items from send_queue")
+        return jsonify({"success": True, "flushed": length})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@flask_app.route('/telegram/queue/dedup', methods=['POST'])
+def api_queue_dedup():
+    """Remove duplicate messages from queue, keep only unique chat_history_id entries"""
+    try:
+        items = redis_client.lrange('telegram:send_queue', 0, -1)
+        seen = set()
+        unique = []
+        dupes = 0
+        for raw in items:
+            try:
+                task = json.loads(raw)
+                key = task.get('chat_history_id')
+                if key and key in seen:
+                    dupes += 1
+                    continue
+                if key:
+                    seen.add(key)
+                unique.append(raw)
+            except Exception:
+                unique.append(raw)
+
+        # Replace queue atomically
+        pipe = redis_client.pipeline()
+        pipe.delete('telegram:send_queue')
+        if unique:
+            pipe.rpush('telegram:send_queue', *unique)
+        pipe.execute()
+
+        logger.info(f"[QUEUE] Deduped: {dupes} duplicates removed, {len(unique)} remaining")
+        return jsonify({"success": True, "before": len(items), "after": len(unique), "duplicates_removed": dupes})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
 @flask_app.route('/telegram/retry_stuck', methods=['POST'])
@@ -1896,6 +1976,7 @@ def incoming_message_consumer():
         try:
             # Blocking pop with 5 second timeout
             result = client.blpop(INCOMING_QUEUE_KEY, timeout=5)
+            _health_state['consumer_heartbeat'] = time.time()  # Thread alive signal (even on idle BLPOP timeout)
             if result:
                 _health_state['consumer_last_activity'] = time.time()
                 _, update_json = result
@@ -2342,14 +2423,15 @@ def thread_watchdog():
                 logger.info(f"[WATCHDOG] StuckMessagesRetry restarted (#{restart_counter})")
 
             # Check IncomingConsumer
+            # Use heartbeat (updates every BLPOP cycle ~5s) for liveness, not activity (only on real messages)
             consumer_dead = incoming_consumer_thread and not incoming_consumer_thread.is_alive()
             consumer_stuck = False
             if incoming_consumer_thread and incoming_consumer_thread.is_alive():
-                last_act = _health_state.get('consumer_last_activity', time.time())
-                consumer_stuck = (time.time() - last_act) > 60
+                last_hb = _health_state.get('consumer_heartbeat', time.time())
+                consumer_stuck = (time.time() - last_hb) > 30  # 30s = 6x BLPOP cycles missed
 
             if consumer_dead or consumer_stuck:
-                reason = "DEAD" if consumer_dead else f"STUCK ({time.time() - _health_state.get('consumer_last_activity', 0):.0f}s)"
+                reason = "DEAD" if consumer_dead else f"STUCK (no heartbeat {time.time() - _health_state.get('consumer_heartbeat', 0):.0f}s)"
                 logger.error(f"[WATCHDOG] IncomingConsumer {reason} — restarting!")
                 _consumer_stop_event.set()
                 if incoming_consumer_thread and incoming_consumer_thread.is_alive():
@@ -2365,6 +2447,7 @@ def thread_watchdog():
                             name=f"IncomingConsumer-{restart_counter}")
                         incoming_consumer_thread.start()
                         _health_state['consumer_last_activity'] = time.time()
+                        _health_state['consumer_heartbeat'] = time.time()
                         logger.info(f"[WATCHDOG] IncomingConsumer restarted (#{restart_counter})")
                 else:
                     _consumer_stop_event.clear()
@@ -2374,6 +2457,7 @@ def thread_watchdog():
                         name=f"IncomingConsumer-{restart_counter}")
                     incoming_consumer_thread.start()
                     _health_state['consumer_last_activity'] = time.time()
+                    _health_state['consumer_heartbeat'] = time.time()
                     logger.info(f"[WATCHDOG] IncomingConsumer restarted (#{restart_counter})")
 
             # Check SenderBot worker
