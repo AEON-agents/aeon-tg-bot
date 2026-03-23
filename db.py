@@ -129,6 +129,26 @@ def _is_conn_stale(conn) -> bool:
     return (time.time() - created) > MAX_CONN_AGE
 
 
+def _getconn_with_timeout(pool, timeout=10):
+    """Get connection from pool with timeout to prevent infinite blocking."""
+    result = [None]
+    error = [None]
+    def _get():
+        try:
+            result[0] = pool.getconn()
+        except Exception as e:
+            error[0] = e
+    t = threading.Thread(target=_get, daemon=True)
+    t.start()
+    t.join(timeout=timeout)
+    if t.is_alive():
+        # Thread is stuck in getconn — connection leaked but better than hanging
+        raise psycopg2.pool.PoolError(f"getconn() timed out after {timeout}s")
+    if error[0]:
+        raise error[0]
+    return result[0]
+
+
 def _track_conn(conn):
     """Track when a connection was obtained (for age-based recycling)"""
     with _conn_age_lock:
@@ -164,7 +184,7 @@ def db_connection(max_retries: int = 3) -> Generator[psycopg2.extensions.connect
             thread_name = threading.current_thread().name
             t0 = time.time()
             logger.info(f"[DB] getconn start (thread={thread_name}, attempt={attempt + 1})")
-            conn = pool.getconn()
+            conn = _getconn_with_timeout(pool)
             t1 = time.time()
             logger.info(f"[DB] getconn done in {t1 - t0:.2f}s (thread={thread_name})")
             _track_conn(conn)
@@ -178,7 +198,7 @@ def db_connection(max_retries: int = 3) -> Generator[psycopg2.extensions.connect
                 except Exception:
                     pass
                 conn = None  # Prevent double-putconn if next getconn raises
-                conn = pool.getconn()
+                conn = _getconn_with_timeout(pool)
                 _track_conn(conn)
 
             # NOTE: No SELECT 1 test — it can hang forever through Supavisor.

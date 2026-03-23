@@ -1896,8 +1896,8 @@ def incoming_message_consumer():
         try:
             # Blocking pop with 5 second timeout
             result = client.blpop(INCOMING_QUEUE_KEY, timeout=5)
-            _health_state['consumer_last_activity'] = time.time()
             if result:
+                _health_state['consumer_last_activity'] = time.time()
                 _, update_json = result
                 update_data = json.loads(update_json)
 
@@ -2174,6 +2174,10 @@ def pg_notify_listener_worker(redis_url: str, database_url: str):
 
             # ===== POLL FOR NOTIFICATIONS =====
             try:
+                # Double-check with short timeout before poll (prevents hang on half-open connections)
+                poll_ready = select.select([conn], [], [], 5)
+                if not poll_ready[0]:
+                    raise Exception("Connection stale: select returned ready but poll timed out")
                 conn.poll()
             except Exception as e:
                 logger.error(f"[LISTENER] conn.poll() failed: {e}")
