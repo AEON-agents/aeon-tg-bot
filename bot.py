@@ -2007,19 +2007,34 @@ def incoming_message_consumer():
             if result:
                 _health_state['consumer_last_activity'] = time.time()
                 _, update_json = result
-                update_data = json.loads(update_json)
+                try:
+                    update_data = json.loads(update_json)
 
-                # Process through aiogram dispatcher
-                update = Update(**update_data)
-                run_async(dp.feed_update(bot, update))
+                    # Process through aiogram dispatcher
+                    update = Update(**update_data)
+                    run_async(dp.feed_update(bot, update))
 
-                update_id = update_data.get('update_id', 'unknown')
-                logger.info(f"[CONSUMER] Processed incoming update: {update_id}")
-                consecutive_errors = 0
-                _health_state['consumer_last_activity'] = time.time()
+                    update_id = update_data.get('update_id', 'unknown')
+                    logger.info(f"[CONSUMER] Processed incoming update: {update_id}")
+                    consecutive_errors = 0
+                    _health_state['consumer_last_activity'] = time.time()
+                except json.JSONDecodeError as e:
+                    logger.error(f"[CONSUMER] Invalid JSON in queue: {e}")
+                except Exception as e:
+                    # Re-push message back to queue with retry counter (max 3)
+                    try:
+                        retry_data = json.loads(update_json) if isinstance(update_json, (str, bytes)) else {}
+                        retry_count = retry_data.get('_consumer_retry', 0)
+                        if retry_count < 3:
+                            retry_data['_consumer_retry'] = retry_count + 1
+                            client.rpush(INCOMING_QUEUE_KEY, json.dumps(retry_data))
+                            logger.warning(f"[CONSUMER] Re-queued message (retry {retry_count + 1}/3): {type(e).__name__}: {e}")
+                        else:
+                            logger.error(f"[CONSUMER] Message dropped after 3 retries: {type(e).__name__}: {e}")
+                    except Exception:
+                        pass
+                    consecutive_errors += 1
 
-        except json.JSONDecodeError as e:
-            logger.error(f"[CONSUMER] Invalid JSON in queue: {e}")
         except psycopg2.pool.PoolError as e:
             consecutive_errors += 1
             logger.warning(f"[CONSUMER] Pool exhausted (#{consecutive_errors}): {e}, backing off 3s")
@@ -2082,12 +2097,13 @@ def retry_stuck_messages(max_age_minutes: int = 30, force_send: bool = False):
             cur.execute("""
                 SELECT h.id, h.chat_id, h.message, h.type_of_message, h.reply_to,
                        h.media_id, h.files_url, h.files_path,
-                       c.type as chat_type, c.group_id, u.telegram_id
+                       c.type as chat_type, c.group_id, u.telegram_id,
+                       h.thought_sessions_id
                 FROM chat_history_tg h
                 JOIN chats_tg c ON c.id = h.chat_id
                 LEFT JOIN users_tg u ON u.id = c.user_id
                 WHERE h.type = 'AEON'
-                  AND h.status = 'queued'
+                  AND h.status IN ('queued', 'failed')
                   AND h.tg_id IS NULL
                   AND h.created_at < NOW() - INTERVAL '1 second' * %s
                   AND h.created_at > NOW() - INTERVAL '%s minutes'
@@ -2111,7 +2127,7 @@ def retry_stuck_messages(max_age_minutes: int = 30, force_send: bool = False):
             queue_key = 'telegram:send_queue'
 
             for row in rows:
-                msg_id, chat_id, message, type_of_message, reply_to, media_id, files_url, files_path, chat_type, group_id, telegram_id = row
+                msg_id, chat_id, message, type_of_message, reply_to, media_id, files_url, files_path, chat_type, group_id, telegram_id, thought_sessions_id = row
 
                 # Determine chat_ident
                 if chat_type == 'group':
@@ -2134,10 +2150,9 @@ def retry_stuck_messages(max_age_minutes: int = 30, force_send: bool = False):
                     if message:
                         request_body['caption'] = message
                 else:
-                    # Text message
                     request_body = {
                         'chat_id': chat_ident,
-                        'type_of_message': 'text',
+                        'type_of_message': type_of_message,
                         'message': message
                     }
 
@@ -2156,6 +2171,7 @@ def retry_stuck_messages(max_age_minutes: int = 30, force_send: bool = False):
                     'chat_history_id': msg_id,
                     'chat_ident': chat_ident,
                     'request_body': request_body,
+                    'thought_sessions_id': thought_sessions_id,
                     'queued_at': time.time(),
                     'retry': True
                 }
