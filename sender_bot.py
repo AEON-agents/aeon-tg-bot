@@ -1334,10 +1334,12 @@ class SenderBot:
                 # Not a numeric string - this could be username, which Bot API doesn't support
                 logger.error(f"❌ Invalid telegram_chat_id (not numeric): {telegram_chat_id}")
                 logger.error(f"   Bot API requires numeric telegram_id, not username/phone")
+                self._handle_failure(chat_history_id, "Invalid telegram_chat_id: not numeric")
                 return
-        
+
         if not telegram_chat_id:
             logger.error(f"❌ No telegram_chat_id in task: {task_data}")
+            self._handle_failure(chat_history_id, "No telegram_chat_id in task")
             return
         
         self.stats['processed'] += 1
@@ -1448,6 +1450,7 @@ class SenderBot:
 
             if retry_count < 3:
                 task_data['retry_count'] = retry_count + 1
+                task_data['force_send'] = True
                 task_data['retry_after'] = time.time() + (2 ** retry_count) * 5
                 self.redis_client.rpush(self.queue_key, json.dumps(task_data))
                 self.stats['retried'] += 1
@@ -1505,9 +1508,9 @@ class SenderBot:
                     except Exception:
                         cur.execute("""
                             UPDATE chat_history_tg
-                            SET status = 'failed'
+                            SET status = 'failed', tg_error_message = %s
                             WHERE id = %s
-                        """, (chat_history_id,))
+                        """, (error, chat_history_id,))
                 return  # success
             except psycopg2.pool.PoolError:
                 if attempt < 2:
