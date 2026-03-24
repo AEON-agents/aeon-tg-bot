@@ -1383,6 +1383,25 @@ class SenderBot:
                     logger.warning(f"⚠️ Duplicate [id]: {chat_history_id}")
                     return
 
+        # ========== PRE-SEND DB CHECK ==========
+        # Prevents duplicates when retry_stuck re-queues after dedup TTL (10 min) expires
+        # If tg_id already set in DB — message was already delivered, skip
+        if chat_history_id and not is_reaction and not is_typing_only and not is_delete:
+            try:
+                with db_cursor() as cur:
+                    cur.execute("SELECT tg_id, status FROM chat_history_tg WHERE id = %s", (chat_history_id,))
+                    row = cur.fetchone()
+                    if row and row[0] is not None:
+                        logger.info(f"⏭️ Already sent (tg_id={row[0]}), skipping: chat_history_id={chat_history_id}")
+                        self.stats['duplicates'] += 1
+                        return
+                    if row and row[1] == 'sent':
+                        logger.info(f"⏭️ Status=sent but no tg_id, skipping: chat_history_id={chat_history_id}")
+                        self.stats['duplicates'] += 1
+                        return
+            except Exception as e:
+                logger.debug(f"Pre-send DB check failed (proceeding): {e}")
+
         try:
             # ========== RATE LIMITING ==========
             # Check rate limits before any action (except for typing-only and delete requests)
