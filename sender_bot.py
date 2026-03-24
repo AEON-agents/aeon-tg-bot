@@ -471,6 +471,12 @@ class SenderBot:
         if self.db_pool:
             logger.info("Sender using shared DB pool")
         
+        # In-memory set of successfully sent chat_history_ids
+        # Survives DB failures — prevents duplicates even if _update_db_success fails
+        # Only resets on process restart (acceptable: retry_stuck will re-check DB)
+        self._sent_ids = set()
+        self._sent_ids_lock = threading.Lock()
+
         # Stats
         self.stats = {
             'processed': 0,
@@ -1383,10 +1389,16 @@ class SenderBot:
                     logger.warning(f"⚠️ Duplicate [id]: {chat_history_id}")
                     return
 
-        # ========== PRE-SEND DB CHECK ==========
-        # Prevents duplicates when retry_stuck re-queues after dedup TTL (10 min) expires
-        # If tg_id already set in DB — message was already delivered, skip
+        # ========== PRE-SEND DEDUP (3 layers) ==========
         if chat_history_id and not is_reaction and not is_typing_only and not is_delete:
+            # Layer 1: In-memory set (survives DB failures, fastest check)
+            with self._sent_ids_lock:
+                if chat_history_id in self._sent_ids:
+                    logger.info(f"⏭️ Already sent (in-memory), skipping: chat_history_id={chat_history_id}")
+                    self.stats['duplicates'] += 1
+                    return
+
+            # Layer 2: DB check (catches retries after process restart)
             try:
                 with db_cursor() as cur:
                     cur.execute("SELECT tg_id, status FROM chat_history_tg WHERE id = %s", (chat_history_id,))
@@ -1394,6 +1406,8 @@ class SenderBot:
                     if row and row[0] is not None:
                         logger.info(f"⏭️ Already sent (tg_id={row[0]}), skipping: chat_history_id={chat_history_id}")
                         self.stats['duplicates'] += 1
+                        with self._sent_ids_lock:
+                            self._sent_ids.add(chat_history_id)
                         return
                     if row and row[1] == 'sent':
                         logger.info(f"⏭️ Status=sent but no tg_id, skipping: chat_history_id={chat_history_id}")
@@ -1436,6 +1450,17 @@ class SenderBot:
                     self.stats[result.stat_key] += 1
                 logger.info(f"Sent {msg_type}: tg_id={result.tg_message_id}")
 
+                # Mark as sent in memory IMMEDIATELY (before DB update)
+                # This prevents duplicates even if DB update fails
+                if chat_history_id:
+                    with self._sent_ids_lock:
+                        self._sent_ids.add(chat_history_id)
+                        # Cap set size to prevent memory leak
+                        if len(self._sent_ids) > 50000:
+                            # Remove oldest ~10k entries (set is unordered, but that's fine)
+                            to_remove = list(self._sent_ids)[:10000]
+                            self._sent_ids -= set(to_remove)
+
                 # Update DB status
                 if chat_history_id and result.tg_message_id:
                     self._update_db_success(chat_history_id, result.tg_message_id)
@@ -1467,9 +1492,17 @@ class SenderBot:
         except Exception as e:
             logger.exception(f"[SENDER] Send error chat_history_id={chat_history_id}: {e}")
 
-            if retry_count < 3:
+            # Only retry if NOT already sent (error could be from DB update after successful TG send)
+            already_sent = False
+            if chat_history_id:
+                with self._sent_ids_lock:
+                    already_sent = chat_history_id in self._sent_ids
+
+            if already_sent:
+                logger.info(f"⏭️ Error after successful send, NOT retrying: chat_history_id={chat_history_id}")
+            elif retry_count < 3:
                 task_data['retry_count'] = retry_count + 1
-                task_data['force_send'] = True
+                # DO NOT set force_send — retry must go through all dedup checks
                 task_data['retry_after'] = time.time() + (2 ** retry_count) * 5
                 self.redis_client.rpush(self.queue_key, json.dumps(task_data))
                 self.stats['retried'] += 1
