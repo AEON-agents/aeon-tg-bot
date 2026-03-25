@@ -978,12 +978,24 @@ def health_check():
         "ffmpeg_available": has_ffmpeg,
     }
 
-    # Return 503 only if bot itself is not initialized
-    # DB/sender may still be starting up — Railway healthcheck comes early
-    # All other issues are reported as degraded but don't block deployment
+    # LISTENER health — if dead >3min after startup, it's critical
+    # (grace period for startup: first 2 minutes don't count)
+    _startup_grace = 120  # 2 min grace for initial boot
+    listener_age = now - listener_act if listener_act else None
+    listener_critical = False
+    if listener_age is not None and listener_age > 180:  # >3 min without activity
+        listener_critical = True
+    elif _listener_degraded and listener_age is not None and listener_age > 180:
+        listener_critical = True
+
+    status_data["pg_listener_critical"] = listener_critical
+
+    # Return 503 if core components are down
+    # bot/redis = immediate 503
+    # LISTENER dead >3min = 503 (triggers Railway restart + aeon-ui watchdog)
     critical_ok = bot_ok and redis_ok
-    if not critical_ok:
-        status_data["status"] = "degraded"
+    if not critical_ok or listener_critical:
+        status_data["status"] = "unhealthy"
         return jsonify(status_data), 503
     elif not (sender_ok and db_ok):
         status_data["status"] = "degraded"
@@ -2395,6 +2407,8 @@ def pg_notify_listener_worker(redis_url: str, database_url: str):
     queue_key = 'telegram:send_queue'
     last_keepalive = time.time()
     KEEPALIVE_INTERVAL = 15  # Aggressive keepalive to prevent Supabase from killing connection
+    reconnect_backoff = 5  # Start at 5s, increase on consecutive failures
+    MAX_RECONNECT_BACKOFF = 30
 
     while not _shutdown_event.is_set():
         try:
@@ -2408,6 +2422,7 @@ def pg_notify_listener_worker(redis_url: str, database_url: str):
                 cur.execute("LISTEN telegram_send;")
                 last_keepalive = time.time()
                 _listener_degraded = False
+                reconnect_backoff = 5  # Reset backoff on successful connect
                 logger.info("[LISTENER] Listening on 'telegram_send'")
 
             # ===== CONNECT TO REDIS =====
@@ -2514,8 +2529,9 @@ def pg_notify_listener_worker(redis_url: str, database_url: str):
                     pass
                 local_redis_client = None
 
-            logger.info("[LISTENER] Waiting 5 seconds before reconnect...")
-            _shutdown_event.wait(5)
+            logger.info(f"[LISTENER] Waiting {reconnect_backoff}s before reconnect...")
+            _shutdown_event.wait(reconnect_backoff)
+            reconnect_backoff = min(reconnect_backoff * 2, MAX_RECONNECT_BACKOFF)
 
     logger.info("[LISTENER] Stopped (shutdown)")
 
@@ -2565,9 +2581,9 @@ def thread_watchdog():
     last_health_log = time.time()
     restart_counter = 0
     consecutive_pg_restarts = 0
-    MAX_PG_RESTARTS = 5
+    MAX_PG_RESTARTS = 3  # Reduced from 5 — exit faster for Railway restart
 
-    _shutdown_event.wait(30)
+    _shutdown_event.wait(10)  # Reduced from 30s — detect failures faster after boot
     logger.info("[WATCHDOG] Thread watchdog started")
 
     while not _shutdown_event.is_set():
@@ -2595,13 +2611,13 @@ def thread_watchdog():
                     name=f"PgNotifyListener-{restart_counter}"
                 )
                 pg_listener_thread.start()
-                _health_state['pg_listener_last_activity'] = time.time()
+                # NOTE: intentionally NOT setting _health_state['pg_listener_last_activity'] here
+                # so that if the new listener also fails to connect, watchdog detects it faster
                 logger.info(f"[WATCHDOG] PgNotifyListener restarted (#{restart_counter}, consecutive={consecutive_pg_restarts})")
             else:
-                # Only reset consecutive counter after 5+ minutes of stability
-                pg_healthy_duration = time.time() - _health_state.get('pg_listener_last_activity', 0)
-                if pg_healthy_duration < 30 and consecutive_pg_restarts > 0:
-                    # Recently active = truly healthy, reset counter
+                # Reset consecutive counter if listener is genuinely active (recent real activity)
+                pg_last_act = _health_state.get('pg_listener_last_activity', 0)
+                if pg_last_act and (time.time() - pg_last_act) < 60 and consecutive_pg_restarts > 0:
                     consecutive_pg_restarts = 0
 
             # Check StuckMessagesRetry
