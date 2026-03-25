@@ -283,6 +283,61 @@ def add_user_to_group(telegram_group_id: int, user_id: int, role: str = 'member'
         return False
 
 
+def _mark_group_as_forum(telegram_group_id: int):
+    """Mark a group as forum (is_forum = true) in groups_tg.
+    Called on first message with message_thread_id.
+    """
+    try:
+        with db_cursor(commit=True) as cur:
+            cur.execute(
+                "UPDATE groups_tg SET is_forum = true WHERE telegram_group_id = %s AND (is_forum IS NULL OR is_forum = false)",
+                (telegram_group_id,)
+            )
+    except Exception as e:
+        logger.warning(f"Failed to mark group {telegram_group_id} as forum: {e}")
+
+
+def save_forum_topic(chat_id: int, topic_id: int, name: str, icon_color: int = None):
+    """Insert or update a forum topic in forum_topics_tg."""
+    with db_cursor(commit=True) as cur:
+        cur.execute("""
+            INSERT INTO public.forum_topics_tg (chat_id, topic_id, name, icon_color)
+            VALUES (%s, %s, %s, %s)
+            ON CONFLICT (chat_id, topic_id) DO UPDATE SET
+                name = EXCLUDED.name,
+                icon_color = EXCLUDED.icon_color,
+                updated_at = NOW()
+        """, (chat_id, topic_id, name, icon_color))
+
+
+def update_forum_topic_name(chat_id: int, topic_id: int, name: str = None, icon_color: int = None):
+    """Update forum topic name/icon on edit event."""
+    with db_cursor(commit=True) as cur:
+        # Build SET clause dynamically for non-None fields
+        sets = ["updated_at = NOW()"]
+        params = []
+        if name is not None:
+            sets.append("name = %s")
+            params.append(name)
+        if icon_color is not None:
+            sets.append("icon_color = %s")
+            params.append(icon_color)
+        params.extend([chat_id, topic_id])
+        cur.execute(
+            f"UPDATE public.forum_topics_tg SET {', '.join(sets)} WHERE chat_id = %s AND topic_id = %s",
+            tuple(params)
+        )
+
+
+def update_forum_topic_closed(chat_id: int, topic_id: int, is_closed: bool):
+    """Update forum topic closed/reopened status."""
+    with db_cursor(commit=True) as cur:
+        cur.execute("""
+            UPDATE public.forum_topics_tg SET is_closed = %s, updated_at = NOW()
+            WHERE chat_id = %s AND topic_id = %s
+        """, (is_closed, chat_id, topic_id))
+
+
 def save_message_to_db(
     chat_id: int,
     message_text: str,
@@ -291,26 +346,29 @@ def save_message_to_db(
     type_of_message: str = 'text',
     group_sender_id: int = None,
     reply_to: int = None,
-    files_path: list = None
+    files_path: list = None,
+    message_thread_id: int = None
 ) -> int:
     """Save message to chat_history_tg, returns chat_history_tg.id
 
     files_path: list of file_id strings (Telegram file IDs)
+    message_thread_id: forum topic thread ID (nullable, for supergroup forums)
     """
     with db_cursor(commit=True) as cur:
         cur.execute("""
             INSERT INTO chat_history_tg
-            (chat_id, message, type, tg_id, type_of_message, group_sender_id, reply_to, files_path, status)
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, 'unread')
+            (chat_id, message, type, tg_id, type_of_message, group_sender_id, reply_to, files_path, status, message_thread_id)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, 'unread', %s)
             ON CONFLICT (chat_id, tg_id) DO UPDATE SET
                 message = EXCLUDED.message,
                 type_of_message = EXCLUDED.type_of_message,
                 group_sender_id = EXCLUDED.group_sender_id,
-                files_path = EXCLUDED.files_path
+                files_path = EXCLUDED.files_path,
+                message_thread_id = EXCLUDED.message_thread_id
             RETURNING id
         """, (
             chat_id, message_text, msg_type, tg_id, type_of_message,
-            group_sender_id, reply_to, files_path
+            group_sender_id, reply_to, files_path, message_thread_id
         ))
 
         history_id = cur.fetchone()[0]
@@ -460,7 +518,86 @@ def setup_handlers():
     async def handle_video(message: Message):
         """Handle incoming videos"""
         await process_incoming_message(message, 'video')
-    
+
+    # ========== FORUM TOPIC EVENT HANDLERS ==========
+
+    @router.message(F.content_type == ContentType.FORUM_TOPIC_CREATED)
+    async def handle_forum_topic_created(message: Message):
+        """Handle forum topic creation — save to forum_topics_tg"""
+        try:
+            chat = message.chat
+            topic = message.forum_topic_created
+            telegram_group_id = abs(chat.id)
+            thread_id = message.message_thread_id
+
+            await asyncio.to_thread(
+                save_forum_topic,
+                chat_id=telegram_group_id,
+                topic_id=thread_id,
+                name=topic.name,
+                icon_color=topic.icon_color
+            )
+            await asyncio.to_thread(_mark_group_as_forum, telegram_group_id)
+            logger.info(f"Forum topic created: group={telegram_group_id}, topic={thread_id}, name='{topic.name}'")
+        except Exception as e:
+            logger.error(f"Error handling forum_topic_created: {e}")
+
+    @router.message(F.content_type == ContentType.FORUM_TOPIC_EDITED)
+    async def handle_forum_topic_edited(message: Message):
+        """Handle forum topic edit — update name/icon in forum_topics_tg"""
+        try:
+            chat = message.chat
+            topic = message.forum_topic_edited
+            telegram_group_id = abs(chat.id)
+            thread_id = message.message_thread_id
+
+            await asyncio.to_thread(
+                update_forum_topic_name,
+                chat_id=telegram_group_id,
+                topic_id=thread_id,
+                name=topic.name,
+                icon_color=getattr(topic, 'icon_color', None)
+            )
+            logger.info(f"Forum topic edited: group={telegram_group_id}, topic={thread_id}, name='{topic.name}'")
+        except Exception as e:
+            logger.error(f"Error handling forum_topic_edited: {e}")
+
+    @router.message(F.content_type == ContentType.FORUM_TOPIC_CLOSED)
+    async def handle_forum_topic_closed(message: Message):
+        """Handle forum topic closed"""
+        try:
+            chat = message.chat
+            telegram_group_id = abs(chat.id)
+            thread_id = message.message_thread_id
+
+            await asyncio.to_thread(
+                update_forum_topic_closed,
+                chat_id=telegram_group_id,
+                topic_id=thread_id,
+                is_closed=True
+            )
+            logger.info(f"Forum topic closed: group={telegram_group_id}, topic={thread_id}")
+        except Exception as e:
+            logger.error(f"Error handling forum_topic_closed: {e}")
+
+    @router.message(F.content_type == ContentType.FORUM_TOPIC_REOPENED)
+    async def handle_forum_topic_reopened(message: Message):
+        """Handle forum topic reopened"""
+        try:
+            chat = message.chat
+            telegram_group_id = abs(chat.id)
+            thread_id = message.message_thread_id
+
+            await asyncio.to_thread(
+                update_forum_topic_closed,
+                chat_id=telegram_group_id,
+                topic_id=thread_id,
+                is_closed=False
+            )
+            logger.info(f"Forum topic reopened: group={telegram_group_id}, topic={thread_id}")
+        except Exception as e:
+            logger.error(f"Error handling forum_topic_reopened: {e}")
+
     return router
 
 
@@ -516,7 +653,8 @@ async def flush_media_group(group_id: str):
             type_of_message=type_of_message,
             group_sender_id=first_msg.get('sender_telegram_id'),
             reply_to=first_msg.get('reply_to'),
-            files_path=files_path
+            files_path=files_path,
+            message_thread_id=first_msg.get('message_thread_id')
         )
 
         # Track flushed group for late arrivals (keep for 30 seconds)
@@ -632,6 +770,16 @@ async def process_incoming_message(message: Message, message_type: str):
         if message.reply_to_message:
             reply_to = message.reply_to_message.message_id
 
+        # Get message_thread_id for forum topics (supergroups)
+        thread_id = message.message_thread_id  # None for non-forum chats
+
+        # Mark group as forum on first topic message
+        if thread_id is not None and is_group:
+            try:
+                await asyncio.to_thread(_mark_group_as_forum, abs(chat.id))
+            except Exception as e:
+                logger.warning(f"Failed to mark group as forum: {e}")
+
         # Check if this is part of media group (album)
         if message.media_group_id and message_type in ('photo', 'video', 'document'):
             group_id = message.media_group_id
@@ -668,7 +816,8 @@ async def process_incoming_message(message: Message, message_type: str):
                 'caption': message_text,
                 'chat_id': internal_chat_id,
                 'sender_telegram_id': sender_telegram_id if is_group else None,
-                'reply_to': reply_to
+                'reply_to': reply_to,
+                'message_thread_id': thread_id
             })
 
             logger.info(f"Buffered media group {group_id}: msg_id={message.message_id}, type={message_type}")
@@ -686,7 +835,8 @@ async def process_incoming_message(message: Message, message_type: str):
             type_of_message=message_type,
             group_sender_id=sender_telegram_id if is_group else None,
             reply_to=reply_to,
-            files_path=files_path_arr
+            files_path=files_path_arr,
+            message_thread_id=thread_id
         )
 
         # Trigger n8n webhook in thread pool (sync HTTP call)
