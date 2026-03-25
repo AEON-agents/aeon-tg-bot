@@ -119,6 +119,11 @@ def _get_reply_to(body: Dict) -> Optional[int]:
     return body.get('reply_to_message_id') or body.get('reply_to')
 
 
+def _get_thread_id(body: Dict) -> Optional[int]:
+    """Get message_thread_id from body (for forum topics)"""
+    return body.get('message_thread_id')
+
+
 # ============== HANDLERS ==============
 
 @MessageHandlers.register('text')
@@ -126,11 +131,12 @@ async def handle_text(sender: 'SenderBot', chat_id: int, body: Dict) -> HandlerR
     """Handle text message"""
     text = body.get('message', '')
     reply_to = _get_reply_to(body)
+    thread_id = _get_thread_id(body)
 
     if not text:
         return HandlerResult(success=False, error="Empty text message")
 
-    tg_msg_id = await sender._send_text(chat_id, text, reply_to)
+    tg_msg_id = await sender._send_text(chat_id, text, reply_to, message_thread_id=thread_id)
     return HandlerResult(success=True, tg_message_id=tg_msg_id)
 
 
@@ -176,6 +182,7 @@ async def handle_sticker(sender: 'SenderBot', chat_id: int, body: Dict) -> Handl
     sticker_set = body.get('sticker_short_name')
     sticker_emoji = body.get('sticker_emoji')
     reply_to = _get_reply_to(body)
+    thread_id = _get_thread_id(body)
 
     logger.info(f"Processing sticker: set={sticker_set}, emoji={sticker_emoji}")
 
@@ -183,7 +190,8 @@ async def handle_sticker(sender: 'SenderBot', chat_id: int, body: Dict) -> Handl
         chat_id,
         sticker_set_name=sticker_set,
         emoji=sticker_emoji,
-        reply_to=reply_to
+        reply_to=reply_to,
+        message_thread_id=thread_id
     )
     return HandlerResult(success=True, tg_message_id=tg_msg_id, stat_key='stickers_sent')
 
@@ -193,11 +201,12 @@ async def handle_video_note(sender: 'SenderBot', chat_id: int, body: Dict) -> Ha
     """Handle video note (circle)"""
     video_data = await _get_media_data(body, 'video')
     reply_to = _get_reply_to(body)
+    thread_id = _get_thread_id(body)
 
     if not video_data:
         return HandlerResult(success=False, error="video_url or video_data required")
 
-    tg_msg_id = await sender._send_video_note(chat_id, video_data, reply_to)
+    tg_msg_id = await sender._send_video_note(chat_id, video_data, reply_to, message_thread_id=thread_id)
     return HandlerResult(success=True, tg_message_id=tg_msg_id, stat_key='video_notes_sent')
 
 
@@ -205,6 +214,7 @@ async def handle_video_note(sender: 'SenderBot', chat_id: int, body: Dict) -> Ha
 async def handle_document(sender: 'SenderBot', chat_id: int, body: Dict) -> HandlerResult:
     """Handle document - either from URL or generated from markdown"""
     reply_to = _get_reply_to(body)
+    thread_id = _get_thread_id(body)
 
     # Try to get document from URL first
     doc_data = await _get_media_data(body, 'document')
@@ -217,7 +227,8 @@ async def handle_document(sender: 'SenderBot', chat_id: int, body: Dict) -> Hand
             filename = doc_url.split('/')[-1].split('?')[0]
 
         tg_msg_id = await sender._send_document_file(
-            chat_id, doc_data, filename=filename, caption=caption, reply_to=reply_to
+            chat_id, doc_data, filename=filename, caption=caption, reply_to=reply_to,
+            message_thread_id=thread_id
         )
         return HandlerResult(success=True, tg_message_id=tg_msg_id, stat_key='documents_sent')
 
@@ -230,7 +241,8 @@ async def handle_document(sender: 'SenderBot', chat_id: int, body: Dict) -> Hand
     filename = body.get('filename')
 
     tg_msg_id = await sender._send_document_generated(
-        chat_id, markdown_text, file_format, filename, reply_to
+        chat_id, markdown_text, file_format, filename, reply_to,
+        message_thread_id=thread_id
     )
     return HandlerResult(success=True, tg_message_id=tg_msg_id, stat_key='documents_sent')
 
@@ -252,8 +264,9 @@ async def handle_photo(sender: 'SenderBot', chat_id: int, body: Dict) -> Handler
 
     caption = body.get('caption', '')
     reply_to = _get_reply_to(body)
+    thread_id = _get_thread_id(body)
 
-    tg_msg_id = await sender._send_photo(chat_id, photo_data, caption, reply_to)
+    tg_msg_id = await sender._send_photo(chat_id, photo_data, caption, reply_to, message_thread_id=thread_id)
     return HandlerResult(success=True, tg_message_id=tg_msg_id)
 
 
@@ -265,8 +278,9 @@ async def handle_voice(sender: 'SenderBot', chat_id: int, body: Dict) -> Handler
         return HandlerResult(success=False, error="voice_url or voice_data required")
 
     reply_to = _get_reply_to(body)
+    thread_id = _get_thread_id(body)
 
-    tg_msg_id = await sender._send_voice(chat_id, voice_data, reply_to)
+    tg_msg_id = await sender._send_voice(chat_id, voice_data, reply_to, message_thread_id=thread_id)
     return HandlerResult(success=True, tg_message_id=tg_msg_id)
 
 
@@ -279,8 +293,9 @@ async def handle_video(sender: 'SenderBot', chat_id: int, body: Dict) -> Handler
 
     caption = body.get('caption', '')
     reply_to = _get_reply_to(body)
+    thread_id = _get_thread_id(body)
 
-    tg_msg_id = await sender._send_video(chat_id, video_data, caption, reply_to)
+    tg_msg_id = await sender._send_video(chat_id, video_data, caption, reply_to, message_thread_id=thread_id)
     return HandlerResult(success=True, tg_message_id=tg_msg_id)
 
 
@@ -299,8 +314,9 @@ async def handle_media_group(sender: 'SenderBot', chat_id: int, body: Dict) -> H
 
     caption = body.get('caption', '')
     reply_to = _get_reply_to(body)
+    thread_id = _get_thread_id(body)
 
-    tg_msg_ids = await sender._send_media_group(chat_id, media, caption, reply_to)
+    tg_msg_ids = await sender._send_media_group(chat_id, media, caption, reply_to, message_thread_id=thread_id)
     # Return first message ID
     first_id = tg_msg_ids[0] if tg_msg_ids else None
     return HandlerResult(success=True, tg_message_id=first_id)

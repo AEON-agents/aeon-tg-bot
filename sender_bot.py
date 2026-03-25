@@ -901,7 +901,8 @@ class SenderBot:
 
         return text
 
-    async def _send_text(self, chat_id: int, text: str, reply_to: int = None) -> int:
+    async def _send_text(self, chat_id: int, text: str, reply_to: int = None,
+                         message_thread_id: int = None) -> int:
         """Send text message with HTML (converted from Markdown), fallback to plain text"""
         from aiogram.enums import ParseMode
 
@@ -917,6 +918,7 @@ class SenderBot:
                 chat_id=chat_id,
                 text=html_text,
                 reply_to_message_id=reply_to,
+                message_thread_id=message_thread_id,
                 parse_mode=ParseMode.HTML
             )
             return msg.message_id
@@ -929,6 +931,7 @@ class SenderBot:
                     chat_id=chat_id,
                     text=text,  # Original text without HTML
                     reply_to_message_id=reply_to,
+                    message_thread_id=message_thread_id,
                     parse_mode=None
                 )
                 return msg.message_id
@@ -936,16 +939,17 @@ class SenderBot:
     
     async def _send_sticker(self, chat_id: int, sticker_set_name: str = None,
                             emoji: str = None, sticker_file_id: str = None,
-                            reply_to: int = None) -> int:
+                            reply_to: int = None, message_thread_id: int = None) -> int:
         """
         Send sticker by set name + emoji or by file_id
-        
+
         Args:
             chat_id: Telegram chat ID
             sticker_set_name: Name of sticker set (e.g. "AEON31")
             emoji: Emoji to find in sticker set (e.g. "👍")
             sticker_file_id: Direct file_id of sticker (priority over set+emoji)
             reply_to: Message ID to reply to
+            message_thread_id: Forum topic thread ID (optional)
         """
         # Priority 1: Direct file_id
         if sticker_file_id:
@@ -953,7 +957,8 @@ class SenderBot:
             msg = await self.worker_bot.send_sticker(
                 chat_id=chat_id,
                 sticker=sticker_file_id,
-                reply_to_message_id=reply_to
+                reply_to_message_id=reply_to,
+                message_thread_id=message_thread_id
             )
             return msg.message_id
         
@@ -1013,14 +1018,15 @@ class SenderBot:
         msg = await self.worker_bot.send_sticker(
             chat_id=chat_id,
             sticker=sticker.file_id,
-            reply_to_message_id=reply_to
+            reply_to_message_id=reply_to,
+            message_thread_id=message_thread_id
         )
         
         logger.info(f"✅ Sticker sent: set={sticker_set_name}, emoji={sticker.emoji}, msg_id={msg.message_id}")
         return msg.message_id
     
     async def _send_video_note(self, chat_id: int, video_data: bytes,
-                                reply_to: int = None) -> int:
+                                reply_to: int = None, message_thread_id: int = None) -> int:
         """
         Send video note (circle video)
         
@@ -1082,13 +1088,15 @@ class SenderBot:
         msg = await self.worker_bot.send_video_note(
             chat_id=chat_id,
             video_note=video_note,
-            reply_to_message_id=reply_to
+            reply_to_message_id=reply_to,
+            message_thread_id=message_thread_id
         )
         return msg.message_id
-    
+
     async def _send_document_generated(self, chat_id: int, markdown_text: str,
                                        file_format: str = 'docx', filename: str = None,
-                                       reply_to: int = None) -> int:
+                                       reply_to: int = None,
+                                       message_thread_id: int = None) -> int:
         """
         Generate and send document from markdown text
         
@@ -1118,15 +1126,17 @@ class SenderBot:
         msg = await self.worker_bot.send_document(
             chat_id=chat_id,
             document=document,
-            reply_to_message_id=reply_to
+            reply_to_message_id=reply_to,
+            message_thread_id=message_thread_id
         )
-        
+
         logger.info(f"✅ Document sent: {fname}")
         return msg.message_id
-    
+
     async def _send_document_file(self, chat_id: int, file_data: bytes,
                                   filename: str = None, caption: str = None,
-                                  reply_to: int = None) -> int:
+                                  reply_to: int = None,
+                                  message_thread_id: int = None) -> int:
         """Send ready document file (not generated)"""
         if not filename:
             filename = 'document'
@@ -1136,10 +1146,11 @@ class SenderBot:
             chat_id=chat_id,
             document=document,
             caption=caption,
-            reply_to_message_id=reply_to
+            reply_to_message_id=reply_to,
+            message_thread_id=message_thread_id
         )
         return msg.message_id
-    
+
     async def _send_reaction(self, chat_id: int, message_id: int, emoji: str) -> bool:
         """
         Set or remove reaction on message
@@ -1220,32 +1231,36 @@ class SenderBot:
         await self.worker_bot.send_chat_action(chat_id=chat_id, action=chat_action)
     
     async def _send_photo(self, chat_id: int, photo_data: bytes,
-                          caption: str = None, reply_to: int = None) -> int:
+                          caption: str = None, reply_to: int = None,
+                          message_thread_id: int = None) -> int:
         """Send photo"""
         photo = BufferedInputFile(photo_data, filename="photo.jpg")
-        
+
         msg = await self.worker_bot.send_photo(
             chat_id=chat_id,
             photo=photo,
             caption=caption,
-            reply_to_message_id=reply_to
+            reply_to_message_id=reply_to,
+            message_thread_id=message_thread_id
         )
         return msg.message_id
     
     async def _send_voice(self, chat_id: int, voice_data: bytes,
-                          reply_to: int = None) -> int:
+                          reply_to: int = None, message_thread_id: int = None) -> int:
         """Send voice message"""
         voice = BufferedInputFile(voice_data, filename="voice.ogg")
-        
+
         msg = await self.worker_bot.send_voice(
             chat_id=chat_id,
             voice=voice,
-            reply_to_message_id=reply_to
+            reply_to_message_id=reply_to,
+            message_thread_id=message_thread_id
         )
         return msg.message_id
     
     async def _send_video(self, chat_id: int, video_data: bytes,
-                          caption: str = None, reply_to: int = None) -> int:
+                          caption: str = None, reply_to: int = None,
+                          message_thread_id: int = None) -> int:
         """Send video"""
         video = BufferedInputFile(video_data, filename="video.mp4")
 
@@ -1253,12 +1268,14 @@ class SenderBot:
             chat_id=chat_id,
             video=video,
             caption=caption,
-            reply_to_message_id=reply_to
+            reply_to_message_id=reply_to,
+            message_thread_id=message_thread_id
         )
         return msg.message_id
 
     async def _send_media_group(self, chat_id: int, media: list,
-                                caption: str = None, reply_to: int = None) -> list:
+                                caption: str = None, reply_to: int = None,
+                                message_thread_id: int = None) -> list:
         """
         Send media group (album) - up to 10 photos/videos
 
@@ -1308,7 +1325,8 @@ class SenderBot:
         messages = await self.worker_bot.send_media_group(
             chat_id=chat_id,
             media=media_list,
-            reply_to_message_id=reply_to
+            reply_to_message_id=reply_to,
+            message_thread_id=message_thread_id
         )
 
         return [msg.message_id for msg in messages]
