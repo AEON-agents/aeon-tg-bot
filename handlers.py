@@ -66,6 +66,7 @@ async def _get_media_data(body: Dict, media_type: str) -> Optional[bytes]:
     # Check multiple URL keys
     url = (
         body.get(f'{media_type}_url') or
+        body.get('file_url') or
         body.get('video_url') or
         body.get('media_url')
     )
