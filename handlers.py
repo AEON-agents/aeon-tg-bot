@@ -80,7 +80,7 @@ async def _get_media_data(body: Dict, media_type: str) -> Optional[bytes]:
 
         # Auto-expand relative paths to full URL
         if not url.startswith(('http://', 'https://')):
-            base_url = os.environ.get('BASE_URL', 'https://aeon.up.railway.app')
+            base_url = os.environ.get('AEON_BASE_URL', 'https://aeon.up.railway.app')
             url = f"{base_url.rstrip('/')}/workspace/{url.lstrip('/')}"
             logger.info(f"📎 Expanded relative path to: {url}")
 
