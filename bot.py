@@ -55,8 +55,8 @@ from db import db_cursor, db_connection, get_db_pool
 
 # ============== CONFIG ==============
 BOT_TOKEN = os.environ.get('BOT_TOKEN')
-DATABASE_URL = os.environ.get('DATABASE_URL')
-DATABASE_URL_DIRECT = os.environ.get('DATABASE_URL_DIRECT', DATABASE_URL)  # Direct connection for LISTEN/NOTIFY
+# DB URLs imported from db.py which handles direct/pooler derivation
+from db import DATABASE_URL, DATABASE_URL_DIRECT  # noqa: E402
 REDIS_URL = os.environ.get('REDIS_URL')
 WEBHOOK_PATH = os.environ.get('WEBHOOK_PATH', '/webhook/telegram')
 WEBHOOK_SECRET = os.environ.get('WEBHOOK_SECRET', '')

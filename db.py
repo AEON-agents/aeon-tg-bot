@@ -1,4 +1,9 @@
-"""Database access layer with context managers and reconnect logic"""
+"""Database access layer with context managers and reconnect logic.
+Strategy: Direct connection (port 5432) preferred, Supavisor pooler as fallback.
+Direct is faster, supports LISTEN/NOTIFY and SET statement_timeout natively.
+Supavisor drops SSL connections periodically — used only as fallback.
+"""
+import re
 import psycopg2
 import psycopg2.pool
 from contextlib import contextmanager
@@ -10,7 +15,50 @@ import threading
 
 logger = logging.getLogger(__name__)
 
-DATABASE_URL = os.environ.get('DATABASE_URL')
+
+def _fix_db_port(url):
+    """Fix DB port based on host type."""
+    if not url:
+        return url
+    if 'pooler.supabase.com' in url and ':5432' in url:
+        return url.replace(':5432', ':6543')
+    if 'pooler.supabase.com' not in url and ':6543' in url:
+        return re.sub(r':6543\b', ':5432', url)
+    return url
+
+
+def _build_direct_url(pooler_url):
+    """Derive direct connection URL from pooler URL.
+    pooler: postgres.REF:PASS@xxx.pooler.supabase.com:6543/db
+    direct: postgres:PASS@db.REF.supabase.co:5432/db"""
+    if not pooler_url or 'pooler.supabase.com' not in pooler_url:
+        return None
+    try:
+        m = re.search(r'postgres\.([a-z]+):', pooler_url)
+        if not m:
+            return None
+        ref = m.group(1)
+        m2 = re.search(r':([^@]+)@', pooler_url)
+        if not m2:
+            return None
+        password = m2.group(1)
+        return f"postgresql://postgres:{password}@db.{ref}.supabase.co:5432/postgres"
+    except Exception:
+        return None
+
+
+# --- URL setup ---
+DATABASE_URL_RAW = os.environ.get('DATABASE_URL', '')
+DATABASE_URL_POOLER = _fix_db_port(os.environ.get('DATABASE_URL_POOL', DATABASE_URL_RAW))
+DATABASE_URL_DIRECT = os.environ.get('DATABASE_URL_DIRECT', '') or _build_direct_url(DATABASE_URL_POOLER)
+if DATABASE_URL_DIRECT:
+    DATABASE_URL_DIRECT = _fix_db_port(DATABASE_URL_DIRECT)
+
+# Preferred URL: direct if available, pooler as fallback
+DATABASE_URL = DATABASE_URL_DIRECT or DATABASE_URL_POOLER
+_using_direct = bool(DATABASE_URL_DIRECT and DATABASE_URL == DATABASE_URL_DIRECT)
+logger.info(f"[DB] Primary: {'DIRECT' if _using_direct else 'POOLER'}")
+
 _db_pool: Optional[psycopg2.pool.ThreadedConnectionPool] = None
 _pool_lock = threading.Lock()
 
@@ -20,22 +68,44 @@ _conn_age_lock = threading.Lock()
 MAX_CONN_AGE = 300  # Recycle connections older than 5 minutes
 
 
+_CONNECT_KWARGS = dict(
+    connect_timeout=10,
+    keepalives=1,
+    keepalives_idle=30,
+    keepalives_interval=10,
+    keepalives_count=3,
+    options='-c statement_timeout=10000',  # 10s — prevents queries from hanging forever
+)
+
+
 def get_db_pool() -> Optional[psycopg2.pool.ThreadedConnectionPool]:
-    """Lazy init database pool"""
+    """Lazy init database pool. Try direct first, fall back to pooler."""
     global _db_pool
-    if _db_pool is None and DATABASE_URL:
-        with _pool_lock:
-            if _db_pool is None:
+    if _db_pool is not None:
+        return _db_pool
+
+    urls_to_try = []
+    if DATABASE_URL_DIRECT:
+        urls_to_try.append(('DIRECT', DATABASE_URL_DIRECT))
+    if DATABASE_URL_POOLER:
+        urls_to_try.append(('POOLER', DATABASE_URL_POOLER))
+
+    if not urls_to_try:
+        return None
+
+    with _pool_lock:
+        if _db_pool is not None:
+            return _db_pool
+        for label, dsn in urls_to_try:
+            try:
                 _db_pool = psycopg2.pool.ThreadedConnectionPool(
-                    minconn=2, maxconn=10, dsn=DATABASE_URL,
-                    connect_timeout=10,
-                    keepalives=1,
-                    keepalives_idle=30,
-                    keepalives_interval=10,
-                    keepalives_count=3,
-                    options='-c statement_timeout=10000',  # 10s — prevents queries from hanging forever
+                    minconn=2, maxconn=10, dsn=dsn, **_CONNECT_KWARGS,
                 )
-                logger.info("[DB] Pool created (minconn=2, maxconn=10)")
+                logger.info(f"[DB] Pool created via {label} (minconn=2, maxconn=10)")
+                return _db_pool
+            except Exception as e:
+                logger.warning(f"[DB] Pool creation failed ({label}): {e}")
+                _db_pool = None
     return _db_pool
 
 
@@ -102,7 +172,7 @@ def get_pool_stats() -> dict:
     """Return current pool statistics for health endpoint"""
     pool = get_db_pool()
     if not pool:
-        return {'status': 'not_initialized'}
+        return {'status': 'not_initialized', 'url_type': 'direct' if _using_direct else 'pooler'}
     try:
         # ThreadedConnectionPool uses internal _lock (Lock) for thread safety
         with pool._lock:
@@ -114,9 +184,10 @@ def get_pool_stats() -> dict:
             'total': used + free,
             'maxconn': pool.maxconn,
             'minconn': pool.minconn,
+            'url_type': 'direct' if _using_direct else 'pooler',
         }
     except Exception as e:
-        return {'error': str(e)}
+        return {'error': str(e), 'url_type': 'direct' if _using_direct else 'pooler'}
 
 
 def _is_conn_stale(conn) -> bool:
