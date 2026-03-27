@@ -50,7 +50,13 @@ def _build_direct_url(pooler_url):
 # --- URL setup ---
 DATABASE_URL_RAW = os.environ.get('DATABASE_URL', '')
 DATABASE_URL_POOLER = _fix_db_port(os.environ.get('DATABASE_URL_POOL', DATABASE_URL_RAW))
-DATABASE_URL_DIRECT = os.environ.get('DATABASE_URL_DIRECT', '') or _build_direct_url(DATABASE_URL_POOLER)
+
+# Direct URL: env var only if it's actually a direct host (not pooler session mode)
+_direct_env = os.environ.get('DATABASE_URL_DIRECT', '')
+if _direct_env and 'pooler.supabase.com' in _direct_env:
+    logger.warning("[DB] DATABASE_URL_DIRECT contains pooler host — ignoring, will auto-derive")
+    _direct_env = ''
+DATABASE_URL_DIRECT = _direct_env or _build_direct_url(DATABASE_URL_POOLER)
 if DATABASE_URL_DIRECT:
     DATABASE_URL_DIRECT = _fix_db_port(DATABASE_URL_DIRECT)
 
