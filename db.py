@@ -34,14 +34,14 @@ def _build_direct_url(pooler_url):
     if not pooler_url or 'pooler.supabase.com' not in pooler_url:
         return None
     try:
-        m = re.search(r'postgres\.([a-z]+):', pooler_url)
-        if not m:
+        from urllib.parse import urlparse
+        parsed = urlparse(pooler_url)
+        if not parsed.username or '.' not in parsed.username:
             return None
-        ref = m.group(1)
-        m2 = re.search(r':([^@]+)@', pooler_url)
-        if not m2:
+        ref = parsed.username.split('.', 1)[1]
+        password = parsed.password
+        if not password:
             return None
-        password = m2.group(1)
         return f"postgresql://postgres:{password}@db.{ref}.supabase.co:5432/postgres"
     except Exception:
         return None
