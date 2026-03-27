@@ -166,12 +166,24 @@ def _untrack_conn(conn):
 def db_connection(max_retries: int = 3) -> Generator[psycopg2.extensions.connection, None, None]:
     """Context manager for database connection with auto-reconnect.
 
+    Retries only apply to connection acquisition (getconn). Once the connection
+    is yielded, errors during usage are NOT retried — the caller must handle
+    retries at a higher level if needed.
+
+    IMPORTANT: A @contextmanager generator must yield exactly once. Previous
+    versions had a retry loop around yield, which caused "generator didn't stop
+    after throw()" when SSL dropped during yield — the except handler did
+    `continue` which attempted a second yield, which @contextmanager rejects.
+
     Usage:
         with db_connection() as conn:
             cur = conn.cursor()
             cur.execute("SELECT 1")
             conn.commit()
     """
+    # Phase 1: Acquire connection (with retries)
+    conn = None
+    pool = None
     last_error = None
 
     for attempt in range(max_retries):
@@ -179,7 +191,6 @@ def db_connection(max_retries: int = 3) -> Generator[psycopg2.extensions.connect
         if not pool:
             raise RuntimeError("Database pool not initialized")
 
-        conn = None
         try:
             thread_name = threading.current_thread().name
             t0 = time.time()
@@ -201,15 +212,14 @@ def db_connection(max_retries: int = 3) -> Generator[psycopg2.extensions.connect
                 conn = _getconn_with_timeout(pool)
                 _track_conn(conn)
 
-            # NOTE: No SELECT 1 test — it can hang forever through Supavisor.
-            # Dead connections will be caught by the actual query and retried.
-            yield conn
-            return  # Success, exit the retry loop
+            # Connection acquired successfully
+            break
 
         except psycopg2.pool.PoolError as e:
             # Pool exhausted — phantom slots from hung psycopg2.connect() through Supavisor.
             # Reset pool to clear phantom _count, fresh pool starts at 0.
             last_error = e
+            conn = None
             logger.warning(f"[DB] Pool exhausted (attempt {attempt + 1}/{max_retries}): {e} — resetting pool")
             _reset_pool()
             if attempt < max_retries - 1:
@@ -220,7 +230,7 @@ def db_connection(max_retries: int = 3) -> Generator[psycopg2.extensions.connect
         except (psycopg2.OperationalError, psycopg2.InterfaceError) as e:
             last_error = e
             if _is_connection_error(e):
-                logger.warning(f"[DB] Connection error (attempt {attempt + 1}/{max_retries}): {e}")
+                logger.warning(f"[DB] Connection error during acquire (attempt {attempt + 1}/{max_retries}): {e}")
                 if conn:
                     _untrack_conn(conn)
                     try:
@@ -234,18 +244,59 @@ def db_connection(max_retries: int = 3) -> Generator[psycopg2.extensions.connect
                     continue
             raise
 
-        finally:
+        except Exception:
+            # Unexpected error during acquisition — clean up conn if we got one
             if conn:
+                _untrack_conn(conn)
                 try:
-                    logger.debug(f"[DB] putconn (thread={threading.current_thread().name})")
-                    pool.putconn(conn)
+                    pool.putconn(conn, close=True)
                 except Exception:
                     pass
+                conn = None
+            raise
 
-    # If we get here, all retries failed
-    if last_error:
-        raise last_error
-    raise RuntimeError("Database connection failed after retries")
+    if conn is None:
+        if last_error:
+            raise last_error
+        raise RuntimeError("Database connection failed after retries")
+
+    # Phase 2: Yield connection (no retries — single yield, always cleans up)
+    try:
+        yield conn
+    except Exception:
+        # Error during usage (SSL drop, query error, etc.)
+        # Mark connection as bad so it gets closed, not returned to pool
+        try:
+            _untrack_conn(conn)
+        except Exception:
+            pass
+        try:
+            if pool and conn:
+                pool.putconn(conn, close=True)
+        except Exception:
+            pass
+        conn = None  # Prevent double-putconn in finally
+
+        # Trigger pool reset for connection errors so next caller gets fresh connections
+        # (but don't block — the caller's exception takes priority)
+        try:
+            _reset_pool()
+        except Exception:
+            pass
+
+        raise
+    finally:
+        # Return healthy connection to pool (or clean up if something went wrong)
+        if conn:
+            try:
+                logger.debug(f"[DB] putconn (thread={threading.current_thread().name})")
+                pool.putconn(conn)
+            except Exception:
+                # Pool might have been reset by another thread — just discard
+                try:
+                    _untrack_conn(conn)
+                except Exception:
+                    pass
 
 
 @contextmanager

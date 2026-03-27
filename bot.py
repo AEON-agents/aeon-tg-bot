@@ -2452,10 +2452,13 @@ def pg_notify_listener_worker(redis_url: str, database_url: str):
             now = time.time()
             if now - last_keepalive >= KEEPALIVE_INTERVAL:
                 try:
-                    # Simple keepalive — no statement_timeout wrapper
-                    # (SET statement_timeout was being cancelled by Supabase)
+                    # Keepalive with statement_timeout to detect half-open connections.
+                    # Safe on direct connection (port 5432). Supavisor used to cancel
+                    # SET statement_timeout — but LISTEN uses direct, not Supavisor.
+                    cur.execute("SET statement_timeout = '5s'")
                     cur.execute("SELECT 1")
                     cur.fetchone()
+                    cur.execute("SET statement_timeout = '0'")  # Reset for LISTEN
                     last_keepalive = now
                     _health_state['pg_listener_last_activity'] = now
                 except Exception as e:
