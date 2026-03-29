@@ -57,6 +57,9 @@ if _direct_env and 'pooler.supabase.com' in _direct_env:
     logger.warning("[DB] DATABASE_URL_DIRECT contains pooler host — ignoring, will auto-derive")
     _direct_env = ''
 DATABASE_URL_DIRECT = _direct_env or _build_direct_url(DATABASE_URL_POOLER)
+# If primary URL is already direct (not pooler), use it for LISTEN/NOTIFY too
+if not DATABASE_URL_DIRECT and DATABASE_URL_RAW and 'pooler.supabase.com' not in DATABASE_URL_RAW:
+    DATABASE_URL_DIRECT = _fix_db_port(DATABASE_URL_RAW)
 if DATABASE_URL_DIRECT:
     DATABASE_URL_DIRECT = _fix_db_port(DATABASE_URL_DIRECT)
 
