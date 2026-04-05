@@ -321,3 +321,48 @@ async def handle_media_group(sender: 'SenderBot', chat_id: int, body: Dict) -> H
     # Return first message ID
     first_id = tg_msg_ids[0] if tg_msg_ids else None
     return HandlerResult(success=True, tg_message_id=first_id)
+
+
+@MessageHandlers.register('pin')
+async def handle_pin(sender: 'SenderBot', chat_id: int, body: Dict) -> HandlerResult:
+    """Pin a message in chat"""
+    message_id = body.get('message_id')
+    if not message_id:
+        return HandlerResult(success=False, error="message_id required for pin")
+    disable_notification = not body.get('notify', True)
+    await sender.worker_bot.pin_chat_message(
+        chat_id=chat_id, message_id=int(message_id),
+        disable_notification=disable_notification
+    )
+    return HandlerResult(success=True)
+
+
+@MessageHandlers.register('unpin')
+async def handle_unpin(sender: 'SenderBot', chat_id: int, body: Dict) -> HandlerResult:
+    """Unpin a message in chat"""
+    message_id = body.get('message_id')
+    if message_id:
+        await sender.worker_bot.unpin_chat_message(chat_id=chat_id, message_id=int(message_id))
+    else:
+        await sender.worker_bot.unpin_chat_message(chat_id=chat_id)
+    return HandlerResult(success=True)
+
+
+@MessageHandlers.register('unpin_all')
+async def handle_unpin_all(sender: 'SenderBot', chat_id: int, body: Dict) -> HandlerResult:
+    """Unpin all messages in chat"""
+    await sender.worker_bot.unpin_all_chat_messages(chat_id=chat_id)
+    return HandlerResult(success=True)
+
+
+@MessageHandlers.register('forward')
+async def handle_forward(sender: 'SenderBot', chat_id: int, body: Dict) -> HandlerResult:
+    """Forward a message from one chat to another"""
+    from_chat_id = body.get('from_chat_id')
+    message_id = body.get('message_id')
+    if not from_chat_id or not message_id:
+        return HandlerResult(success=False, error="from_chat_id and message_id required")
+    msg = await sender.worker_bot.forward_message(
+        chat_id=chat_id, from_chat_id=from_chat_id, message_id=message_id
+    )
+    return HandlerResult(success=True, tg_message_id=msg.message_id)

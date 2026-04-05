@@ -1,6 +1,7 @@
-"""Tests for bot.py — DB CRUD, health endpoint, media group flush"""
+"""Tests for bot.py — DB CRUD, health endpoint, media group flush, graceful shutdown"""
 import pytest
 import asyncio
+import signal
 import time
 from unittest.mock import patch, MagicMock, AsyncMock
 
@@ -205,7 +206,8 @@ class TestMediaGroupFlush:
             ]
         }
 
-        with patch.object(bot_module, 'save_message_to_db', return_value=42) as mock_save:
+        import app as app_module
+        with patch.object(app_module, 'save_message_to_db', return_value=42) as mock_save:
             # Run the coroutine but patch out the sleep
             with patch('asyncio.sleep', new_callable=AsyncMock):
                 asyncio.run(bot_module.flush_media_group('grp_123'))
@@ -224,3 +226,139 @@ class TestMediaGroupFlush:
         assert 'grp_123' in bot_module.media_group_flushed
         # Cleanup
         bot_module.media_group_flushed.pop('grp_123', None)
+
+
+# ---------------------------------------------------------------------------
+# Graceful shutdown tests
+# ---------------------------------------------------------------------------
+
+class TestGracefulShutdown:
+    """Tests for _graceful_exit and watchdog improvements"""
+
+    def test_graceful_exit_sets_shutdown_event(self):
+        """_graceful_exit sets _shutdown_event before exiting"""
+        import shared as shared_module
+        import bot as bot_module
+        shared_module._shutdown_event.clear()
+
+        with patch.object(shared_module, 'sender_bot', None), \
+             patch('db.close_db_pool'), \
+             patch('redis_client.close_redis_pool'), \
+             pytest.raises(SystemExit) as exc_info:
+            bot_module._graceful_exit(exit_code=42)
+
+        assert exc_info.value.code == 42
+        assert shared_module._shutdown_event.is_set()
+        shared_module._shutdown_event.clear()  # cleanup
+
+    def test_graceful_exit_stops_sender(self):
+        """_graceful_exit calls sender_bot.stop()"""
+        import shared as shared_module
+        import bot as bot_module
+        mock_sender = MagicMock()
+
+        with patch.object(shared_module, 'sender_bot', mock_sender), \
+             patch('db.close_db_pool'), \
+             patch('redis_client.close_redis_pool'), \
+             pytest.raises(SystemExit):
+            bot_module._graceful_exit(1)
+
+        mock_sender.stop.assert_called_once()
+        shared_module._shutdown_event.clear()
+
+    def test_graceful_exit_closes_db_and_redis(self):
+        """_graceful_exit closes DB pool and Redis pool"""
+        import shared as shared_module
+        import bot as bot_module
+
+        with patch.object(shared_module, 'sender_bot', None), \
+             patch('db.close_db_pool') as mock_db, \
+             patch('redis_client.close_redis_pool') as mock_redis, \
+             pytest.raises(SystemExit):
+            bot_module._graceful_exit(1)
+
+        mock_db.assert_called_once()
+        mock_redis.assert_called_once()
+        shared_module._shutdown_event.clear()
+
+    def test_graceful_exit_joins_threads(self):
+        """_graceful_exit attempts to join background threads"""
+        import shared as shared_module
+        import bot as bot_module
+        mock_thread = MagicMock()
+        mock_thread.is_alive.return_value = True
+
+        with patch.object(shared_module, 'sender_bot', None), \
+             patch.object(shared_module, 'pg_listener_thread', mock_thread), \
+             patch.object(shared_module, 'retry_worker_thread', None), \
+             patch.object(shared_module, 'incoming_consumer_thread', None), \
+             patch('db.close_db_pool'), \
+             patch('redis_client.close_redis_pool'), \
+             pytest.raises(SystemExit):
+            bot_module._graceful_exit(1, timeout=9)
+
+        mock_thread.join.assert_called_once_with(timeout=3.0)  # min(9/3, 5)
+        shared_module._shutdown_event.clear()
+
+    def test_graceful_exit_survives_sender_error(self):
+        """_graceful_exit continues even if sender_bot.stop() raises"""
+        import shared as shared_module
+        import bot as bot_module
+        mock_sender = MagicMock()
+        mock_sender.stop.side_effect = RuntimeError("boom")
+
+        with patch.object(shared_module, 'sender_bot', mock_sender), \
+             patch('db.close_db_pool'), \
+             patch('redis_client.close_redis_pool'), \
+             pytest.raises(SystemExit) as exc_info:
+            bot_module._graceful_exit(1)
+
+        # Should still exit despite error
+        assert exc_info.value.code == 1
+        shared_module._shutdown_event.clear()
+
+    def test_check_cooldown_allows_within_limit(self):
+        """_check_cooldown returns True when under limit"""
+        import shared as shared_module
+        import bot as bot_module
+        # Reset cooldown tracker
+        shared_module._thread_restart_times = {
+            'pg_listener': [], 'retry_worker': [],
+            'incoming_consumer': [], 'sender': [],
+        }
+        assert bot_module._check_cooldown('pg_listener') is True
+        assert bot_module._check_cooldown('pg_listener') is True
+
+    def test_check_cooldown_blocks_after_limit(self):
+        """_check_cooldown returns False after MAX_RESTARTS_IN_WINDOW"""
+        import shared as shared_module
+        import bot as bot_module
+        shared_module._thread_restart_times = {
+            'pg_listener': [time.time(), time.time(), time.time()],
+            'retry_worker': [], 'incoming_consumer': [], 'sender': [],
+        }
+        assert bot_module._check_cooldown('pg_listener') is False
+
+    def test_check_cooldown_expires_old_entries(self):
+        """_check_cooldown removes entries older than RESTART_COOLDOWN_WINDOW"""
+        import shared as shared_module
+        import bot as bot_module
+        old_time = time.time() - bot_module.RESTART_COOLDOWN_WINDOW - 10
+        shared_module._thread_restart_times = {
+            'pg_listener': [old_time, old_time, old_time],
+            'retry_worker': [], 'incoming_consumer': [], 'sender': [],
+        }
+        # Old entries should be pruned, so this is allowed
+        assert bot_module._check_cooldown('pg_listener') is True
+
+    def test_handle_sigterm_calls_graceful_exit(self):
+        """SIGTERM handler calls _graceful_exit(0)"""
+        import shared as shared_module
+        import app as app_module
+        import bot as bot_module
+
+        with patch.object(app_module, '_graceful_exit') as mock_exit:
+            bot_module._handle_sigterm(signal.SIGTERM, None)
+
+        mock_exit.assert_called_once_with(0, timeout=15)
+        shared_module._shutdown_event.clear()

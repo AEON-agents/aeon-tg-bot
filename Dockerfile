@@ -28,4 +28,4 @@ EXPOSE 8080
 # --threads 4: use threads for concurrent requests
 # --timeout 120: long timeout for async operations
 # NO --preload: initialization must happen in worker process, not master
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "--workers", "1", "--threads", "4", "--timeout", "120", "bot:flask_app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "--workers", "1", "--threads", "4", "--timeout", "120", "app:flask_app"]
