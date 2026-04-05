@@ -27,7 +27,7 @@ def redis_client():
 @pytest.fixture
 def flask_client_with_redis(redis_client):
     """Flask test client with mocked redis containing queue items."""
-    import bot as bot_module
+    import shared as shared_module
 
     mock_bot = MagicMock()
     mock_sender = MagicMock()
@@ -39,7 +39,7 @@ def flask_client_with_redis(redis_client):
     mock_consumer_thread = MagicMock()
     mock_consumer_thread.is_alive.return_value = True
 
-    patches = {
+    shared_patches = {
         'bot': mock_bot,
         'redis_client': redis_client,
         'sender_bot': mock_sender,
@@ -49,8 +49,8 @@ def flask_client_with_redis(redis_client):
         '_listener_degraded': False,
     }
 
-    with patch.multiple(bot_module, **patches), \
-         patch('bot.db_cursor') as mock_db_ctx, \
+    with patch.multiple(shared_module, **shared_patches), \
+         patch('health.db_cursor') as mock_db_ctx, \
          patch('db.get_pool_stats', return_value={
              'used': 1, 'free': 9, 'total': 10,
              'maxconn': 10, 'minconn': 2,
@@ -59,8 +59,8 @@ def flask_client_with_redis(redis_client):
         mock_db_ctx.return_value.__enter__ = MagicMock(return_value=cur)
         mock_db_ctx.return_value.__exit__ = MagicMock(return_value=False)
 
-        bot_module.flask_app.config['TESTING'] = True
-        yield bot_module.flask_app.test_client(), redis_client
+        shared_module.flask_app.config['TESTING'] = True
+        yield shared_module.flask_app.test_client(), redis_client
 
 
 # ---------------------------------------------------------------------------
@@ -224,7 +224,7 @@ class TestQueueForceSend:
         redis.set('telegram:sent:42', '1')
         assert redis.get('telegram:sent:42') == '1'
 
-        with patch('bot.retry_stuck_messages', return_value=1):
+        with patch('endpoints.retry_stuck_messages', return_value=1):
             resp = client.post('/telegram/queue/force_send',
                                json={'ids': [42]})
 
@@ -244,7 +244,7 @@ class TestRetryStuck:
 
     def test_retry_stuck_default_age(self, flask_client_with_redis):
         client, redis = flask_client_with_redis
-        with patch('bot.retry_stuck_messages', return_value=3) as mock_retry:
+        with patch('endpoints.retry_stuck_messages', return_value=3) as mock_retry:
             resp = client.post('/telegram/retry_stuck',
                                json={},
                                content_type='application/json')
@@ -256,7 +256,7 @@ class TestRetryStuck:
 
     def test_retry_stuck_custom_age(self, flask_client_with_redis):
         client, redis = flask_client_with_redis
-        with patch('bot.retry_stuck_messages', return_value=0) as mock_retry:
+        with patch('endpoints.retry_stuck_messages', return_value=0) as mock_retry:
             resp = client.post('/telegram/retry_stuck',
                                json={'max_age_minutes': 120})
 
@@ -300,7 +300,7 @@ class TestRetryStuckFunction:
 
     def test_returns_zero_on_no_db(self):
         """Should return 0 when DB connection fails."""
-        with patch('bot.db_connection') as mock_ctx:
+        with patch('stuck_retry.db_connection') as mock_ctx:
             mock_ctx.return_value.__enter__ = MagicMock(side_effect=Exception("no db"))
             mock_ctx.return_value.__exit__ = MagicMock(return_value=True)
             from bot import retry_stuck_messages
