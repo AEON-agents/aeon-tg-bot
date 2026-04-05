@@ -9,6 +9,7 @@ __all__ = [
     '_send_n8n_webhook',
 ]
 
+import json
 import logging
 from typing import Optional, Dict
 
@@ -223,7 +224,21 @@ def save_message_to_db(
         history_id = cur.fetchone()[0]
         files_count = len(files_path) if files_path else 0
         logger.info(f"Saved message: chat={chat_id}, tg_id={tg_id}, type={type_of_message}, files={files_count}")
-        return history_id
+
+    # Publish to Redis for real-time delivery to aeon-main
+    try:
+        from redis_client import get_redis
+        r = get_redis()
+        if r:
+            r.publish('aeon:new_tg_message', json.dumps({
+                'id': history_id,
+                'chat_id': chat_id,
+                'tg_id': tg_id
+            }))
+    except Exception as e:
+        logger.debug(f"Redis PUBLISH failed (non-critical): {e}")
+
+    return history_id
 
 
 def resolve_telegram_chat_id(internal_chat_id: int) -> Optional[int]:
