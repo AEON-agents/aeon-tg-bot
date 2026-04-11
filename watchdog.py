@@ -2,6 +2,8 @@
 
 __all__ = ['_graceful_exit', 'thread_watchdog']
 
+import os
+import signal
 import sys
 import time
 import logging
@@ -18,11 +20,32 @@ from incoming_consumer import incoming_message_consumer
 logger = logging.getLogger(__name__)
 
 
-def _graceful_exit(exit_code=1, timeout=15):
-    """Graceful shutdown: stop all threads, close connections, then exit.
+_graceful_exit_lock = threading.Lock()
+_graceful_exit_started = False
 
-    Replaces os._exit() to prevent resource leaks and lost data.
+
+def _reset_graceful_exit_state():
+    """Test-only: reset the one-shot latch so _graceful_exit can be called again."""
+    global _graceful_exit_started
+    with _graceful_exit_lock:
+        _graceful_exit_started = False
+
+
+def _graceful_exit(exit_code=1, timeout=15):
+    """Graceful shutdown: stop all threads, close connections, then kill the process.
+
+    IMPORTANT: This function is called from daemon threads (watchdog). A plain
+    sys.exit() from a daemon thread only raises SystemExit in that thread — it
+    does NOT terminate the process. To actually restart the service we must
+    either send SIGTERM to ourselves (so gunicorn handles shutdown) or call
+    os._exit() as a last resort.
     """
+    global _graceful_exit_started
+    with _graceful_exit_lock:
+        if _graceful_exit_started:
+            return
+        _graceful_exit_started = True
+
     logger.warning(f"[GRACEFUL_EXIT] Initiating graceful exit (code={exit_code}, timeout={timeout}s)")
 
     # Signal all threads to stop
@@ -63,8 +86,23 @@ def _graceful_exit(exit_code=1, timeout=15):
     except Exception:
         pass
 
-    logger.warning(f"[GRACEFUL_EXIT] Exiting with code {exit_code}")
-    sys.exit(exit_code)
+    logger.warning(f"[GRACEFUL_EXIT] Terminating process (code={exit_code})")
+
+    # Prefer SIGTERM so gunicorn performs its own graceful shutdown and Railway
+    # restarts the service cleanly. Start a safety-net daemon that forces the
+    # process down with os._exit() if SIGTERM doesn't take effect in time.
+    def _force_exit():
+        time.sleep(max(1, timeout))
+        logger.critical(f"[GRACEFUL_EXIT] SIGTERM didn't take effect after {timeout}s — forcing os._exit({exit_code})")
+        os._exit(exit_code)
+
+    threading.Thread(target=_force_exit, daemon=True, name="GracefulExitForce").start()
+
+    try:
+        os.kill(os.getpid(), signal.SIGTERM)
+    except Exception as e:
+        logger.error(f"[GRACEFUL_EXIT] SIGTERM failed: {e} — falling back to os._exit immediately")
+        os._exit(exit_code)
 
 
 def thread_watchdog():

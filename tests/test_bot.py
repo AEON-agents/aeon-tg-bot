@@ -235,56 +235,69 @@ class TestMediaGroupFlush:
 class TestGracefulShutdown:
     """Tests for _graceful_exit and watchdog improvements"""
 
+    def _reset(self, shared_module):
+        """Reset shared state and one-shot latch between tests."""
+        import watchdog as watchdog_module
+        watchdog_module._reset_graceful_exit_state()
+        shared_module._shutdown_event.clear()
+
     def test_graceful_exit_sets_shutdown_event(self):
         """_graceful_exit sets _shutdown_event before exiting"""
         import shared as shared_module
         import bot as bot_module
-        shared_module._shutdown_event.clear()
+        self._reset(shared_module)
 
         with patch.object(shared_module, 'sender_bot', None), \
              patch('db.close_db_pool'), \
              patch('redis_client.close_redis_pool'), \
-             pytest.raises(SystemExit) as exc_info:
+             patch('watchdog.threading.Thread'), \
+             patch('watchdog.os.kill') as mock_kill:
             bot_module._graceful_exit(exit_code=42)
 
-        assert exc_info.value.code == 42
+        # SIGTERM sent to self instead of sys.exit — daemon threads can't exit the process
+        assert mock_kill.called
         assert shared_module._shutdown_event.is_set()
-        shared_module._shutdown_event.clear()  # cleanup
+        self._reset(shared_module)
 
     def test_graceful_exit_stops_sender(self):
         """_graceful_exit calls sender_bot.stop()"""
         import shared as shared_module
         import bot as bot_module
+        self._reset(shared_module)
         mock_sender = MagicMock()
 
         with patch.object(shared_module, 'sender_bot', mock_sender), \
              patch('db.close_db_pool'), \
              patch('redis_client.close_redis_pool'), \
-             pytest.raises(SystemExit):
+             patch('watchdog.threading.Thread'), \
+             patch('watchdog.os.kill'):
             bot_module._graceful_exit(1)
 
         mock_sender.stop.assert_called_once()
-        shared_module._shutdown_event.clear()
+        self._reset(shared_module)
 
     def test_graceful_exit_closes_db_and_redis(self):
         """_graceful_exit closes DB pool and Redis pool"""
         import shared as shared_module
         import bot as bot_module
+        self._reset(shared_module)
 
         with patch.object(shared_module, 'sender_bot', None), \
              patch('db.close_db_pool') as mock_db, \
              patch('redis_client.close_redis_pool') as mock_redis, \
-             pytest.raises(SystemExit):
+             patch('watchdog.threading.Thread'), \
+             patch('watchdog.os.kill'):
             bot_module._graceful_exit(1)
 
         mock_db.assert_called_once()
         mock_redis.assert_called_once()
-        shared_module._shutdown_event.clear()
+        self._reset(shared_module)
 
     def test_graceful_exit_joins_threads(self):
         """_graceful_exit attempts to join background threads"""
         import shared as shared_module
         import bot as bot_module
+        self._reset(shared_module)
         mock_thread = MagicMock()
         mock_thread.is_alive.return_value = True
 
@@ -294,28 +307,67 @@ class TestGracefulShutdown:
              patch.object(shared_module, 'incoming_consumer_thread', None), \
              patch('db.close_db_pool'), \
              patch('redis_client.close_redis_pool'), \
-             pytest.raises(SystemExit):
+             patch('watchdog.threading.Thread'), \
+             patch('watchdog.os.kill'):
             bot_module._graceful_exit(1, timeout=9)
 
         mock_thread.join.assert_called_once_with(timeout=3.0)  # min(9/3, 5)
-        shared_module._shutdown_event.clear()
+        self._reset(shared_module)
 
     def test_graceful_exit_survives_sender_error(self):
         """_graceful_exit continues even if sender_bot.stop() raises"""
         import shared as shared_module
         import bot as bot_module
+        self._reset(shared_module)
         mock_sender = MagicMock()
         mock_sender.stop.side_effect = RuntimeError("boom")
 
         with patch.object(shared_module, 'sender_bot', mock_sender), \
              patch('db.close_db_pool'), \
              patch('redis_client.close_redis_pool'), \
-             pytest.raises(SystemExit) as exc_info:
+             patch('watchdog.threading.Thread'), \
+             patch('watchdog.os.kill') as mock_kill:
             bot_module._graceful_exit(1)
 
-        # Should still exit despite error
-        assert exc_info.value.code == 1
-        shared_module._shutdown_event.clear()
+        # Should still terminate despite error
+        assert mock_kill.called
+        self._reset(shared_module)
+
+    def test_graceful_exit_uses_os_exit_when_sigterm_fails(self):
+        """If os.kill raises, fall back to os._exit (bypasses daemon-thread sys.exit trap)"""
+        import shared as shared_module
+        import bot as bot_module
+        self._reset(shared_module)
+
+        with patch.object(shared_module, 'sender_bot', None), \
+             patch('db.close_db_pool'), \
+             patch('redis_client.close_redis_pool'), \
+             patch('watchdog.threading.Thread'), \
+             patch('watchdog.os.kill', side_effect=OSError("no such process")), \
+             patch('watchdog.os._exit') as mock_exit:
+            bot_module._graceful_exit(1)
+
+        mock_exit.assert_called_once_with(1)
+        self._reset(shared_module)
+
+    def test_graceful_exit_is_one_shot(self):
+        """Second call to _graceful_exit while first is in progress is a no-op"""
+        import shared as shared_module
+        import bot as bot_module
+        self._reset(shared_module)
+        mock_sender = MagicMock()
+
+        with patch.object(shared_module, 'sender_bot', mock_sender), \
+             patch('db.close_db_pool'), \
+             patch('redis_client.close_redis_pool'), \
+             patch('watchdog.threading.Thread'), \
+             patch('watchdog.os.kill'):
+            bot_module._graceful_exit(1)
+            bot_module._graceful_exit(1)  # should be ignored
+
+        # Sender should have been stopped exactly once
+        mock_sender.stop.assert_called_once()
+        self._reset(shared_module)
 
     def test_check_cooldown_allows_within_limit(self):
         """_check_cooldown returns True when under limit"""
