@@ -6,7 +6,7 @@ __all__ = [
     'update_forum_topic_name', 'update_forum_topic_closed',
     'save_message_to_db', 'resolve_telegram_chat_id',
     'get_chat_info_by_telegram_id', '_update_media_group_file',
-    '_send_n8n_webhook',
+    '_update_message_files_url', '_send_n8n_webhook',
 ]
 
 import json
@@ -213,6 +213,7 @@ def save_message_to_db(
                 message = EXCLUDED.message,
                 type_of_message = EXCLUDED.type_of_message,
                 group_sender_id = EXCLUDED.group_sender_id,
+                reply_to = EXCLUDED.reply_to,
                 files_path = EXCLUDED.files_path,
                 message_thread_id = EXCLUDED.message_thread_id
             RETURNING id
@@ -312,6 +313,16 @@ def _update_media_group_file(files_path, history_id):
             SET files_path = %s
             WHERE id = %s
         """, (files_path, history_id))
+
+
+def _update_message_files_url(history_id, files_url):
+    """Sync helper: set files_url (array) for a chat_history_tg row."""
+    with db_cursor(commit=True) as cur:
+        cur.execute("""
+            UPDATE chat_history_tg
+            SET files_url = %s
+            WHERE id = %s
+        """, (files_url, history_id))
 
 
 def _send_n8n_webhook(webhook_data):
