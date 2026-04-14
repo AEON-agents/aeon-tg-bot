@@ -30,7 +30,8 @@ from shared import (flask_app, _shutdown_event, _health_state,
 from db_helpers import (get_or_create_user, get_or_create_chat, get_or_create_group,
                         add_user_to_group, _mark_group_as_forum, save_forum_topic,
                         update_forum_topic_name, update_forum_topic_closed,
-                        save_message_to_db, _update_media_group_file, _send_n8n_webhook)
+                        save_message_to_db, _update_media_group_file,
+                        _update_message_files_url, _send_n8n_webhook)
 from db import get_db_pool
 from sender_bot import SenderBot
 from pg_listener import pg_notify_listener_worker
@@ -238,6 +239,10 @@ async def flush_media_group(group_id: str):
             'files_path': files_path.copy()
         }
 
+        # Auto-download all files in the group so files_url gets populated
+        if history_id and files_path:
+            asyncio.create_task(_auto_download_media_group(files_path, history_id, type_of_message))
+
         cutoff = time.time() - 60
         to_remove = [k for k, v in media_group_flushed.items() if v['flushed_at'] < cutoff]
         for k in to_remove:
@@ -284,6 +289,93 @@ def _resolve_chat_and_user_sync(chat, user, is_group):
         internal_chat_id = get_or_create_chat('user', user_id=internal_user_id)
 
     return internal_chat_id, sender_user_id, sender_telegram_id
+
+
+async def _download_one_file(file_id: str, history_id: int, message_type: str, index: int = 0):
+    """Download a single file and return (filename, bytes_len) or None on failure.
+    Saves to `<MEDIA_CACHE_DIR>/<history_id>/<filename>`.
+    """
+    try:
+        cache_dir = os.environ.get('MEDIA_CACHE_DIR', '/tmp/media_cache')
+        save_dir = os.path.join(cache_dir, str(history_id))
+        os.makedirs(save_dir, exist_ok=True)
+
+        file = await shared.bot.get_file(file_id)
+        file_bytes = await shared.bot.download_file(file.file_path)
+
+        ext = os.path.splitext(file.file_path)[1] if file.file_path else ''
+        if not ext:
+            ext = {
+                'photo': '.jpg',
+                'video': '.mp4',
+                'voice': '.ogg',
+                'video_note': '.mp4',
+                'animation': '.mp4',
+            }.get(message_type, '.bin')
+        tg_basename = os.path.basename(file.file_path) if file.file_path else ''
+        filename = tg_basename if tg_basename else f"{message_type}_{index}_{file_id[:12]}{ext}"
+        filename = ''.join(c for c in filename if c.isalnum() or c in '._-')
+        if not filename:
+            filename = f"{message_type}_{index}_{file_id[:12]}{ext}"
+
+        file_path = os.path.join(save_dir, filename)
+        content = file_bytes.read()
+        with open(file_path, 'wb') as f:
+            f.write(content)
+        return filename, len(content)
+    except Exception as e:
+        logger.exception(f"[MEDIA] Download failed for history_id={history_id}, file_id={file_id[:20]}...: {e}")
+        return None
+
+
+async def _auto_download_media(file_id: str, history_id: int, message_type: str):
+    """Download a single incoming media file and populate chat_history_tg.files_url
+    so that aeon-main can actually read the file instead of seeing only a bare
+    `media: <type>` marker. Runs as a background asyncio task.
+    """
+    result = await _download_one_file(file_id, history_id, message_type, index=0)
+    if not result:
+        return
+    filename, size = result
+    base_url = (BASE_URL or '').rstrip('/')
+    public_url = (
+        f"{base_url}/api/media/serve/{history_id}/{filename}"
+        if base_url else os.path.join(os.environ.get('MEDIA_CACHE_DIR', '/tmp/media_cache'), str(history_id), filename)
+    )
+    try:
+        await asyncio.to_thread(_update_message_files_url, history_id, [public_url])
+        logger.info(f"[MEDIA] Auto-downloaded {message_type} for history_id={history_id}: {size} bytes, url={public_url}")
+    except Exception as e:
+        logger.exception(f"[MEDIA] Failed to update files_url for history_id={history_id}: {e}")
+
+
+async def _auto_download_media_group(file_ids: list, history_id: int, message_type: str):
+    """Download all files in a media group and write the full files_url array."""
+    results = []
+    for i, fid in enumerate(file_ids):
+        r = await _download_one_file(fid, history_id, message_type, index=i)
+        results.append(r)
+
+    base_url = (BASE_URL or '').rstrip('/')
+    urls = []
+    for r in results:
+        if r is None:
+            urls.append(None)
+            continue
+        filename, _ = r
+        if base_url:
+            urls.append(f"{base_url}/api/media/serve/{history_id}/{filename}")
+        else:
+            urls.append(os.path.join(os.environ.get('MEDIA_CACHE_DIR', '/tmp/media_cache'), str(history_id), filename))
+
+    if not any(urls):
+        logger.warning(f"[MEDIA] All downloads failed for media group history_id={history_id}")
+        return
+    try:
+        await asyncio.to_thread(_update_message_files_url, history_id, urls)
+        logger.info(f"[MEDIA] Auto-downloaded media group ({len(file_ids)} files) for history_id={history_id}")
+    except Exception as e:
+        logger.exception(f"[MEDIA] Failed to update files_url for media group history_id={history_id}: {e}")
 
 
 async def process_incoming_message(message: Message, message_type: str):
@@ -393,6 +485,12 @@ async def process_incoming_message(message: Message, message_type: str):
             files_path=files_path_arr,
             message_thread_id=thread_id
         )
+
+        # Auto-download media to cache so that aeon-main can read the actual file
+        # contents instead of hallucinating from a bare `media: document` marker.
+        # Runs as a background asyncio task so the webhook handler returns fast.
+        if file_id and history_id and message_type in ('photo', 'video', 'document', 'voice', 'video_note', 'animation'):
+            asyncio.create_task(_auto_download_media(file_id, history_id, message_type))
 
         if N8N_WEBHOOK_URL:
             try:
