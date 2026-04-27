@@ -84,9 +84,21 @@ def pg_notify_listener_worker(redis_url: str, database_url: str):
                 cur = conn.cursor()
                 cur.execute("LISTEN telegram_send;")
                 last_keepalive = time.time()
-                shared._listener_degraded = False
                 reconnect_backoff = 5
                 logger.info("[LISTENER] Listening on 'telegram_send'")
+
+                # Catch-up: re-queue any AEON messages whose NOTIFY was lost
+                # while the LISTEN connection was down. Idempotent — SenderBot
+                # dedups by chat_history_id (telegram:sent:{id}) for 600s.
+                try:
+                    from stuck_retry import retry_stuck_messages
+                    catch_up = retry_stuck_messages(max_age_minutes=10, min_age_seconds=0)
+                    if catch_up:
+                        logger.info(f"[LISTENER] Catch-up re-queued {catch_up} pending messages")
+                except Exception as e:
+                    logger.error(f"[LISTENER] Catch-up failed: {e}")
+
+                shared._listener_degraded = False
 
             # ===== CONNECT TO REDIS =====
             if local_redis_client is None:

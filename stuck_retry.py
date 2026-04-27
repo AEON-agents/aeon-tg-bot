@@ -11,16 +11,19 @@ from db import db_connection
 logger = logging.getLogger(__name__)
 
 
-def retry_stuck_messages(max_age_minutes: int = 30, force_send: bool = False):
+def retry_stuck_messages(max_age_minutes: int = 30, force_send: bool = False, min_age_seconds: int = None):
     """Find and re-queue stuck messages (status='queued' but no tg_id).
 
-    When listener is degraded, picks up messages after 5 seconds instead of 60.
+    Picks up messages older than 1 second normally, 0 seconds in degraded mode
+    or when explicitly overridden (e.g. listener catch-up after reconnect).
     force_send: if True, adds force_send flag to bypass sender dedup.
     """
     from redis_client import get_redis
 
-    # In degraded mode, pick up messages much faster (5s vs 60s)
-    min_age_seconds = 5 if shared._listener_degraded else 60
+    if min_age_seconds is None:
+        # Degraded → pick up immediately, normal → small grace period to avoid
+        # racing with the PG listener on the same NOTIFY.
+        min_age_seconds = 0 if shared._listener_degraded else 5
 
     try:
         t_conn = time.time()
@@ -128,8 +131,8 @@ def stuck_messages_retry_worker():
 
     Adaptive: polls every 10s when LISTEN is degraded, every 60s normally.
     """
-    NORMAL_INTERVAL = 60
-    DEGRADED_INTERVAL = 10
+    NORMAL_INTERVAL = 10
+    DEGRADED_INTERVAL = 5
     logger.info(f"[RETRY] Starting stuck messages retry worker (normal={NORMAL_INTERVAL}s, degraded={DEGRADED_INTERVAL}s)")
 
     # Wait 30 seconds on startup before first check
