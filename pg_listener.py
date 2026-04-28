@@ -72,6 +72,7 @@ def pg_notify_listener_worker(redis_url: str, database_url: str):
     KEEPALIVE_INTERVAL = 15
     reconnect_backoff = 5
     MAX_RECONNECT_BACKOFF = 30
+    is_first_connect = True
 
     while not _shutdown_event.is_set():
         try:
@@ -88,15 +89,19 @@ def pg_notify_listener_worker(redis_url: str, database_url: str):
                 logger.info("[LISTENER] Listening on 'telegram_send'")
 
                 # Catch-up: re-queue any AEON messages whose NOTIFY was lost
-                # while the LISTEN connection was down. Idempotent — SenderBot
-                # dedups by chat_history_id (telegram:sent:{id}) for 600s.
-                try:
-                    from stuck_retry import retry_stuck_messages
-                    catch_up = retry_stuck_messages(max_age_minutes=10, min_age_seconds=0)
-                    if catch_up:
-                        logger.info(f"[LISTENER] Catch-up re-queued {catch_up} pending messages")
-                except Exception as e:
-                    logger.error(f"[LISTENER] Catch-up failed: {e}")
+                # while the LISTEN connection was down. Skip on first connect —
+                # at boot there's no "lost" NOTIFY (bot was simply absent),
+                # so catch-up only races with normal NOTIFY for fresh rows.
+                # Idempotent — SenderBot dedups by chat_history_id for 600s.
+                if not is_first_connect:
+                    try:
+                        from stuck_retry import retry_stuck_messages
+                        catch_up = retry_stuck_messages(max_age_minutes=10, min_age_seconds=0)
+                        if catch_up:
+                            logger.info(f"[LISTENER] Catch-up re-queued {catch_up} pending messages")
+                    except Exception as e:
+                        logger.error(f"[LISTENER] Catch-up failed: {e}")
+                is_first_connect = False
 
                 shared._listener_degraded = False
 

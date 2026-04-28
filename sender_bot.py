@@ -1435,16 +1435,22 @@ class SenderBot:
                 logger.debug(f"Pre-send DB check failed (proceeding): {e}")
 
         try:
+            # Stage timing — surfaces where latency is spent (rate-limit, typing, send, DB).
+            _t0 = time.time()
+            queued_at = task_data.get('queued_at')
+            queue_wait = (_t0 - float(queued_at)) if queued_at else None
+
             # ========== RATE LIMITING ==========
             # Check rate limits before any action (except for typing-only and delete requests)
             if not is_typing_only and not is_delete:
                 wait_time = await self.rate_limiter.check_and_wait(
-                    telegram_chat_id, 
+                    telegram_chat_id,
                     is_message=(not is_reaction)  # Reactions are API calls, not messages
                 )
                 if wait_time > 0:
                     logger.debug(f"⏳ Rate limited {telegram_chat_id}: waited {wait_time:.2f}s")
-            
+            _t1 = time.time()
+
             # ========== CHAT ACTION ==========
             # Send typing/uploading indicator before actual send
             # Skip for reactions, typing-only, and delete requests
@@ -1456,17 +1462,31 @@ class SenderBot:
                     msg_type,
                     self.rate_limiter
                 )
-            
+            _t2 = time.time()
+
             # ========== MESSAGE SENDING via HANDLERS ==========
             result: HandlerResult = await MessageHandlers.handle(
                 self, telegram_chat_id, msg_type, request_body
             )
+            _t3 = time.time()
 
             if result.success:
                 self.stats['sent'] += 1
                 if result.stat_key:
                     self.stats[result.stat_key] += 1
-                logger.info(f"Sent {msg_type}: tg_id={result.tg_message_id}")
+
+                stage_summary = (
+                    f"id={chat_history_id} type={msg_type} tg_id={result.tg_message_id} "
+                    f"queue_wait={queue_wait:.2f}s " if queue_wait is not None else f"id={chat_history_id} type={msg_type} tg_id={result.tg_message_id} "
+                )
+                stage_summary += (
+                    f"ratelimit={_t1-_t0:.2f}s typing={_t2-_t1:.2f}s "
+                    f"send={_t3-_t2:.2f}s"
+                )
+                if (_t3 - _t0) > 3.0 or (queue_wait is not None and queue_wait > 3.0):
+                    logger.warning(f"[SLOW SEND] {stage_summary}")
+                else:
+                    logger.info(f"Sent {stage_summary}")
 
                 # Mark as sent in memory IMMEDIATELY (before DB update)
                 # This prevents duplicates even if DB update fails
