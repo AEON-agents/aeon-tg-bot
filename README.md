@@ -50,4 +50,4 @@ Internal service of a closed product, published as a work sample. All secrets ar
 
 ## License
 
-All rights reserved. Published for review only — not licensed for use, copying, or distribution. See [LICENSE](LICENSE).
+MIT — see [LICENSE](LICENSE).
